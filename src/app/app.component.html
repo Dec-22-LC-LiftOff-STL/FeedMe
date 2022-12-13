@@ -1,9 +1,10 @@
 <!-- Navbar -->
 <form>
     <div class="topnav">
-      <a href="#home">Home</a>
-      <a href="#FeedMeNow">FeedMe Now</a>
-      <a href="#FeedMeLater">FeedMe Later</a>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+      <a routerLink="/feed-me-now" routerLinkActive="active">FeedMe Now</a>
+      <a routerLink="/feed-me-later" routerLinkActive="active">FeedMe Later</a>
     </div>
 </form>
 <!-- Navbar -->
+<router-outlet></router-outlet>
