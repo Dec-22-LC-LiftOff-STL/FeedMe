@@ -2,15 +2,16 @@
 <p>
     FeedMe Now!
 </p>
-<form>
+<form onsubmit="addNewFastFood()">
     <label for="fastFood">Enter local take out places</label>
-    <input type="text" id="fastFood" name="fastFoodName"><br><br>
-
+    <input type="text" id="fastFood" name="fastFoodName"><br>
+    <input type="submit" value="submit"><br>
+</form>
 
 
     <tr *ngFor="let fastFood of fastFoods">
         <td>{{fastFood.name}} 
     </tr>
 
-      </form>
+      
    
