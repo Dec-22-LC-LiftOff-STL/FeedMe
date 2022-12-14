@@ -11,16 +11,22 @@ import {NgForm} from '@angular/forms';
 export class FeedMeNowPageComponent {
  
     fastFoods = [
-    "Temcobell", "Burger Kang", "MacDoughnuts"];
+    "Temcobell", "Burger Kang", "MacDoughnuts", "Mochi's and Sushi's"];
 
 
 
     addNewFastFood(){
       this.fastFoods.push("fastFoodName")
 }
+//  fastFood="";
 
- item = this.fastFoods[Math.floor(Math.random()*this.fastFoods.length)];
-  }
+// randomizer(){
+randomFastFood = this.fastFoods[Math.floor(Math.random()*this.fastFoods.length)];
+//  this.fastFood= randomFastFood
+//  return this.fastFood
+//   }
+ 
+}
 
 
      
