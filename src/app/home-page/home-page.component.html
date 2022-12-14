@@ -11,25 +11,34 @@
     <div>
         <div class="row text-center">
 
-            <div class="col-sm p-3 border rounded bg-secondary mx-4">
-                    <img src="/assets/home-page.png" alt="FeedMe Now">
+            <div class="col-sm p-3 mx-4">
+                <a routerLink="/feed-me-now" routerLinkActive="active" style="text-decoration: none;">
+                    <img src="/assets/home-page.png" alt="FeedMe Now" style="padding-bottom: 20px;">
                     <br>
-                    <p style="font-size: 30px; color: black;" class="h3 p-3 border rounded bg-white mx-4">FeedMe Now</p>
+                    <p style="font-size: 30px; color: black;" class="h3 p-3 bg-light border rounded mx-4">FeedMe Now</p>
                     <br>
                     <p class="h4" style="color: black;">Don't mind cooking? Input what's in
                         <br> your pantry and we'll generate a
                         <br> recipe that's right for you!</p>
+                </a>
             </div>
 
-            <div class="col-sm p-3 border rounded bg-secondary mx-4">
-                <img src="/assets/home-page.png" alt="FeedMe Later">
-                <br>
-                <p style="font-size: 30px; color: black;" class="h3 p-3 border rounded bg-white mx-4">FeedMe Later</p>
-                <br>
-                <p class="h4" style="color: black;">Input what's in your pantry or what
-                    <br> restaurants you have a taste for,
-                    <br> and we'll generate an option for you!</p>
+            <div class="col-sm" style="max-width: 150px;">
+                <h4 class="border border-dark rounded-circle" style="margin-top: 360px; padding: 45px;">OR</h4>
             </div>
+
+            <div class="col-sm p-3 mx-4">
+                <a routerLink="/feed-me-later" routerLinkActive="active"  style="text-decoration: none;">
+                    <img src="/assets/home-page.png" alt="FeedMe Later" style="padding-bottom: 20px;">
+                    <br>
+                    <p style="font-size: 30px; color: black;" class="h3 p-3 bg-light border rounded mx-4">FeedMe Later</p>
+                    <br>
+                    <p class="h4" style="color: black;">Input what's in your pantry or what
+                        <br> restaurants you have a taste for,
+                        <br> and we'll generate an option for you!</p>
+                </a>
+            </div>
+            
         </div>
     </div>
 </main>
