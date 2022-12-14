@@ -3,5 +3,9 @@
 </p>
 <form>
     <label for="fastFood">Enter local take out places</label>
-    <input type="text" id="fastFood" name="fname"><br><br>
+    <input type="text" id="fastFood" name="fastFoodName"><br><br>
+
+    <tr *ngFor="let fastFood of fastFoods">
+        <td>{{fastFood.name}} 
+    </tr>
     </form>
