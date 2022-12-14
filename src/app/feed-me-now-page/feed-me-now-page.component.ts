@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 import {NgForm} from '@angular/forms';
 
 @Component({
@@ -13,7 +14,9 @@ export class FeedMeNowPageComponent {
     {name: "Taco Bell"}];
 
     addNewFastFood(){
-      this.fastFoods.push(fastFood)
+      this.fastFoods.push()
+
+      
 
     }
 
