@@ -10,18 +10,28 @@ import { NgForm } from '@angular/forms';
 })
 export class FeedMeNowPageComponent {
 
-  fastFoods = [
+  orderFoods: string[] = [
     "Temcobell", "Burger Kang", "MacDoughnuts", "Mochi's and Sushi's"];
 
+  homeFoods: string[] = [
+    "Cold Pizza", "Cereal", "Amazing Pot Roast Leftovers", "Microwave Pot Pie", "Pizza Rolls", "Ham Sandwich"
+  ]
 
 
-  addNewFastFood() {
-    this.fastFoods.push("fastFoodName")
+
+  addNewFastFood = (): void => {
+    this.orderFoods.push("fastFoodName")
   }
   //  fastFood="";
 
+  randomizer = (array: string[]): string => {
+    return array[Math.floor(Math.random() * array.length)]
+  }
+
+  randomHomeFood = this.randomizer(this.homeFoods)
+  randomOrderFood = this.randomizer(this.orderFoods)
   // randomizer(){
-  randomFastFood = this.fastFoods[Math.floor(Math.random() * this.fastFoods.length)];
+  randomFastFood: string = this.orderFoods[Math.floor(Math.random() * this.orderFoods.length)];
   //  this.fastFood= randomFastFood
   //  return this.fastFood
   //   }
