@@ -10,12 +10,14 @@ import {NgForm} from '@angular/forms';
 export class FeedMeNowPageComponent {
  
     fastFoods = [
-     {name: "Taco Bell"}];
-     addNewFastFood() {
-       this.fastFoods.push(fastFoodName)
-     }
+    {name: "Taco Bell"}];
+
+
+     
+
+
  
  }
-}
+
 
 
