@@ -8,3 +8,5 @@ import { Component } from '@angular/core';
 export class FeedMeNowPageComponent {
 
 }
+const fastFood = ["Taco Bell"]
+fastFood.push 
