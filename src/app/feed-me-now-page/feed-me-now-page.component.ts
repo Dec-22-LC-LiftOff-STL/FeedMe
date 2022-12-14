@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 
-import {NgForm} from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-feed-me-now-page',
@@ -9,31 +9,31 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./feed-me-now-page.component.css']
 })
 export class FeedMeNowPageComponent {
- 
-    fastFoods = [
+
+  fastFoods = [
     "Temcobell", "Burger Kang", "MacDoughnuts", "Mochi's and Sushi's"];
 
 
 
-    addNewFastFood(){
-      this.fastFoods.push("fastFoodName")
+  addNewFastFood() {
+    this.fastFoods.push("fastFoodName")
+  }
+  //  fastFood="";
+
+  // randomizer(){
+  randomFastFood = this.fastFoods[Math.floor(Math.random() * this.fastFoods.length)];
+  //  this.fastFood= randomFastFood
+  //  return this.fastFood
+  //   }
+
 }
-//  fastFood="";
-
-// randomizer(){
-randomFastFood = this.fastFoods[Math.floor(Math.random()*this.fastFoods.length)];
-//  this.fastFood= randomFastFood
-//  return this.fastFood
-//   }
- 
-}
 
 
-     
 
 
- 
- 
+
+
+
 
 
 
