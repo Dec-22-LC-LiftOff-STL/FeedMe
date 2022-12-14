@@ -1,11 +1,42 @@
 <!--Description / Header-->
 <header class="container-fluid">
     <div class="text-center">
-        <h1 style="font-size: 30px; padding-top: 20px;">Just feeling like a quick bite?</h1>
-        <p>Add items to the FeedMe Here list or some of your favorite places to FeedMe Out list below!</p>
+        <h1>Just feeling like a quick bite?</h1>
+        <h2>Add items to one of the lists below and click the button to generate your choice.</h2>
     </div>
-</header> 
+</header>
 <!--Description / Header-->
+
+
+<main class="container-fluid px-5" style="padding-top: 20px;">
+    <div>
+        <div class="row text-center">
+            <div class="col-sm p-3 mx-4">
+                <h4>FeedMe Here!</h4>
+                <p>Add items that you have on hand: Those leftovers that were really great? That frozen pot-pie you've been saving for a rainy day?  <br>Add them to the list! Then click the button below to let us pick one for you!</p>
+                <img src="/assets/home-page.png" alt="FeedMe Now" style="padding-bottom: 20px;">
+                <form onsubmit="addNewFastFood()">
+                    <label>Enter something you have on hand here: </label>
+                    <input type="text" id="quickHomeFood" name="quickHomeFood">
+                    <input type="submit" value="submit"><br>
+                </form>
+            </div>
+
+            <div class="col-sm p-3 mx-4">
+                <h4>Bring me a FeedMe!</h4>
+                <p>Add some of your favorite places to order out.  Have a favorite fast-food destination?  Love some delivery pizza?  <br>Add them here, then click the button below and let us pick the place!</p>
+                <img src="/assets/home-page.png" alt="FeedMe Now" style="padding-bottom: 20px;">
+                <form onsubmit="addNewFastFood()">
+                    <label for="fastFood">Enter a local take out place </label>
+                    <input type="text" id="fastFood" name="fastFoodName">
+                    <input type="submit" value="submit"><br>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+
 <p>
     FeedMe Now!
 </p>
