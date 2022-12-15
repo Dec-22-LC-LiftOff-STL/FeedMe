@@ -37,6 +37,10 @@ body {
 
 }
 
+#instructions{
+  padding-left: 30px;
+}
+
 .container {
 /* This puts all of the */
 width:1000px;
