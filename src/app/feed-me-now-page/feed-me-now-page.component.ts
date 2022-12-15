@@ -11,7 +11,7 @@ import { NgForm } from '@angular/forms';
 export class FeedMeNowPageComponent {
 
   orderFoods: string[] = [
-    "Temcobell", "Burger Kang", "MacDoughnuts", "Mochi's and Sushi's"];
+    "Temcobell", "Burger Kang", "MacDoughnuts", "Mochi's and Sushi's", "Mon-Keigh Joes", "Los Pollos Hermanos"];
 
   homeFoods: string[] = [
     "Cold Pizza", "Cereal", "Amazing Pot Roast Leftovers", "Microwave Pot Pie", "Pizza Rolls", "Ham Sandwich"
