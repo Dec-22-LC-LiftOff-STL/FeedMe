@@ -1,1 +1,48 @@
-<p>feed-me-later-page works!</p>
+!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="feed-me-later-page.component.css">
+  <title>FeedMe Later</title>
+  <header>FeedMe Later</header>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <p id="mainDescription">Don't mind cooking? Input what's in you pantry and we'll generate a recipe that's right for you!</p>
+        <p id="updateDescription">If you don't like the selection, click generate again.</p>
+        <div class="row">
+          <div class="col-xl-12"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-12">
+      <div id="recipeGenerator" class="wrapper">
+        <textarea placeholder="Enter ingredients here separated by commas..." id="ingredient-textarea"></textarea>
+        <button type="button" class="btn btn-secondary btn-rounded">Generate</button>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+          <img src="/Users/torriereal/LaunchCode_directory/Unit-2/java-practice/FeedMe/src/app/feed-me-later-page/Images/crockot-chicken-tacos.jpg" alt="crockpot chicken tacos" width="300" height="200">
+          <h1 id="recipeName">Recipe Name</h1>
+          <p>Cuisine Type | Prep Time | Cook Time</p>
+        </div>
+        <div class="col-md-6">
+          <h3>Ingredients:</h3>
+          <ol>
+            <li> Step 1</li>
+            <li> Step 1</li>
+            <li> Step 1</li>
+            <li> Step 1</li>
+            <li> Step 1</li>
+            <li> Step 1</li>
+            <li> Step 1</li>
+          </ol>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
