@@ -32,10 +32,10 @@
                     <p class="h4" style="padding-bottom: 40px;">Add more choices!</p>
                 </div>
 
-                <button class="btn btn-secondary btn-lg" style="margin-top: 40px;">Generate</button>
+                <button (click)="randomizeOnHandFood()" class="btn btn-secondary btn-lg" style="margin-top: 40px;">Generate</button>
 
                 <input type="text" class="text-center form-control w-25 fs-5"
-                style="margin: 0 auto; background-color: transparent; margin-top: 15px;" value="Chips">
+                style="margin: 0 auto; background-color: transparent; margin-top: 15px;" value="{{randomOnHandFood}}">
             </div>
 
             <div class="col-sm" style="max-width: 150px;">
@@ -62,10 +62,10 @@
                     <p class="h4" style="padding-bottom: 40px;">Add more choices!</p>
                 </div>
 
-                <button class="btn btn-secondary btn-lg" style="margin-top: 40px;">Generate</button>
+                <button (click)="randomizeOrderFood()" class="btn btn-secondary btn-lg" style="margin-top: 40px;">Generate</button>
 
                 <input type="text" class="text-center form-control w-25 fs-5"
-                style="margin: 0 auto; background-color: transparent; margin-top: 15px;" value="Wendys">
+                style="margin: 0 auto; background-color: transparent; margin-top: 15px;" value="{{randomOrderFood}}">
             </div>
         </div>
     </div>
