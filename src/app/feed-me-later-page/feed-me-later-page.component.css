@@ -5,7 +5,6 @@
 }
 
 body {
-  background-color: ;
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
@@ -36,6 +35,10 @@ body {
   align-items: center;
   justify-content: center;
 
+}
+
+#instructions{
+  padding-left: 30px;
 }
 
 .container {
@@ -89,8 +92,38 @@ textarea {
   display: inline-block;
 }
 
-.button-
+.button {
+  background: #fff;
+  border: 2px solid #666;
+  color: #666;
+  text-align: center;
+
+  font: 32px Arial, sans-serif;
+}
 
 #description{
   justify-content: center;
+}
+
+ol {
+  margin-left:0; 
+  padding-left:0; 
+  counter-reset:item
+}
+
+ol>li {
+  margin-left:0; 
+  padding-left:0; 
+  counter-increment:item; 
+  list-style:none inside;
+  margin-bottom:10px
+}
+ol>li:before {
+content: counter(item);
+padding:3px 9px;
+margin-right:0.5em;
+background:#ccc;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px; 
 }
