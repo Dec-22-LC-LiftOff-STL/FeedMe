@@ -37,13 +37,21 @@ export class FeedMeNowPageComponent {
   randomizeOrderFood = (): void => {
     this.randomOrderFood = this.randomizer(this.orderFoods)
   }
+//AddSnackby get element
+// addNewSnack(){
+//   this.onHandFoods.push(document.getElementById("snackInput"))
+// }
 
-  // randomizer(){
-  randomFastFood: string = this.orderFoods[Math.floor(Math.random() * this.orderFoods.length)];
-  //  this.fastFood= randomFastFood
-  //  return this.fastFood
-  //   }
+addNewSnack(){
 
+};
+
+
+
+Character(value: string) {
+  this.onHandFoods.push(value)
+  console.log(this.onHandFoods);
+}
 }
 
 

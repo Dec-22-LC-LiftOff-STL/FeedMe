@@ -19,15 +19,16 @@
 
                 <div class="border rounded" style="background-color: grey; margin-top: 40px;">
 
-                    <input type="text" class="form-control border-0 w-75 fs-4"
+                    <input #box (keyup.enter)="Character(box.value)" type="text" class="form-control border-0 w-75 fs-4"
                     style="border: 0px; margin: 0 auto; margin-top: 80px;" value="CheezIts">
+                    
 
-                    <input type="text" class="form-control border-0 w-75 fs-4"
+                    <input #box2 (keyup.enter)="Character(box2.value)" type="text" class="form-control border-0 w-75 fs-4"
                     style="border: 0px; margin: 0 auto; margin-top: 20px;" value="Fruit Snacks">
 
-                    <input type="text" class="form-control border-0 w-75 fs-4"
+                    <input #box3 (keyup.enter)="Character(box3.value)" id="snackInput" type="text" class="form-control border-0 w-75 fs-4"
                     style="border: 0px; margin: 0 auto; margin-top: 20px; margin-bottom: 40px;" value="Chips">
-
+                 
                     <button class="feedMeButton button5">+</button> 
                     <p class="h4" style="padding-bottom: 40px;">Add more choices!</p>
                 </div>
@@ -69,4 +70,6 @@
             </div>
         </div>
     </div>
+ 
+
 </main>
