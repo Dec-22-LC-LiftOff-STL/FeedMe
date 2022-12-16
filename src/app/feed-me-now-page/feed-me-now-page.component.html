@@ -12,77 +12,60 @@
     <div>
         <div class="row text-center">
 
-            <div class="col-sm p-3 mx-4" style="margin-top: 180px; max-width: 800px;">
+            <div class="col-sm p-3 mx-4" style="margin-top: 100px;">
                 
-                <input type="text" class="text-center form-control border-0 w-25 fs-3"
+                <input type="text" class="text-center form-control border-0 w-25 fs-2"
                 style="border: 0px; margin: 0 auto; background-color: transparent;" value="Snacks">
 
                 <div class="border rounded" style="background-color: grey; margin-top: 40px;">
 
-                    <input type="text" class="text-center form-control border-0 w-75 fs-3"
+                    <input type="text" class="form-control border-0 w-75 fs-4"
                     style="border: 0px; margin: 0 auto; margin-top: 80px;" value="CheezIts">
 
-                    <input type="text" class="text-center form-control border-0 w-75 fs-3"
+                    <input type="text" class="form-control border-0 w-75 fs-4"
                     style="border: 0px; margin: 0 auto; margin-top: 20px;" value="Fruit Snacks">
 
-                    <input type="text" class="text-center form-control border-0 w-75 fs-3"
-                    style="border: 0px; margin: 0 auto; margin-top: 20px; margin-bottom: 80px;" value="Chips">
+                    <input type="text" class="form-control border-0 w-75 fs-4"
+                    style="border: 0px; margin: 0 auto; margin-top: 20px; margin-bottom: 40px;" value="Chips">
 
-                    <!-- <img src="/assets/home-page.png" alt="FeedMe Now" style="padding-bottom: 20px;"> -->
-
-                    
-
-
-
-                    <!-- <tr class="row text-center" *ngFor="let homeFood of homeFoods">
-                        <td>{{homeFood}} </td>
-                    </tr>
-
-                    <form onsubmit="addNewFastFood()">
-                        <label for="homeFood">Enter something quick and easy you have at home: &nbsp; </label>
-                        <input type="text" id="homeFood" name="homeFoodName">
-                        <input type="submit" value="submit"><br>
-                    </form> <br>
-
-
-
-
-
-                    <button type="submit" onClick="window.location.reload()">Generate</button> <br>
-                    <p>{{randomHomeFood}}</p> -->
+                    <button class="feedMeButton button5">+</button> 
+                    <p class="h4" style="padding-bottom: 40px;">Add more choices!</p>
                 </div>
+
+                <button class="btn btn-secondary btn-lg" style="margin-top: 40px;">Generate</button>
+
+                <input type="text" class="text-center form-control w-25 fs-5"
+                style="margin: 0 auto; background-color: transparent; margin-top: 15px;" value="Chips">
             </div>
 
             <div class="col-sm" style="max-width: 150px;">
                 <h4 class="border border-dark rounded-circle" style="margin-top: 360px; padding: 45px;">OR</h4>
             </div>
 
-            <div class="col-sm p-3 mx-4">
-                <div style="background-color: grey; margin-top: 180px; padding: 45px;">
-                    <h4>Bring me a FeedMe!</h4>
-                    <p>Add some of your favorite places to order out. Have a favorite fast-food destination? Love
-                        some
-                        delivery pizza? <br>Add them here, then click the button below and let us pick the place!
-                    </p>
-                    <!-- <img src="/assets/home-page.png" alt="FeedMe Now" style="padding-bottom: 20px;"> -->
-                    <tr class="row text-center" *ngFor="let orderFood of orderFoods">
-                        <td>{{orderFood}} </td>
-                    </tr>
-                    
-                    <form onsubmit="addNewFastFood()">
-                        <label for="fastFood">Enter a local take out place: &nbsp;</label>
-                        <input type="text" id="fastFood" name="fastFoodName">
-                        <input type="submit" value="submit"><br>
-                    </form> <br>
+            <div class="col-sm p-3 mx-4" style="margin-top: 100px;">
+                
+                <input type="text" class="text-center form-control border-0 w-25 fs-2"
+                style="border: 0px; margin: 0 auto; background-color: transparent;" value="Take Out">
 
-                    <button type="submit" onClick="window.location.reload()">Generate</button> <br>
-                    <p>{{randomOrderFood}}</p>
+                <div class="border rounded" style="background-color: grey; margin-top: 40px;">
 
-                    <a class="btn btn-primary btn-sml"
-                        href="https://www.google.com/maps/search/?api=1&query={{randomOrderFood}}">
-                        Find it on Google Maps!
-                    </a>
+                    <input type="text" class="form-control border-0 w-75 fs-4"
+                    style="border: 0px; margin: 0 auto; margin-top: 80px;" value="Taco Bell">
+
+                    <input type="text" class="form-control border-0 w-75 fs-4"
+                    style="border: 0px; margin: 0 auto; margin-top: 20px;" value="McDonalds">
+
+                    <input type="text" class="form-control border-0 w-75 fs-4"
+                    style="border: 0px; margin: 0 auto; margin-top: 20px; margin-bottom: 40px;" value="Wendys">
+
+                    <button class="feedMeButton button5">+</button> 
+                    <p class="h4" style="padding-bottom: 40px;">Add more choices!</p>
                 </div>
+
+                <button class="btn btn-secondary btn-lg" style="margin-top: 40px;">Generate</button>
+
+                <input type="text" class="text-center form-control w-25 fs-5"
+                style="margin: 0 auto; background-color: transparent; margin-top: 15px;" value="Wendys">
             </div>
         </div>
     </div>
