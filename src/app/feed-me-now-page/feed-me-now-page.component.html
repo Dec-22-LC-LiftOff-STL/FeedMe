@@ -1,8 +1,8 @@
 <!--Description / Header-->
 <header class="container-fluid">
     <div class="text-center">
-        <h1>Just feeling like a quick bite?</h1>
-        <h2>Add items to one of the lists below and click the button to generate your choice.</h2>
+        <h2 style="font-size: 30px; padding-top: 20px;">Input what's in your pantry or what restaurants you have a taste for and we'll generate
+        <br> an option for you!</h2>
     </div>
 </header>
 <!--Description / Header-->
@@ -11,17 +11,30 @@
 <main class="container-fluid px-5" style="padding-top: 20px;">
     <div>
         <div class="row text-center">
-            <div class="col-sm p-3 mx-4">
-                <div style="background-image: url('/assets/home-page.png'); margin-top: 180px; padding: 45px;">
-                    <h4>FeedMe Here!</h4>
-                    <p>Add items that you have on hand: Those leftovers that were really great? That frozen pot-pie
-                        you've
-                        been saving for a rainy day? <br>Add them to the list! Then click the button below to let us
-                        pick
-                        one for you!</p>
+
+            <div class="col-sm p-3 mx-4" style="margin-top: 180px; max-width: 800px;">
+                
+                <input type="text" class="text-center form-control border-0 w-25 fs-3"
+                style="border: 0px; margin: 0 auto; background-color: transparent;" value="Snacks">
+
+                <div class="border rounded" style="background-color: grey; margin-top: 40px;">
+
+                    <input type="text" class="text-center form-control border-0 w-75 fs-3"
+                    style="border: 0px; margin: 0 auto; margin-top: 80px;" value="CheezIts">
+
+                    <input type="text" class="text-center form-control border-0 w-75 fs-3"
+                    style="border: 0px; margin: 0 auto; margin-top: 20px;" value="Fruit Snacks">
+
+                    <input type="text" class="text-center form-control border-0 w-75 fs-3"
+                    style="border: 0px; margin: 0 auto; margin-top: 20px; margin-bottom: 80px;" value="Chips">
+
                     <!-- <img src="/assets/home-page.png" alt="FeedMe Now" style="padding-bottom: 20px;"> -->
 
-                    <tr class="row text-center" *ngFor="let homeFood of homeFoods">
+                    
+
+
+
+                    <!-- <tr class="row text-center" *ngFor="let homeFood of homeFoods">
                         <td>{{homeFood}} </td>
                     </tr>
 
@@ -36,7 +49,7 @@
 
 
                     <button type="submit" onClick="window.location.reload()">Generate</button> <br>
-                    <p>{{randomHomeFood}}</p>
+                    <p>{{randomHomeFood}}</p> -->
                 </div>
             </div>
 
@@ -45,7 +58,7 @@
             </div>
 
             <div class="col-sm p-3 mx-4">
-                <div style="background-image: url('/assets/home-page.png'); margin-top: 180px; padding: 45px;">
+                <div style="background-color: grey; margin-top: 180px; padding: 45px;">
                     <h4>Bring me a FeedMe!</h4>
                     <p>Add some of your favorite places to order out. Have a favorite fast-food destination? Love
                         some
