@@ -42,13 +42,11 @@ export class FeedMeNowPageComponent {
 //   this.onHandFoods.push(document.getElementById("snackInput"))
 // }
 
-addNewSnack(){
-
-};
 
 
 
-Character(value: string) {
+
+addNewSnack(value: string) {
   this.onHandFoods.push(value)
   console.log(this.onHandFoods);
 }
