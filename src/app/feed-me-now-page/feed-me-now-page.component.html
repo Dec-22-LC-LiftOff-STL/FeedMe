@@ -1,80 +1,116 @@
 <!--Description / Header-->
 <header class="container-fluid">
     <div class="text-center">
-        <h2 style="font-size: 30px; padding-top: 20px;">Input what's in your pantry or what restaurants you have a taste for and we'll generate
-        <br> an option for you!</h2>
+        <h2 style="font-size: 30px; padding-top: 20px">
+            Input what's in your pantry or what restaurants you have a taste for and
+            we'll generate <br />
+            an option for you!
+        </h2>
     </div>
 </header>
 <!--Description / Header-->
 
-
-<main class="container-fluid px-5" style="padding-top: 20px;">
+<main class="container-fluid px-5" style="padding-top: 20px">
     <div>
         <div class="row text-center">
-
-            <div class="col-sm p-3 mx-4" style="margin-top: 100px;">
-                
+            <div class="col-sm p-3 mx-4" style="margin-top: 100px">
                 <input type="text" class="text-center form-control border-0 w-25 fs-2"
-                style="border: 0px; margin: 0 auto; background-color: transparent;" value="Snacks">
+                    style="border: 0px; margin: 0 auto; background-color: transparent" value="Snacks" />
 
-                <div class="border rounded" style="background-color: grey; margin-top: 40px;">
+                <div class="border rounded" style="background-color: grey; margin-top: 40px">
+                    <input #snackBox1 (keyup.enter)="addNewSnack(snackBox1.value)" type="text"
+                        class="form-control border-0 w-75 fs-4" style="border: 0px; margin: 0 auto; margin-top: 80px"
+                        placeholder="Enter Snack" />
 
-                    <input #snackBox1 (keyup.enter)="addNewSnack(snackBox1.value)" type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 80px;" placeholder="Enter Snack">
-                    
+                    <input #snackBox2 (keyup.enter)="addNewSnack(snackBox2.value)" type="text"
+                        class="form-control border-0 w-75 fs-4" style="border: 0px; margin: 0 auto; margin-top: 20px"
+                        placeholder="Enter Snack" />
 
-                    <input #snackBox2 (keyup.enter)="addNewSnack(snackBox2.value)" type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 20px;" placeholder="Enter Snack">
-
-                    <input #snackBox3 (keyup.enter)="addNewSnack(snackBox3.value)" id="snackInput" type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 20px; margin-bottom: 40px;" placeholder="Enter Snack">
-                 <br>
-                 <button (click)="addNewSnack(snackBox3.value); addNewSnack(snackBox2.value); addNewSnack(snackBox1.value)" class="btn btn-light" >Add all choices to list</button>
-                 <br>  
-                 <button class="feedMeButton button5" style="font-size:20px; font-weight: bolder;">+</button> 
-                    <p class="h4" style="padding-bottom: 40px;">Add more choices!</p>
+                    <input #snackBox3 (keyup.enter)="addNewSnack(snackBox3.value)" id="snackInput" type="text"
+                        class="form-control border-0 w-75 fs-4" style="
+              border: 0px;
+              margin: 0 auto;
+              margin-top: 20px;
+              margin-bottom: 40px;
+            " placeholder="Enter Snack" />
+                    <br />
+                    <button (click)="
+              addNewSnack(snackBox3.value);
+              addNewSnack(snackBox2.value);
+              addNewSnack(snackBox1.value)
+            " class="btn btn-light">
+                        Add all choices to list
+                    </button>
+                    <br />
+                    <button class="feedMeButton button5" style="font-size: 20px; font-weight: bolder">
+                        +
+                    </button>
+                    <p class="h4" style="padding-bottom: 40px">Add more choices!</p>
                 </div>
 
-                <button (click)="randomizeOnHandFood()" class="btn btn-secondary btn-lg" style="margin-top: 40px;">Generate</button>
+                <button (click)="randomizeOnHandFood()" class="btn btn-secondary btn-lg" style="margin-top: 40px">
+                    Generate
+                </button>
 
-                <input type="text" class="text-center form-control w-25 fs-5"
-                style="margin: 0 auto; background-color: transparent; margin-top: 15px;" value="{{randomOnHandFood}}">
+                <input type="text" class="text-center form-control w-25 fs-5" style="
+            margin: 0 auto;
+            background-color: transparent;
+            margin-top: 15px;
+          " value="{{ randomOnHandFood }}" />
             </div>
 
-            <div class="col-sm" style="max-width: 150px;">
-                <h4 class="border border-dark rounded-circle" style="margin-top: 360px; padding: 45px;">OR</h4>
+            <div class="col-sm" style="max-width: 150px">
+                <h4 class="border border-dark rounded-circle" style="margin-top: 360px; padding: 45px">
+                    OR
+                </h4>
             </div>
 
-            <div class="col-sm p-3 mx-4" style="margin-top: 100px;">
-                
+            <div class="col-sm p-3 mx-4" style="margin-top: 100px">
                 <input type="text" class="text-center form-control border-0 w-25 fs-2"
-                style="border: 0px; margin: 0 auto; background-color: transparent;" value="Take Out">
+                    style="border: 0px; margin: 0 auto; background-color: transparent" value="Take Out" />
 
-                <div class="border rounded" style="background-color: grey; margin-top: 40px;">
+                <div class="border rounded" style="background-color: grey; margin-top: 40px">
+                    <input #orderBox1 (keyup.enter)="addNewOrder(orderBox1.value)" type="text"
+                        class="form-control border-0 w-75 fs-4" style="border: 0px; margin: 0 auto; margin-top: 80px"
+                        placeholder="Enter Take Out" />
 
-                    <input #orderBox1 (keyup.enter)="addNewOrder(orderBox1.value)" type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 80px;" placeholder="Enter Take Out">
+                    <input #orderBox2 (keyup.enter)="addNewOrder(orderBox2.value)" type="text"
+                        class="form-control border-0 w-75 fs-4" style="border: 0px; margin: 0 auto; margin-top: 20px"
+                        placeholder="Enter Take Out" />
 
-                    <input #orderBox2 (keyup.enter)="addNewOrder(orderBox2.value)" type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 20px;" placeholder="Enter Take Out">
+                    <input #orderBox3 (keyup.enter)="addNewOrder(orderBox3.value)" type="text"
+                        class="form-control border-0 w-75 fs-4" style="
+              border: 0px;
+              margin: 0 auto;
+              margin-top: 20px;
+              margin-bottom: 40px;
+            " placeholder="Enter Take Out" />
+                    <br />
+                    <button (click)="
+              addNewOrder(orderBox3.value);
+              addNewOrder(orderBox2.value);
+              addNewOrder(orderBox1.value)
+            " class="btn btn-light">
+                        Add all choices to list
+                    </button>
+                    <br />
 
-                    <input  #orderBox3 (keyup.enter)="addNewOrder(orderBox3.value)" type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 20px; margin-bottom: 40px;" placeholder="Enter Take Out">
-                    <br>
-                    <button (click)="addNewOrder(orderBox3.value); addNewOrder(orderBox2.value); addNewOrder(orderBox1.value)" class="btn btn-light">Add all choices to list</button>
-                    <br>
-
-                    <button class="feedMeButton button5" style="font-size:20px; font-weight: bolder;" >+</button> 
-                    <p class="h4" style="padding-bottom: 40px;">Add more choices!</p>
+                    <button class="feedMeButton button5" style="font-size: 20px; font-weight: bolder">
+                        +
+                    </button>
+                    <p class="h4" style="padding-bottom: 40px">Add more choices!</p>
                 </div>
 
-                <button (click)="randomizeOrderFood()" class="btn btn-secondary btn-lg" style="margin-top: 40px;">Generate</button>
+                <button (click)="randomizeOrderFood()" class="btn btn-secondary btn-lg" style="margin-top: 40px">
+                    Generate
+                </button>
 
-                <input type="text" class="text-center form-control w-25 fs-5"
-                style="margin: 0 auto; background-color: transparent; margin-top: 15px;" value="{{randomOrderFood}}">
+                <input type="text" class="text-center form-control w-25 fs-5" style="
+            margin: 0 auto;
+            background-color: transparent;
+            margin-top: 15px;
+          " value="{{ randomOrderFood }}" />
             </div>
         </div>
     </div>
- 
-
 </main>
