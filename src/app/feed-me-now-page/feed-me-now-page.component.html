@@ -20,14 +20,14 @@
                 <div class="border rounded" style="background-color: grey; margin-top: 40px;">
 
                     <input #snackBox1 (keyup.enter)="addNewSnack(snackBox1.value)" type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 80px;" value="Enter Snack">
+                    style="border: 0px; margin: 0 auto; margin-top: 80px;" placeholder="Enter Snack">
                     
 
                     <input #snackBox2 (keyup.enter)="addNewSnack(snackBox2.value)" type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 20px;" value="Enter Snack">
+                    style="border: 0px; margin: 0 auto; margin-top: 20px;" placeholder="Enter Snack">
 
                     <input #snackBox3 (keyup.enter)="addNewSnack(snackBox3.value)" id="snackInput" type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 20px; margin-bottom: 40px;" value="Enter Snack">
+                    style="border: 0px; margin: 0 auto; margin-top: 20px; margin-bottom: 40px;" placeholder="Enter Snack">
                  <br>
                  <button (click)="addNewSnack(snackBox3.value); addNewSnack(snackBox2.value); addNewSnack(snackBox1.value)" class="btn btn-light" >Add all choices to list</button>
                  <br>  
@@ -53,13 +53,13 @@
                 <div class="border rounded" style="background-color: grey; margin-top: 40px;">
 
                     <input #orderBox1 (keyup.enter)="addNewOrder(orderBox1.value)" type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 80px;" value="Enter Take Out">
+                    style="border: 0px; margin: 0 auto; margin-top: 80px;" placeholder="Enter Take Out">
 
                     <input #orderBox2 (keyup.enter)="addNewOrder(orderBox2.value)" type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 20px;" value="Enter Take Out">
+                    style="border: 0px; margin: 0 auto; margin-top: 20px;" placeholder="Enter Take Out">
 
                     <input  #orderBox3 (keyup.enter)="addNewOrder(orderBox3.value)" type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 20px; margin-bottom: 40px;" value="Enter Take Out">
+                    style="border: 0px; margin: 0 auto; margin-top: 20px; margin-bottom: 40px;" placeholder="Enter Take Out">
                     <br>
                     <button (click)="addNewOrder(orderBox3.value); addNewOrder(orderBox2.value); addNewOrder(orderBox1.value)" class="btn btn-light">Add all choices to list</button>
                     <br>
