@@ -3,13 +3,16 @@ h2 {
   padding-top: 20px;
 }
 main {
-    padding-top: 20px
+  padding-top: 20px;
 }
-.col-sm.p-3.mx-4{
-    margin-top: 100px;
-    max-width: 1150px
-    }
+.col-sm.p-3.mx-4 {
+  margin-top: 100px;
+}
 /* .col-sm { 
     max-width: 150px
 } */
-h4 {margin-top: 360px; padding: 45px}
+h4 {
+  margin-top: 360px;
+  padding: 45px;
+  max-width: 150px;
+}
