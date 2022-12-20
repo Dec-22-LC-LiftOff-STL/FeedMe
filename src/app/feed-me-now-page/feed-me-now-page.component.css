@@ -14,5 +14,8 @@ main {
 h4 {
   margin-top: 360px;
   padding: 45px;
-  max-width: 150px ;
+}
+
+#orCircle {
+  max-width: 150px;
 }

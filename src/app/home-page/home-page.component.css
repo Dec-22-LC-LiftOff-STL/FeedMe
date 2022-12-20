@@ -23,6 +23,14 @@ a {
 .feedMeLater-img {
   padding-bottom: 20px;
 }
+h4 {
+  margin-top: 360px;
+  padding: 45px;
+}
 .h4 {
   color: black;
+}
+
+#orCircle {
+  max-width: 150px;
 }

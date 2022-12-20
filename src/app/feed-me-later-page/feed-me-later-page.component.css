@@ -127,3 +127,4 @@ background:#ccc;
 -moz-border-radius: 10px;
 border-radius: 10px; 
 }
+.container-fluid.px-5{padding-top: 20px;}
