@@ -8,32 +8,11 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./feed-me-now-page.component.css'],
 })
 export class FeedMeNowPageComponent {
-  orderFoods: string[] = [];
+    items1: string[] = [""];
 
-  onHandFoods: string[] = [];
+    items2: string[] = [""];
 
-  randomOnHandFood: string = '';
-  randomOrderFood: string = '';
-
-  randomizer = (array: string[]): string => {
-    return array[Math.floor(Math.random() * array.length)];
-  };
-
-  randomizeOnHandFood = (): void => {
-    this.randomOnHandFood = this.randomizer(this.onHandFoods);
-  };
-
-  randomizeOrderFood = (): void => {
-    this.randomOrderFood = this.randomizer(this.orderFoods);
-  };
-
-  addNewOrder(value: string) {
-    this.orderFoods.push(value);
-    console.log(this.orderFoods);
-  }
-
-  addNewSnack(value: string) {
-    this.onHandFoods.push(value);
-    console.log(this.onHandFoods);
-  }
+    items1Column: string = "items1";
+    
+    items2Column: string = "items2";
 }
