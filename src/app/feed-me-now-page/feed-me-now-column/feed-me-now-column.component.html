@@ -1,5 +1,5 @@
-    <input type="text" class="text-center form-control border-0 fs-2"
-        style="border: 0px; margin: 0 auto; background-color: transparent" value="Enter a Value" />
+    <input type="text" [(ngModel)]="columnTitle" (ngModelChange)="saveToLocalStorage()" class="text-center form-control border-0 fs-2"
+        style="border: 0px; margin: 0 auto; background-color: transparent" placeholder="Enter a Value" />
 
     <div class="border rounded" style="background-color: grey; margin-top: 20px">
         <div class="inputRow" *ngFor="let arrayItem of items; index as i; trackBy: trackByFn">

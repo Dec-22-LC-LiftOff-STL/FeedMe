@@ -14,12 +14,18 @@ export class FeedMeNowColumnComponent implements OnInit {
 
   randomItem: string = "";
 
+  columnTitle: string = "";
+
   ngOnInit(): void {
     // get the string from localStorage
     const str = localStorage.getItem(this.columnName);
+    const title = localStorage.getItem(this.columnName + "Title")
     if(str) {
       // convert string to valid object
       this.items = JSON.parse(str);
+    }
+    if(title) {
+      this.columnTitle = title;
     }
   }
 
@@ -44,6 +50,7 @@ export class FeedMeNowColumnComponent implements OnInit {
 
     // save to localStorage
     localStorage.setItem(this.columnName, jsonArr);
+    localStorage.setItem(this.columnName + "Title", this.columnTitle)
   }
 
   randomize() {
