@@ -7,8 +7,8 @@ main {
 }
 .col-sm.p-3.mx-4{
     margin-top: 100px;
-    
-}
+    max-width: 1150px
+    }
 /* .col-sm { 
     max-width: 150px
 } */
