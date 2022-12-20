@@ -9,6 +9,7 @@ export class FuncsService {
     // checks to make sure it contains atleast one item
     if(array.length <= 0) {
       alert("Please add one or more items to your list!");
+      return "";
     }
     // checks to make there are no empty fields
     else {
@@ -16,11 +17,11 @@ export class FuncsService {
       for(let i = 0; i < array.length; i++) {
         if(array[i] === "") {
           alert("Please ensure you have no empty fields!");
-          // break;
+          return "";
         }
       }
     }
-      // assign a random item using math.random
+    // assign a random item using math.random
     return array[Math.floor(Math.random()*array.length)];
   }
 
