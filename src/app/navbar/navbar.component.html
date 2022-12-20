@@ -1,9 +1,27 @@
-<form>
-    <div class="topnav">
+<!-- <form>
+    <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
         <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
             <img id="navPic" src="../../assets/NavbarPic.png">
         </a>
         <a routerLink="/feed-me-now" routerLinkActive="active">FeedMe Now</a>
         <a routerLink="/feed-me-later" routerLinkActive="active">FeedMe Later</a>
+    </nav>
+</form> -->
+
+<nav class="navbar navbar-expand-sm bg-secondary navbar-light fixed-top">
+    <div class="container-fluid">
+        <ul class="navbar-nav navbar-light">
+            <li class="navbar-brand">
+                <a id="navPicBox" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                    <img src="../../assets/NavbarPic.png" class="rounded-pill">
+                </a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/feed-me-now" routerLinkActive="active">FeedMe Now</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/feed-me-later" routerLinkActive="active">FeedMe Later</a>
+            </li>
+        </ul>
     </div>
-</form>
+</nav>
