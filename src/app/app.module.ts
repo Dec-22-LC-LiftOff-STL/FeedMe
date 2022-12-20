@@ -8,6 +8,7 @@ import { FeedMeNowPageComponent } from './feed-me-now-page/feed-me-now-page.comp
 import { FeedMeLaterPageComponent } from './feed-me-later-page/feed-me-later-page.component';
 import { FormsModule } from '@angular/forms';
 import { FeedMeNowColumnComponent } from './feed-me-now-page/feed-me-now-column/feed-me-now-column.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FeedMeNowColumnComponent } from './feed-me-now-page/feed-me-now-column/
     HomePageComponent,
     FeedMeNowPageComponent,
     FeedMeLaterPageComponent,
-    FeedMeNowColumnComponent
+    FeedMeNowColumnComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
