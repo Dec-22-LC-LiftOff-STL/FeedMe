@@ -3,7 +3,7 @@
 
     <div class="border rounded" style="background-color: grey; margin-top: 20px">
         <div class="inputRow" *ngFor="let arrayItem of items; index as i; trackBy: trackByFn">
-            <input type="text" name="arrayInput{{columnName}}{{i}}"
+            <input type="text" name="arrayInput{{columnKey}}{{i}}"
             [(ngModel)]="items[i]"
             (ngModelChange)="saveToLocalStorage()"
             class="form-control border-0 fs-4 text-center" 
