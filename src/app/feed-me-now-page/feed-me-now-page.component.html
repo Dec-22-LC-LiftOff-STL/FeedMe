@@ -1,72 +1,33 @@
 <!--Description / Header-->
 <header class="container-fluid">
     <div class="text-center">
-        <h2 style="font-size: 30px; padding-top: 20px;">Input what's in your pantry or what restaurants you have a taste for and we'll generate
-        <br> an option for you!</h2>
+        <h2 style="font-size: 30px; padding-top: 20px">
+            Input what's in your pantry or what restaurants you have a taste for and
+            we'll generate <br />
+            an option for you!
+        </h2>
     </div>
 </header>
 <!--Description / Header-->
 
-
-<main class="container-fluid px-5" style="padding-top: 20px;">
+<main class="container-fluid px-5" style="padding-top: 20px">
     <div>
         <div class="row text-center">
 
-            <div class="col-sm p-3 mx-4" style="margin-top: 100px;">
-                
-                <input type="text" class="text-center form-control border-0 w-25 fs-2"
-                style="border: 0px; margin: 0 auto; background-color: transparent;" value="Snacks">
-
-                <div class="border rounded" style="background-color: grey; margin-top: 40px;">
-
-                    <input type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 80px;" value="CheezIts">
-
-                    <input type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 20px;" value="Fruit Snacks">
-
-                    <input type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 20px; margin-bottom: 40px;" value="Chips">
-
-                    <button class="feedMeButton button5">+</button> 
-                    <p class="h4" style="padding-bottom: 40px;">Add more choices!</p>
-                </div>
-
-                <button class="btn btn-secondary btn-lg" style="margin-top: 40px;">Generate</button>
-
-                <input type="text" class="text-center form-control w-25 fs-5"
-                style="margin: 0 auto; background-color: transparent; margin-top: 15px;" value="Chips">
+            <div class="col-sm p-3 mx-4" style="margin-top: 100px">
+                <app-feed-me-now-column [items]="items1" columnName="items1Column"></app-feed-me-now-column>
             </div>
 
-            <div class="col-sm" style="max-width: 150px;">
-                <h4 class="border border-dark rounded-circle" style="margin-top: 360px; padding: 45px;">OR</h4>
+            <div class="col-sm" style="max-width: 150px">
+                <h4 class="border border-dark rounded-circle" style="margin-top: 360px; padding: 45px">
+                    OR
+                </h4>
             </div>
 
-            <div class="col-sm p-3 mx-4" style="margin-top: 100px;">
-                
-                <input type="text" class="text-center form-control border-0 w-25 fs-2"
-                style="border: 0px; margin: 0 auto; background-color: transparent;" value="Take Out">
-
-                <div class="border rounded" style="background-color: grey; margin-top: 40px;">
-
-                    <input type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 80px;" value="Taco Bell">
-
-                    <input type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 20px;" value="McDonalds">
-
-                    <input type="text" class="form-control border-0 w-75 fs-4"
-                    style="border: 0px; margin: 0 auto; margin-top: 20px; margin-bottom: 40px;" value="Wendys">
-
-                    <button class="feedMeButton button5">+</button> 
-                    <p class="h4" style="padding-bottom: 40px;">Add more choices!</p>
-                </div>
-
-                <button class="btn btn-secondary btn-lg" style="margin-top: 40px;">Generate</button>
-
-                <input type="text" class="text-center form-control w-25 fs-5"
-                style="margin: 0 auto; background-color: transparent; margin-top: 15px;" value="Wendys">
+            <div class="col-sm p-3 mx-4" style="margin-top: 100px">
+                <app-feed-me-now-column [items]="items2" columnName="items2Column"></app-feed-me-now-column>
             </div>
+
         </div>
     </div>
 </main>
