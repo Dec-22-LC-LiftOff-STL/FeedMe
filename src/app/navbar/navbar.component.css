@@ -1,37 +1,47 @@
 .navbar {
-    /* background-color: rgba(107, 107, 116, 0.959); */
-    height: fit-content;
-    overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .navbar a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 40px;
-    margin: 15px 5px 5px;
-  }
-  
-  /* Change the color of links on hover */
-  .navbar a:hover {
-    background-color: rgba(221, 221, 221, 0.247);
-    color: black;
-  }
-  
-  .navbar a.active {
-    background-color: rgba(167, 167, 167, 0.904);
-  }
+  overflow: hidden;
+  max-height: 70px;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 35px;
+  vertical-align: middle;
+  margin: 15px 5px 0px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: rgba(221, 221, 221, 0.247);
+  color: black;
+}
+
+.nav-item:hover {
+  font-weight: bold;
+  height: 90px;
+  width: auto;
+  margin: 20px, 5px, 50px;
+}
+
+.navbar a.active {
+  background-color: rgba(167, 167, 167, 0.904);
+}
 
 .navbar img {
-    height: auto;
-    width: 100px;
-    padding-bottom: -30px;
-    margin: -65px 0px -50px;
-  }
+  height: auto;
+  width: 65px;
+  vertical-align: middle;
+  margin-top: -30px;
+}
 
-  #navPicBox {
-    margin-top: 10px;
-  }
+.navbar-brand:hover {
+  height: auto;
+  width: 100px;
+  vertical-align: middle;
+  padding: 20px;
+}
