@@ -8,7 +8,7 @@ body {
   font-family: "Roboto", sans-serif;
   display: flex;
   /* flex-direction: column; */
-  
+
   align-items: top;
   justify-content: center;
   height: 100vh;
@@ -40,12 +40,12 @@ body {
 #instructions {
   padding-left: 30px;
   justify-content: center;
+  text-align: left;
 }
 
 .container {
   /* This puts all of the */
   width: 1000px;
-  
 }
 
 .wrapper {
@@ -129,18 +129,22 @@ ol > li:before {
 h2 {
   font-size: 30px;
   margin-top: 20px;
- 
- 
 }
 
-#searchBox{
 
-
-  margin-bottom: 200px;
-
-}
-#recipeGenerator{
+#recipeGenerator {
   margin-left: 200px;
+  margin-bottom: 200px;
+  margin-top: 50px;
 }
 
+.container-fluid.px-5 {
+  padding-top: 20px;
 
+ 
+  /* margin-left: 500px; */
+
+}
+#recipeNameBox{ 
+ text-align: center;
+}
