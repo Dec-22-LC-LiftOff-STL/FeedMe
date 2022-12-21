@@ -39,6 +39,7 @@ body {
 
 #instructions{
   padding-left: 30px;
+  justify-content: center;
 }
 
 .container {
@@ -57,7 +58,7 @@ width:1000px;
   border-radius: 5px;
   /* The bellow puts text area and generator button on same page */
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
 }
 
 .wrapper.input{
@@ -101,9 +102,7 @@ textarea {
   font: 32px Arial, sans-serif;
 }
 
-#description{
-  justify-content: center;
-}
+
 
 ol {
   margin-left:0; 
@@ -126,4 +125,9 @@ background:#ccc;
 -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
 border-radius: 10px; 
+}
+
+h2 {
+  font-size: 30px;
+  padding-top: 20px;
 }
