@@ -1,9 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FuncsService } from 'src/app/Services/funcs.service';
 
 @Component({
   selector: 'app-feed-me-now-column',
   templateUrl: './feed-me-now-column.component.html',
-  styleUrls: ['./feed-me-now-column.component.css']
+  styleUrls: ['./feed-me-now-column.component.css'],
+  providers: [FuncsService]
 })
 export class FeedMeNowColumnComponent implements OnInit {
   @Input()
@@ -53,22 +55,27 @@ export class FeedMeNowColumnComponent implements OnInit {
     localStorage.setItem(this.columnName + "Title", this.columnTitle)
   }
 
-  randomize() {
-    // checks to make sure it contains atleast one item
-    if(this.items.length <= 0) {
-      alert("Please add one or more items to your list!");
-    }
-    // checks to make there are no empty fields
-    else {
-      // loops through the array of items to look for any empty values
-      for(let i = 0; i < this.items.length; i++) {
-        if(this.items[i] === "") {
-          alert("Please ensure you have no empty fields!");
-          return;
-        }
-      }
-      // assign a random item using math.random
-      this.randomItem = this.items[Math.floor(Math.random()*this.items.length)];
-    }
+  randomizeColumn = (): void => {
+    this.randomItem = this.fService.randomize(this.items)
   }
+
+  constructor(public fService: FuncsService) {}
+  // randomize() {
+  //   // checks to make sure it contains atleast one item
+  //   if(this.items.length <= 0) {
+  //     alert("Please add one or more items to your list!");
+  //   }
+  //   // checks to make there are no empty fields
+  //   else {
+  //     // loops through the array of items to look for any empty values
+  //     for(let i = 0; i < this.items.length; i++) {
+  //       if(this.items[i] === "") {
+  //         alert("Please ensure you have no empty fields!");
+  //         return;
+  //       }
+  //     }
+  //     // assign a random item using math.random
+  //     this.randomItem = this.items[Math.floor(Math.random()*this.items.length)];
+  //   }
+  // }
 }
