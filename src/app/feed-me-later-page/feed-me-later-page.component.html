@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 <html>
   <!-- Description / Header -->
-<header class="container-fluid">
-  <div class="text-center">
+  <header class="container-fluid">
+    <div class="text-center">
       <h2>
-          Don't mind cooking? Input the ingredients you have in your pantry and we'll generate <br/> 
-          a recipe option for you!
-      </h2>
-  </div>
-</header>
+        Don't mind cooking? Input the ingredients you have in your pantry and
+        we'll generate <br />
+        a recipe option for you!
+        </h2>
+        <div  id="searchBox" class="container">
+          <div>
+            <div id="recipeGenerator" class="wrapper">
+              <textarea
+                placeholder="Enter ingredients here separated by commas..."
+                id="ingredient-textarea"
+              ></textarea>
+              <button type="button" class="btn btn-secondary btn-lg">
+                Generate
+              </button>
+            </div>
+          </div>
+        </div>
+    </div>
+  </header>
   <!-- Description / Header -->
 
   <!-- Search Box and Generate Button -->
-<body >
-  <div id="searchBox"  class="container">
-    <div class="col-xl-12">
-      <div id="recipeGenerator" class="wrapper">
-        <textarea placeholder="Enter ingredients here separated by commas..." id="ingredient-textarea"></textarea>
-        <button type="button" class="btn btn-secondary btn-lg" >Generate</button>
-      </div>
-    </div>
-  <!-- Search Box and Generate Button -->
+  <body>
+    <!-- Search Box and Generate Button -->
 
-
-  <!-- Recipe Image / Name / Instructions -->  
-   <main class="container-fluid px-5" style="padding-top: 20px;">
-    <div class="row">
-      <!-- <img _ngcontent-uwn-c18="" _ngcontent-ueu-c16="" src="/assets/home-page.png" alt="FeedMe Now" style="padding-bottom: 5px;"> -->
+    <!-- Recipe Image / Name / Instructions -->
+    <main class="container-fluid px-5" style="padding-top: 20px">
+      <div class="row">
+        <!-- <img _ngcontent-uwn-c18="" _ngcontent-ueu-c16="" src="/assets/home-page.png" alt="FeedMe Now" style="padding-bottom: 5px;"> -->
         <div class="col-md-6">
-          <img src="/assets/recipe-standin.png" alt="Recipe image" width="300" height="200">
+          <img
+            src="/assets/recipe-standin.png"
+            alt="Recipe image"
+            width="300"
+            height="200"
+          />
           <h1 id="recipeName">Recipe Name</h1>
           <p>Cuisine Type | Prep Time | Cook Time</p>
         </div>
         <div id="instructions" class="col-md-6">
           <h3>Instructions:</h3>
-            <ol>
-              <li>Step 1</li>
-              <li>Step 2</li>
-              <li>Step 3</li>
-              <li>Step 4</li>
-            </ol>
+          <ol>
+            <li>Step 1</li>
+            <li>Step 2</li>
+            <li>Step 3</li>
+            <li>Step 4</li>
+          </ol>
         </div>
-    </div>
-   </main> 
-  <!-- Recipe Image / Name / Instructions -->  
-  </div>
-</body>
+      </div>
+    </main>
+    <!-- Recipe Image / Name / Instructions -->
+  </body>
 </html>
-
-
