@@ -12,16 +12,17 @@ export class FeedMeNowColumnComponent implements OnInit {
   items: string[] = [""];
 
   @Input()
-  columnName: string = "";
+  columnKey: string = "";
+
+  @Input()
+  columnTitle: string = "";
 
   randomItem: string = "";
 
-  columnTitle: string = "";
-
   ngOnInit(): void {
     // get the string from localStorage
-    const str = localStorage.getItem(this.columnName);
-    const title = localStorage.getItem(this.columnName + "Title")
+    const str = localStorage.getItem(this.columnKey);
+    const title = localStorage.getItem(this.columnKey + "Title")
     if(str) {
       // convert string to valid object
       this.items = JSON.parse(str);
@@ -51,8 +52,8 @@ export class FeedMeNowColumnComponent implements OnInit {
     const jsonArr = JSON.stringify(this.items);
 
     // save to localStorage
-    localStorage.setItem(this.columnName, jsonArr);
-    localStorage.setItem(this.columnName + "Title", this.columnTitle)
+    localStorage.setItem(this.columnKey, jsonArr);
+    localStorage.setItem(this.columnKey + "Title", this.columnTitle)
   }
 
   randomizeColumn = (): void => {

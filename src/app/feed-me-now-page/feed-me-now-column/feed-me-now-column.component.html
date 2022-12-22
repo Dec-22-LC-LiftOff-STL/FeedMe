@@ -6,26 +6,25 @@
   placeholder="Enter a Value"
 />
 
-<div class="border rounded">
-  <div
-    class="inputRow"
-    *ngFor="let arrayItem of items; index as i; trackBy: trackByFn"
-  >
-    <input
-      type="text"
-      name="arrayInput{{ columnName }}{{ i }}"
-      [(ngModel)]="items[i]"
-      (ngModelChange)="saveToLocalStorage()"
-      class="form-control border-0 fs-4 text-center"
-      placeholder="Enter a Value"
-    />
-    <button (click)="removeInput(i)" class="feedMeButton button5">x</button>
-  </div>
-  <label>
-    Add more choices!
-    <button (click)="addNewInput()" class="feedMeButton button5">+</button>
-  </label>
-</div>
+    <div class="border rounded" style="background-color: grey; margin-top: 20px">
+        <div class="inputRow" *ngFor="let arrayItem of items; index as i; trackBy: trackByFn">
+            <input type="text" name="arrayInput{{columnKey}}{{i}}"
+            [(ngModel)]="items[i]"
+            (ngModelChange)="saveToLocalStorage()"
+            class="form-control border-0 fs-4 text-center" 
+            style="border: 0px; margin-top: 8px; margin-bottom: 8px;"
+            placeholder="Enter a Value"/>
+            <button (click)="removeInput(i)" class="feedMeButton button5" style="font-size: 20px; font-weight: bolder">
+              x
+            </button>
+          </div>
+          <label>
+            Add more choices!
+            <button (click)="addNewInput()" class="feedMeButton button5" style="font-size: 20px; font-weight: bolder">
+              +
+            </button>
+          </label>
+    </div>
 
 <button (click)="randomizeColumn()" class="btn btn-secondary btn-lg">
   Randomize
