@@ -1,0 +1,36 @@
+h1 {
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+.container-fluid.px-5 {
+  padding-top: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.feedMeNow-img {
+  padding-bottom: 20px;
+}
+
+.h3 {
+  font-size: 30px;
+  color: black;
+}
+
+.feedMeLater-img {
+  padding-bottom: 20px;
+}
+h4 {
+  margin-top: 360px;
+  padding: 45px;
+}
+.h4 {
+  color: black;
+}
+
+#orCircle {
+  max-width: 150px;
+}

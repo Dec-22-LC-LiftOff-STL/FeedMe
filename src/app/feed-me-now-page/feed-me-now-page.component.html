@@ -1,18 +1,24 @@
 <!--Description / Header-->
 <header class="container-fluid">
     <div class="text-center">
-        <h2 style="font-size: 30px; padding-top: 20px">
+        <h2>
             Input what's in your pantry or what restaurants you have a taste for and
-            we'll generate <br />
+            we'll generate <br/>
             an option for you!
         </h2>
     </div>
 </header>
 <!--Description / Header-->
 
-<main class="container-fluid px-5" style="padding-top: 20px">
-    <div>
-        <div class="row text-center">
+<main class="container-fluid px-5">
+  <div>
+    <div class="row text-center">
+      <div class="col-sm p-3 mx-4">
+        <app-feed-me-now-column
+          [items]="items1"
+          columnName="items1Column"
+        ></app-feed-me-now-column>
+      </div>
 
             <div class="col-sm p-3 mx-4" style="margin-top: 100px" *ngFor="let column of columns; index as i;">
                 <app-feed-me-now-column [items]="column.items" [columnKey]="column.columnKey" [columnTitle]="column.columnTitle"></app-feed-me-now-column>
@@ -39,4 +45,5 @@
             </div>
         </div>
     </div>
+  </div>
 </main>

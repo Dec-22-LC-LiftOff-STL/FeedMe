@@ -1,5 +1,10 @@
-    <input type="text" [(ngModel)]="columnTitle" (ngModelChange)="saveToLocalStorage()" class="text-center form-control border-0 fs-2"
-        style="border: 0px; margin: 0 auto; background-color: transparent" placeholder="Enter a Value" />
+<input
+  type="text"
+  [(ngModel)]="columnTitle"
+  (ngModelChange)="saveToLocalStorage()"
+  class="text-center form-control border-0 fs-2"
+  placeholder="Enter a Value"
+/>
 
     <div class="border rounded" style="background-color: grey; margin-top: 20px">
         <div class="inputRow" *ngFor="let arrayItem of items; index as i; trackBy: trackByFn">
@@ -21,11 +26,13 @@
           </label>
     </div>
 
-    <button (click)="randomize()" class="btn btn-secondary btn-lg" style="margin-top: 40px">
-        Randomize
-    </button>
+<button (click)="randomizeColumn()" class="btn btn-secondary btn-lg">
+  Randomize
+</button>
 
-    <input type="text" disabled class="text-center form-control w-25 fs-5" style="
-    margin: 0 auto;
-    background-color: transparent;
-    margin-top: 15px;" [ngModel]="randomItem"/>
+<input
+  type="text"
+  disabled
+  class="text-center form-control w-25 fs-5"
+  [ngModel]="randomItem"
+/>
