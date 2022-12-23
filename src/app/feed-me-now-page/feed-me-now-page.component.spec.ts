@@ -8,9 +8,9 @@ describe('FeedMeNowPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FeedMeNowPageComponent ]
+      declarations: [FeedMeNowPageComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(FeedMeNowPageComponent);
     component = fixture.componentInstance;

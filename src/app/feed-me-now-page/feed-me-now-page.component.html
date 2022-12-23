@@ -1,33 +1,40 @@
 <!--Description / Header-->
 <header class="container-fluid">
     <div class="text-center">
-        <h2 style="font-size: 30px; padding-top: 20px">
+        <h2>
             Input what's in your pantry or what restaurants you have a taste for and
-            we'll generate <br />
+            we'll generate <br/>
             an option for you!
         </h2>
     </div>
 </header>
 <!--Description / Header-->
 
-<main class="container-fluid px-5" style="padding-top: 20px">
-    <div>
-        <div class="row text-center">
-
-            <div class="col-sm p-3 mx-4" style="margin-top: 100px">
-                <app-feed-me-now-column [items]="items1" columnName="items1Column"></app-feed-me-now-column>
-            </div>
-
-            <div class="col-sm" style="max-width: 150px">
-                <h4 class="border border-dark rounded-circle" style="margin-top: 360px; padding: 45px">
-                    OR
-                </h4>
-            </div>
-
-            <div class="col-sm p-3 mx-4" style="margin-top: 100px">
-                <app-feed-me-now-column [items]="items2" columnName="items2Column"></app-feed-me-now-column>
-            </div>
-
+<main class="container-fluid px-5">
+  <div>
+    <div class="row text-center">
+        <div class="col-sm p-3 mx-4" style="margin-top: 100px" *ngFor="let column of columns; index as i;">
+            <app-feed-me-now-column [items]="column.items" [columnKey]="column.columnKey" [columnTitle]="column.columnTitle"></app-feed-me-now-column>
+            <button (click)="removeColumn(i)" class="feedMeButton button5" style="font-size: 20px; font-weight: bolder">
+                x
+            </button>
         </div>
     </div>
+
+    <div class="row text-center bg-light" style="max-width: 600px; margin: 80px auto 0px;">
+      <div class="col-sm p-3 mx-4" style="margin-top: 20px;">
+          <input type="text"
+          [(ngModel)]="newColumnTitle"
+          class="form-control border-0 fs-4 text-center" 
+          style="border: 0px; margin-top: 8px; margin-bottom: 8px;"
+          placeholder="Enter a new Column Name"/>
+          <label>
+          Add a new Column!
+          <button (click)="addNewColumn()" class="feedMeButton button5" style="font-size: 20px; font-weight: bolder">
+          +
+          </button>
+          </label>
+      </div>
+    </div>
+  </div>
 </main>
