@@ -44,3 +44,20 @@
 .navbar-brand:hover {
   width: 120px;
 }
+
+.nav-login {
+  margin-bottom: 20px;
+}
+
+/* Modal styling */
+
+.backdrop{
+  background-color:rgba(0,0,0,0.6);
+  position:flex;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+}
+
+
