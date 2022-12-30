@@ -3,7 +3,7 @@
   [(ngModel)]="columnTitle"
   (ngModelChange)="saveToLocalStorage()"
   class="text-center form-control border-0 fs-2"
-  placeholder="Enter a Value"
+  placeholder="Enter an option"
 />
 
     <div class="border rounded" style="background-color: grey; margin-top: 20px">
@@ -13,7 +13,7 @@
             (ngModelChange)="saveToLocalStorage()"
             class="form-control border-0 fs-4 text-center" 
             style="border: 0px; margin-top: 8px; margin-bottom: 8px;"
-            placeholder="Enter a Value"/>
+            placeholder="Enter an option"/>
             <button (click)="removeInput(i)" class="feedMeButton button5" style="font-size: 20px; font-weight: bolder">
               x
             </button>
@@ -26,9 +26,19 @@
           </label>
     </div>
 
-<button (click)="randomizeColumn()" class="btn btn-secondary btn-lg">
+<button (click)="randomizeColumn()" class="btn btn-secondary btn-lg"> 
   Randomize
 </button>
+
+<button class="toolTip">
+<span class="randomizeTip">
+  <img alt="info icon" src="downloads/info_icon.png" width="15" height="15">
+    <span class="tip">
+      "Randomize" will randomly generate an option each time you click it.
+    </span>
+</span>
+</button>
+
 
 <input
   type="text"

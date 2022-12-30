@@ -66,3 +66,11 @@
   background-color: transparent;
   margin-top: 15px;
 }
+
+button .tip{
+  display: none;
+}
+
+button:hover .tip{
+  display: inline;
+}
