@@ -26,17 +26,12 @@
           </label>
     </div>
 
-<button (click)="randomizeColumn()" class="btn btn-secondary btn-lg"> 
+<button (click)="randomizeColumn()" class="btn btn-secondary btn-lg" title="Click here and your option will appear in the box below."> 
   GENERATE <br/>
-  <span class="tip">
-    Click here and your option will appear in the box below.
-  </span>
 </button>
 
 
-<input
-  type="text"
-  disabled
+<p
   class="text-center form-control w-25 fs-5"
-  [ngModel]="randomItem"
-/>
+  style="border: none;"
+>{{randomItem}}</p>
