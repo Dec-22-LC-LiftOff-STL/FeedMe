@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { FeedMeNowColumnComponent } from './feed-me-now-page/feed-me-now-column/feed-me-now-column.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginSignupComponent } from './navbar/login-signup/login-signup.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FeedMeNowPageComponent,
     FeedMeLaterPageComponent,
     FeedMeNowColumnComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginSignupComponent
   ],
   imports: [
     BrowserModule,
