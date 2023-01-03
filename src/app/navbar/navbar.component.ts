@@ -8,15 +8,4 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 
 export class NavbarComponent {
-
-  display = "none";
- 
-    openModal(){
-      this.display='block';
-  }
-
-  closeModal(){
-    this.display='none';
-  }
-
 }
