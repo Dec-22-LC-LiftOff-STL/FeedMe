@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FuncsService } from 'src/app/services/funcs.service';
+import { FuncsService } from 'src/app/Services/funcs.service';
 
 @Component({
   selector: 'app-feed-me-now-column',
