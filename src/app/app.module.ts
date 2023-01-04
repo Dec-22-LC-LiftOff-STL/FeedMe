@@ -11,6 +11,7 @@ import { FeedMeNowColumnComponent } from './feed-me-now-page/feed-me-now-column/
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginSignupComponent } from './navbar/login-signup/login-signup.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { LoginSignupComponent } from './navbar/login-signup/login-signup.compone
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
