@@ -32,4 +32,8 @@ export class AuthService {
 
         });
     }
+
+    getUserInfo() {
+        return this.http.get<UserInfo>("/api/users");
+    }
 }

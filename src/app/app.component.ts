@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserInfo } from './model/user-info';
+import { AuthService } from './Services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  ngOnInit(): void {
+
+  userInfo: UserInfo;
+
+
+  constructor(private auth: AuthService) {
     
   }
-  title = 'FeedMe';
+
+  ngOnInit(): void {
+    this.auth.getUserInfo().subscribe({
+      next: (data) => {
+        this.userInfo = data;
+      },
+      error: (error) => {
+        
+      }
+    });
+  }
 }

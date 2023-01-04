@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { UserInfo } from 'src/app/model/user-info';
 import { AuthService } from 'src/app/Services/auth.service';
 
@@ -7,7 +7,9 @@ import { AuthService } from 'src/app/Services/auth.service';
   templateUrl: './login-signup.component.html',
   styleUrls: ['./login-signup.component.css']
 })
-export class LoginSignupComponent {
+export class LoginSignupComponent implements OnInit {
+
+  rememberMe = false;
 
   loginUsername = "";
 
@@ -27,7 +29,8 @@ export class LoginSignupComponent {
 
   registerError = "";
 
-  loggedIn = false;
+  @Input()
+  userInfo: UserInfo;
 
   @Output()
   userDataChanged: EventEmitter<UserInfo> = new EventEmitter<UserInfo>();
@@ -38,7 +41,34 @@ export class LoginSignupComponent {
 
   display = "none"; 
   
-  constructor(private auth: AuthService) {};
+  constructor(private auth: AuthService) {}
+
+  ngOnInit(): void {
+    const savedUsername = localStorage.getItem("savedUsername");
+
+    if(savedUsername) {
+      this.rememberMe = true;
+
+      this.loginUsername = savedUsername;
+    }
+  }
+
+  rememberMeChanged(value: boolean) {
+    this.rememberMe = value;
+
+    if(this.rememberMe) {
+      localStorage.setItem("savedUsername", this.loginUsername);
+    } 
+    else {
+      localStorage.removeItem("savedUsername");
+    }
+  }
+
+  loginUsernameChanged(value: string) {
+    if(this.rememberMe) {
+      localStorage.setItem("savedUsername", value);
+    }
+  }
 
   register() {
     this.successMessage = "";
@@ -76,8 +106,8 @@ export class LoginSignupComponent {
     this.auth.login(this.loginUsername, this.loginPassword).subscribe({
       next: (data) => {
         this.successMessage = "Login successful!";
+        this.userInfo = data;
         this.userDataChanged.emit(data);
-        this.loggedIn = true;
         this.closeModal();
       },
       error: (error) => {
@@ -89,7 +119,7 @@ export class LoginSignupComponent {
   logout() {
     this.auth.logout().subscribe({
       next: () => {
-        this.loggedIn = false;
+        this.userInfo = null;
         this.userDataChanged.emit(null);
       }
     });
