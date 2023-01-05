@@ -100,7 +100,7 @@ export class LoginSignupComponent implements OnInit {
       next: (data) => {
         this.successMessage = "Login successful!";
         this.auth.userInfo = data;
-        this.closeModal();
+        location.reload();
       },
       error: (error) => {
         this.loginError = error?.error?.message || "Invalid login credentials";
@@ -112,6 +112,7 @@ export class LoginSignupComponent implements OnInit {
     this.auth.logout().subscribe({
       next: () => {
         this.auth.userInfo = null;
+        location.reload();
       }
     });
   }

@@ -66,7 +66,7 @@ export class FeedMeNowPageComponent implements OnInit {
       else {
         // logged in user save to backend
         if(this.auth.userInfo) {
-          const column: ChoiceColumn = {name: this.newColumnTitle, items: []};
+          const column: ChoiceColumn = {name: this.newColumnTitle, items: [""]};
 
           this.columnService.createColumn(column).subscribe({
             next: data => {
@@ -81,12 +81,22 @@ export class FeedMeNowPageComponent implements OnInit {
           this.saveToLocalStorage();
           this.newColumnTitle = "";
         }
+        this.newColumnTitle = "";
       }
     }
 
     removeColumn(index: number) {
-      this.columns.splice(index, 1);
-      this.saveToLocalStorage();
+      // logged in user delete from backend
+      if(this.auth.userInfo) {
+        const column = this.columns[index];
+        this.columnService.deleteColumn(column.id).subscribe();
+        this.columns.splice(index, 1);
+      }
+      // anonymous user delete from local storage
+      else {
+        this.columns.splice(index, 1);
+        this.saveToLocalStorage();
+      }
     }
 
     saveToLocalStorage() { 
