@@ -21,6 +21,10 @@ export class FeedMeNowColumnComponent implements OnInit {
 
   }
 
+  save() {
+    
+  }
+
   addNewInput() {
     this.column.items.push("");
   }

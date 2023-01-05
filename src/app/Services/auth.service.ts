@@ -8,6 +8,8 @@ import { UserInfo } from '../model/user-info';
 })
 export class AuthService {
 
+    userInfo: UserInfo;
+
     constructor(private http: HttpClient) { 
 
     }
@@ -34,6 +36,13 @@ export class AuthService {
     }
 
     getUserInfo() {
-        return this.http.get<UserInfo>("/api/users");
+        return this.http.get<UserInfo>("/api/users").subscribe({
+            next: (data) => {
+              this.userInfo = data;
+            },
+            error: (error) => {
+              
+            }
+          });
     }
 }

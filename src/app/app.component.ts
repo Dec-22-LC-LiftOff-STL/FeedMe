@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UserInfo } from './model/user-info';
 import { AuthService } from './Services/auth.service';
 
 @Component({
@@ -9,21 +8,11 @@ import { AuthService } from './Services/auth.service';
 })
 export class AppComponent implements OnInit {
 
-  userInfo: UserInfo;
-
-
   constructor(private auth: AuthService) {
     
   }
 
   ngOnInit(): void {
-    this.auth.getUserInfo().subscribe({
-      next: (data) => {
-        this.userInfo = data;
-      },
-      error: (error) => {
-        
-      }
-    });
+    this.auth.getUserInfo();
   }
 }

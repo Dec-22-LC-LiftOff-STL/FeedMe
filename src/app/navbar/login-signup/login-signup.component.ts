@@ -1,5 +1,4 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { UserInfo } from 'src/app/model/user-info';
 import { AuthService } from 'src/app/Services/auth.service';
 
 @Component({
@@ -28,12 +27,6 @@ export class LoginSignupComponent implements OnInit {
   successMessage = "";
 
   registerError = "";
-
-  @Input()
-  userInfo: UserInfo;
-
-  @Output()
-  userDataChanged: EventEmitter<UserInfo> = new EventEmitter<UserInfo>();
 
   @ViewChild("loginLink")
   loginLinkElement: ElementRef<HTMLAnchorElement>;
@@ -106,8 +99,7 @@ export class LoginSignupComponent implements OnInit {
     this.auth.login(this.loginUsername, this.loginPassword).subscribe({
       next: (data) => {
         this.successMessage = "Login successful!";
-        this.userInfo = data;
-        this.userDataChanged.emit(data);
+        this.auth.userInfo = data;
         this.closeModal();
       },
       error: (error) => {
@@ -119,8 +111,7 @@ export class LoginSignupComponent implements OnInit {
   logout() {
     this.auth.logout().subscribe({
       next: () => {
-        this.userInfo = null;
-        this.userDataChanged.emit(null);
+        this.auth.userInfo = null;
       }
     });
   }
@@ -131,5 +122,9 @@ export class LoginSignupComponent implements OnInit {
 
   closeModal(){
     this.display='none';
+  }
+
+  get userInfo() {
+    return this.auth.userInfo;
   }
 }
