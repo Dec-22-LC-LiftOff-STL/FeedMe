@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChoiceColumn } from '../model/choice-columns';
 interface Column {
   items: string[];
 
@@ -13,14 +14,14 @@ interface Column {
   styleUrls: ['./feed-me-now-page.component.css'],
 })
 export class FeedMeNowPageComponent implements OnInit {
-    columns: Column[] = [{
-      items: [""], 
-      columnKey: "items1",
-      columnTitle: "Snacks"
+    columns: ChoiceColumn[] = [{
+      id: 0,
+      name: "Snacks",
+      items: [""]
     }, {
-      items: [""],
-      columnKey: "items2",
-      columnTitle: "Take Out"
+      id: 1,
+      name: "Take Out",
+      items: [""]
     }];
 
     newColumnTitle: string = "";
@@ -31,7 +32,7 @@ export class FeedMeNowPageComponent implements OnInit {
       }
       else {
         let index: number = this.columns.length + 1;
-        this.columns.push({items: [""], columnKey: "items" + index, columnTitle: this.newColumnTitle});
+        this.columns.push({items: [""], id: index, name: this.newColumnTitle});
         this.saveToLocalStorage();
         this.newColumnTitle = "";
       }
