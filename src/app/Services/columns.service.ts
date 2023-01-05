@@ -19,10 +19,10 @@ export class ColumnsService {
     }
 
     updateColumn(choiceColumn: ChoiceColumn) { 
-        return this.http.put<ChoiceColumn>("/api/choiceColumns", choiceColumn);
+        return this.http.put<ChoiceColumn>("/api/choiceColumns/" + choiceColumn.id, choiceColumn);
     }
 
     deleteColumn(id: number) { 
-        return this.http.delete("/api/choiceColumns");
+        return this.http.delete("/api/choiceColumns/" + id);
     }
 }
