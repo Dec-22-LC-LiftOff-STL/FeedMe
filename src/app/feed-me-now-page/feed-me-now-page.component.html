@@ -14,7 +14,7 @@
   <div>
     <div class="row text-center">
         <div class="col-sm p-3 mx-4" style="margin-top: 100px" *ngFor="let column of columns; index as i;">
-            <app-feed-me-now-column [items]="column.items" [columnKey]="column.columnKey" [columnTitle]="column.columnTitle"></app-feed-me-now-column>
+            <app-feed-me-now-column [column]="column" (saveColumn)="saveToLocalStorage()"></app-feed-me-now-column>
             <button *ngIf="i >= 2" (click)="removeColumn(i)" class="feedMeButton button5" style="font-size: 20px; font-weight: bolder">
                 x
             </button>
