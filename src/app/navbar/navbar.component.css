@@ -1,5 +1,5 @@
 nav {
-background-color: #F0A160;
+background-color: #39918C;
 }
 
 .container-fluid{
@@ -18,7 +18,7 @@ background-color: #F0A160;
 /* Style the links inside the navigation bar */
 .navbar a {
   float: left;
-  color:#c6f7df;
+  color: #E4D4C8;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;

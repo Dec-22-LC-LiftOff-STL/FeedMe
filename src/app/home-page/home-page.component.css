@@ -1,6 +1,6 @@
 
 body {
-     background-image: linear-gradient(#c6f7df, #c6dcf7);
+     background-image: linear-gradient(#D0B49F, #AB6B51);
 
          min-height: 100vh;
 }
@@ -42,6 +42,6 @@ h4 {
 }
 
 #FeedMeBtn {
-background-color: #F0A160;
+background-color: #39918C;
 
 }
