@@ -1,3 +1,9 @@
+
+body {
+     background-image: linear-gradient(#c6f7df, #c6dcf7);
+
+         min-height: 100vh;
+}
 h1 {
   font-size: 30px;
   padding-top: 20px;
@@ -33,4 +39,9 @@ h4 {
 
 #orCircle {
   max-width: 150px;
+}
+
+#FeedMeBtn {
+background-color: #F0A160;
+
 }

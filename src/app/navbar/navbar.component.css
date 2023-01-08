@@ -1,14 +1,24 @@
+nav {
+background-color: #F0A160;
+}
+
+.container-fluid{
+
+}
+
 .navbar {
   overflow: hidden;
   max-height: 70px;
   display: flex;
   justify-content: sp;
+
+
 }
 
 /* Style the links inside the navigation bar */
 .navbar a {
   float: left;
-  color: #f2f2f2;
+  color:#c6f7df;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
