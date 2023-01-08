@@ -1,8 +1,8 @@
 
 body {
-     background-image: linear-gradient(#c6f7df, #c6dcf7);
-
-         min-height: 100vh;
+   background-image: url("/assets/fresh-colourful-ingredients-mexican-cuisine.jpg");
+background-size:cover;
+  min-height: 100vh;
 }
 h1 {
   font-size: 30px;
