@@ -29,7 +29,7 @@ background-color: #39918C;
 
 /* Change the color of links on hover */
 .navbar a:hover {
-  background-color: rgba(221, 221, 221, 0.247);
+  background-color:  rgba(221, 221, 221, 0.247);
   color: black;
   font-weight: bolder;
   width: 125%;
