@@ -22,7 +22,7 @@
   background-color: rgba(221, 221, 221, 0.247);
   color: black;
   font-weight: bolder;
-  width: 125%;
+  /* width: 125%; */
   position: relative;
 }
 
@@ -41,9 +41,9 @@
   margin-left: 20px;
 }
 
-.navbar-brand:hover {
+/* .navbar-brand:hover {
   width: 120px;
-}
+} */
 
 .nav-login {
   margin-bottom: 20px;
