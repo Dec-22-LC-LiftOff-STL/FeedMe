@@ -8,12 +8,12 @@
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px; */
-    
+
 
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  background-color: white;
+  background-color:#EAEFF2;
   border: black solid 2px;
   color: Black;
   font-weight: bolder;
@@ -21,8 +21,13 @@
   margin-top: 25px;
   margin-bottom: 15px;
   }
-  
-  
+  body{
+       background-image: linear-gradient(#D0B49F, #AB6B51);
+
+           min-height: 100vh;
+  }
+
+
   .button1 {border-radius: 2px;}
   .button2 {border-radius: 4px;}
   .button3 {border-radius: 8px;}
@@ -35,7 +40,7 @@
     grid-column-gap: 8px;
     max-width: 500px;
     margin: 0 auto;
-    background-color: grey;
+    background-color: #39918C;
   }
 
 h2 {
@@ -47,8 +52,9 @@ main {
 }
 .col-sm.p-3.mx-4 {
   margin-top: 100px;
+    background-color: #39918C;
 }
-/* .col-sm { 
+/* .col-sm {
     max-width: 150px
 } */
 h4 {

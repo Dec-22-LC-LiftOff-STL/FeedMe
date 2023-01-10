@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <!--Description / Header-->
 <header class="container-fluid">
     <div class="text-center">
@@ -21,11 +25,11 @@
         </div>
     </div>
 
-    <div class="row text-center bg-light" style="max-width: 600px; margin: 80px auto 0px;" *ngIf="columns.length <= 5">
+    <div class="row text-center " style="max-width: 600px; margin: 80px auto 0px;" *ngIf="columns.length <= 5">
       <div class="col-sm p-3 mx-4" style="margin-top: 20px;">
           <input type="text"
           [(ngModel)]="newColumnTitle"
-          class="form-control border-0 fs-4 text-center" 
+          class="form-control border-0 fs-4 text-center"
           style="border: 0px; margin-top: 8px; margin-bottom: 8px;"
           placeholder="Enter a new Column Name"/>
           <label>
@@ -38,3 +42,5 @@
     </div>
   </div>
 </main>
+</body>
+</html>

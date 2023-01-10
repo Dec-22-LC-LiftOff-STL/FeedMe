@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+<body>
 <input
   type="text"
   [(ngModel)]="columnTitle"
@@ -6,12 +9,12 @@
   placeholder="Enter an option"
 />
 
-    <div class="border rounded" style="background-color: grey; margin-top: 20px">
+    <div class="border rounded" style="background-color: #EAEFF2; margin-top: 20px">
         <div class="inputRow" *ngFor="let arrayItem of items; index as i; trackBy: trackByFn">
             <input type="text" name="arrayInput{{columnKey}}{{i}}"
             [(ngModel)]="items[i]"
             (ngModelChange)="saveToLocalStorage()"
-            class="form-control border-0 fs-4 text-center" 
+            class="form-control border-0 fs-4 text-center"
             style="border: 0px; margin-top: 8px; margin-bottom: 8px;"
             placeholder="Enter an option"/>
             <button (click)="removeInput(i)" class="feedMeButton button5" style="font-size: 20px; font-weight: bolder">
@@ -26,7 +29,7 @@
           </label>
     </div>
 
-<button (click)="randomizeColumn()" class="btn btn-secondary btn-lg" title="Click here and your option will appear in the box below."> 
+<button (click)="randomizeColumn()" class="btn btn-lg" title="Click here and your option will appear in the box below.">
   GENERATE <br/>
 </button>
 
@@ -35,3 +38,5 @@
   class="text-center form-control w-25 fs-5"
   style="border: none;"
 >{{randomItem}}</p>
+</body>
+</html>
