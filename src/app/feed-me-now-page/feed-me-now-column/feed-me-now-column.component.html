@@ -9,7 +9,7 @@
   placeholder="Enter an option"
 />
 
-    <div class="border rounded" style="background-color: #EAEFF2; margin-top: 20px">
+    <div class="border rounded" style="background-color:#8ce6cb; margin-top: 20px">
         <div class="inputRow" *ngFor="let arrayItem of items; index as i; trackBy: trackByFn">
             <input type="text" name="arrayInput{{columnKey}}{{i}}"
             [(ngModel)]="items[i]"

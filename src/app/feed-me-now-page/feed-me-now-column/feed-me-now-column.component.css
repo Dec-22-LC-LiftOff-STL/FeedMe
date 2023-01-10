@@ -10,7 +10,9 @@
   margin-top: 25px;
   margin-bottom: 15px;
 }
-
+body{
+ background-color: #8ce6cb;
+}
 
 .button1 {
   border-radius: 2px;
