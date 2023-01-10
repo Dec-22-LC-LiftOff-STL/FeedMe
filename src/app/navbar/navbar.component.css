@@ -2,7 +2,7 @@
   overflow: hidden;
   max-height: 70px;
   display: flex;
-  justify-content: sp;
+  justify-content:flex-start;
 }
 
 /* Style the links inside the navigation bar */
@@ -10,20 +10,18 @@
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10x;
   text-decoration: none;
-  font-size: 35px;
-  vertical-align: bottom;
-  margin: 15px 5px 0px;
+  font-size: 45px;
+  vertical-align: middle;
 }
 
 /* Change the color of links on hover */
 .navbar a:hover {
-  background-color: rgba(221, 221, 221, 0.247);
-  color: black;
-  font-weight: bolder;
-  /* width: 125%; */
+  color: rgba(221, 221, 221, 0.164);
+  /* color: black; */
   position: relative;
+  text-decoration: underline;
 }
 
 .navbar a.active {
@@ -32,18 +30,9 @@
 
 .navbar img {
   height: auto;
-  width: 65px;
+  max-width: 70px;
   vertical-align: top;
-  margin: 0px -40px 15px -40px;
 }
-
-.navbar-brand {
-  margin-left: 20px;
-}
-
-/* .navbar-brand:hover {
-  width: 120px;
-} */
 
 .nav-login {
   margin-bottom: 20px;
