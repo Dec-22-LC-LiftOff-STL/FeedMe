@@ -18,11 +18,27 @@ background-color: #EA9B7A;
     background-color: #000;
   }
 
+  #pills-home-tab{
+    background-color:  #EA9B7A;
+  }
 
+  #pills-profile-tab{
+    background-color:#FFCBA4;
+  }
+
+  #modalLogin{
+    background-color: #FFCBA4;
+  }
+  #modalSignUp{
+    background-color: #FFCBA4;
+  }
+ 
   .card{
-
+background-color: #39918C;
     width: 400px;
     border:none;
+    margin-bottom: 100px;
+  
 
   }
 
