@@ -29,15 +29,16 @@ background-color: #39918C;
 
 /* Change the color of links on hover */
 .navbar a:hover {
-  background-color:  rgba(221, 221, 221, 0.247);
+  background-color:#EA9B7A;
   color: black;
-  font-weight: bolder;
-  width: 125%;
+  font-weight: bold;
+  width: 100%;
   position: relative;
 }
 
 .navbar a.active {
-  background-color: rgba(167, 167, 167, 0.904);
+  background-color:#D0B49F;
+  color: black;
 }
 
 .navbar img {
