@@ -9,21 +9,21 @@
   placeholder="Enter an option"
 />
 
-    <div class="border rounded" style="background-color:#8ce6cb; margin-top: 20px">
+    <div class="border rounded" style="background-color:#8ce6cb; margin-top: 20px;">
         <div class="inputRow" *ngFor="let arrayItem of items; index as i; trackBy: trackByFn">
             <input type="text" name="arrayInput{{columnKey}}{{i}}"
             [(ngModel)]="items[i]"
             (ngModelChange)="saveToLocalStorage()"
             class="form-control border-0 fs-4 text-center"
-            style="border: 0px; margin-top: 8px; margin-bottom: 8px;"
+            
             placeholder="Enter an option"/>
-            <button (click)="removeInput(i)" class="feedMeButton button5" style="font-size: 20px; font-weight: bolder">
-              x
+            <button (click)="removeInput(i)" class="feedMeButton button5" >
+              X
             </button>
           </div>
           <label>
             Add more choices!
-            <button (click)="addNewInput()" class="feedMeButton button5" style="font-size: 20px; font-weight: bolder">
+            <button (click)="addNewInput()" class="feedMeButton button4" >
               +
             </button>
           </label>
@@ -36,7 +36,8 @@
 
 <p
   class="text-center form-control w-25 fs-5"
-  style="border: none;"
+  style="border: none; background-color: antiquewhite;"
 >{{randomItem}}</p>
+
 </body>
 </html>

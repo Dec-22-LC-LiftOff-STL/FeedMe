@@ -13,6 +13,11 @@
 body{
  background-color: #8ce6cb;
 }
+.form-control.border-0.fs-4.text-center{
+  border: 10px; 
+  margin-top: 8px; 
+  margin-bottom: 8px;
+}
 
 .button1 {
   border-radius: 2px;
@@ -24,12 +29,31 @@ body{
   border-radius: 8px;
 }
 .button4 {
-  border-radius: 12px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color:#EAEFF2;
+  border: black solid 2px;
+  color: Black;
+  font-weight:900;
+  font-size: 25px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+ 
 }
 .button5 {
   border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color:#EAEFF2;
+  border: black solid 2px;
+  color: Black;
+  font-weight:900;
+  font-size: 25px;
+  margin-top: 25px;
+  margin-bottom: 15px;
 }
-.btn,btn-lg{
+.btn.btn-lg{
   background-color: #EAEFF2;
 }
 
@@ -39,7 +63,7 @@ body{
   grid-column-gap: 8px;
   max-width: 500px;
   margin: 0 auto;
-  background-color: white;
+  background-color: #8ce6cb;
 }
 
 .text-center.form-control.border-0.fs-2 {

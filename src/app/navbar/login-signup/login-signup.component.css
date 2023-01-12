@@ -18,6 +18,11 @@ background-color: #EA9B7A;
     background-color: #000;
   }
 
+  .btn{
+    max-width: 250px; 
+    margin-left: auto;
+  }
+
   #pills-home-tab{
     background-color:  #EA9B7A;
   }
