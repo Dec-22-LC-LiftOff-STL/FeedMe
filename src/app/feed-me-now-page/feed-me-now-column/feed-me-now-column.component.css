@@ -12,13 +12,12 @@
 }
 body{
  background-color: #8ce6cb;
-}
-.form-control.border-0.fs-4.text-center{
-  border: 10px; 
-  margin-top: 8px; 
-  margin-bottom: 8px;
-}
 
+
+}
+#randomItem{
+  margin: auto; border-radius: 30px; border-width: 10px; border-color :  #8ce6cb; background-color: antiquewhite; height: 70px; 
+}
 .button1 {
   border-radius: 2px;
 }
@@ -72,10 +71,7 @@ body{
   background-color: transparent;
 }
 
-.border.rounded {
-  background-color: grey;
-  margin-top: 20px;
-}
+
 .form-control.border-0.fs-4.text-center {
   border: 0px;
   margin-top: 8px;
