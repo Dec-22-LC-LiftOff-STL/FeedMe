@@ -18,7 +18,7 @@ body{
 
 }
 #randomizedItem{
-  margin: auto; border-radius: 30px; border-width: 10px; border-color :  #8ce6cb; background-color: antiquewhite; height: 70px; 
+margin: auto; border-radius: 30px; border-width: 10px; border-color :  #8ce6cb; background-color: antiquewhite; height: 70px; 
 }
 .button1 {
   border-radius: 2px;
@@ -30,19 +30,16 @@ body{
   border-radius: 8px;
 }
 .button4 {
-  
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  background-color:#EAEFF2;
-  border: black solid 2px;
-  color: Black;
-  font-weight:900;
-  font-size: 25px;
-  margin-top: 25px;
-  margin-bottom: 15px;
-  
- 
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color:#EAEFF2;
+    border: black solid 2px;
+    color: Black;
+    font-weight:900;
+    font-size: 25px;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
 .button5 {
   border-radius: 50%;
@@ -58,6 +55,7 @@ body{
 }
 .btn.btn-lg{
   background-color: #EAEFF2;
+  margin-bottom: 20px;
 }
 
 .inputRow {
