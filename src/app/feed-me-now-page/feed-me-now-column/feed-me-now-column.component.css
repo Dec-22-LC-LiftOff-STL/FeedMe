@@ -2,7 +2,7 @@
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  background-color: white;
+  background-color: #EAEFF2;
   border: black solid 2px;
   color: Black;
   font-weight: bolder;
@@ -10,7 +10,16 @@
   margin-top: 25px;
   margin-bottom: 15px;
 }
+body{
+ background-color: #8ce6cb;
+ border-radius: 30px;
 
+
+
+}
+#randomizedItem{
+  margin: auto; border-radius: 30px; border-width: 10px; border-color :  #8ce6cb; background-color: antiquewhite; height: 70px; 
+}
 .button1 {
   border-radius: 2px;
 }
@@ -21,10 +30,34 @@
   border-radius: 8px;
 }
 .button4 {
-  border-radius: 12px;
+  
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color:#EAEFF2;
+  border: black solid 2px;
+  color: Black;
+  font-weight:900;
+  font-size: 25px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  
+ 
 }
 .button5 {
   border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color:#EAEFF2;
+  border: black solid 2px;
+  color: Black;
+  font-weight:900;
+  font-size: 25px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.btn.btn-lg{
+  background-color: #EAEFF2;
 }
 
 .inputRow {
@@ -33,7 +66,7 @@
   grid-column-gap: 8px;
   max-width: 500px;
   margin: 0 auto;
-  background-color: grey;
+  background-color: #8ce6cb;
 }
 
 .text-center.form-control.border-0.fs-2 {
@@ -42,10 +75,7 @@
   background-color: transparent;
 }
 
-.border.rounded {
-  background-color: grey;
-  margin-top: 20px;
-}
+
 .form-control.border-0.fs-4.text-center {
   border: 0px;
   margin-top: 8px;

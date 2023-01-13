@@ -8,12 +8,12 @@
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px; */
-    
+
 
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  background-color: white;
+  background-color:#EAEFF2;
   border: black solid 2px;
   color: Black;
   font-weight: bolder;
@@ -21,13 +21,44 @@
   margin-top: 25px;
   margin-bottom: 15px;
   }
-  
-  
+.form-control{
+border: 0px;
+ margin-top: 8px; 
+margin-bottom: 8px;
+}
+
+
+body {
+       background-image: url("/assets/fresh-colourful-ingredients-mexican-cuisine.jpg");
+background-color: #AB6B51;
+background-size:cover;
+  min-height: 100vh;
+ background-blend-mode: overlay;
+
+}
+#addNewColumn{
+  font-size: 25px;
+}
+#addNewColumnId{
+  max-width: 600px;
+  margin: 80px auto 0px;
+}
+
   .button1 {border-radius: 2px;}
   .button2 {border-radius: 4px;}
   .button3 {border-radius: 8px;}
   .button4 {border-radius: 12px;}
-  .button5 {border-radius: 50%;}
+  .button5 {  border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color:#EAEFF2;
+    border: black solid 2px;
+    color: Black;
+    font-weight:900;
+    font-size: 25px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+   }
 
   .inputRow {
     display: grid;
@@ -35,7 +66,7 @@
     grid-column-gap: 8px;
     max-width: 500px;
     margin: 0 auto;
-    background-color: grey;
+    background-color: #39918C;
   }
 
 h2 {
@@ -47,8 +78,10 @@ main {
 }
 .col-sm.p-3.mx-4 {
   margin-top: 100px;
+    background-color: #39918C;
+
 }
-/* .col-sm { 
+/* .col-sm {
     max-width: 150px
 } */
 h4 {

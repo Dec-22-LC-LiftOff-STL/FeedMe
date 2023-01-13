@@ -1,12 +1,16 @@
+
 <button type="button" class="btn btn-info btn-lg" (click)="openModal()" *ngIf="!userInfo; else logoutButton">Login/Register</button>
 <ng-template #logoutButton>
     <button type="button" class="btn btn-info btn-lg" (click)="logout()">Logout</button>
 </ng-template>
 
+
 <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
     <div class="modal-dialog" role="dialog">
         <div class="modal-content">
+
             <button type="button" class="btn btn-lg closeButton" (click)="closeModal()">x</button>
+
             <div class="d-flex justify-content-center align-items-center mt-5">
 
                 <div class="card">
@@ -31,11 +35,19 @@
                                     <p class="formSuccess">{{successMessage}}</p>
                                 </div>
 
+
+                                <input type="text" name="" class="form-control" placeholder="Email Address">
+
                                 <p class="formError" *ngIf="loginError">{{loginError}}</p>
+
 
                                 <input type="text" name="loginUsername" class="form-control" placeholder="Username" [(ngModel)]="loginUsername" (ngModelChange)="loginUsernameChanged($event)">
 
+
+                                <button id = "modalLogin" class="btn btn-block">Login</button>
+
                                 <input type="password" name="loginPassword" class="form-control" placeholder="Password" [(ngModel)]="loginPassword">
+
 
                                 <div class="form-group form-check">
                                     <label class="form-check-label">
@@ -55,6 +67,9 @@
                                 
                                 <input type="text" name="registerUsername" class="form-control" placeholder="Username" [(ngModel)]="registerUsername">
 
+
+                                <button id = "modalSignUp" class="btn btn-block">Signup</button>
+
                                 <input type="email" name="registerEmail" class="form-control" placeholder="Email" [(ngModel)]="registerEmail">
 
                                 <input type="password" name="registerPassword" class="form-control" placeholder="Password" [(ngModel)]="registerPassword">
@@ -62,6 +77,7 @@
                                 <input type="password" name="registerConfirmPassword" class="form-control" placeholder="Confirm Password" [(ngModel)]="registerConfirmPassword">
 
                                 <button class="btn btn-dark btn-block" (click)="register()">Register</button>
+
 
                             </div>
                         </div>
