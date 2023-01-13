@@ -21,6 +21,11 @@
   margin-top: 25px;
   margin-bottom: 15px;
   }
+.form-control{
+border: 0px;
+ margin-top: 8px; 
+margin-bottom: 8px;
+}
 
 
 body {
@@ -33,6 +38,10 @@ background-size:cover;
 }
 #addNewColumn{
   font-size: 25px;
+}
+#addNewColumnId{
+  max-width: 600px;
+  margin: 80px auto 0px;
 }
 
   .button1 {border-radius: 2px;}
@@ -70,6 +79,7 @@ main {
 .col-sm.p-3.mx-4 {
   margin-top: 100px;
     background-color: #39918C;
+
 }
 /* .col-sm {
     max-width: 150px
