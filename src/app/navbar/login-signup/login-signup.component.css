@@ -9,6 +9,15 @@
     height:100vh;
 
   }
+  #pills-home-tab{
+  text-decoration: none;
+  font-weight: 700;
+  }
+
+  #pills-profile-tab{
+ text-decoration: none;
+ font-weight: 700;
+  }
 #signUpLoginBtn{
 background-color: #EA9B7A;
  font-weight: bold;
@@ -17,18 +26,35 @@ background-color: #EA9B7A;
 
     background-color: #000;
   }
+  #signUpLogin{
+color: aliceblue;
 
+  }
   .btn{
     max-width: 250px; 
     margin-left: auto;
   }
 
   #pills-home-tab{
+    background-color:  #FFCBA4;
+    color:  #327b77;
+    font-weight: 500;
+  }
+  #pills-home-tab.active{
     background-color:  #EA9B7A;
+    color: #000;
+    font-weight: 900;
   }
 
   #pills-profile-tab{
     background-color:#FFCBA4;
+    color: #327b77;
+    font-weight: 500;
+  }
+  #pills-profile-tab.active{
+    background-color:  #EA9B7A;
+    color: #000;
+    font-weight: 900;
   }
 
   #modalLogin{

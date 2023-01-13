@@ -12,6 +12,8 @@
 }
 body{
  background-color: #8ce6cb;
+ border-radius: 30px;
+
 
 
 }
@@ -28,6 +30,7 @@ body{
   border-radius: 8px;
 }
 .button4 {
+  
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -38,6 +41,7 @@ body{
   font-size: 25px;
   margin-top: 25px;
   margin-bottom: 15px;
+  
  
 }
 .button5 {
