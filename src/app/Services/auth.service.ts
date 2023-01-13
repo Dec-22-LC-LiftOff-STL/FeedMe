@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { lastValueFrom } from 'rxjs';
 import { MessageResponse } from '../model/message-response';
 import { UserInfo } from '../model/user-info';
 
@@ -7,6 +8,8 @@ import { UserInfo } from '../model/user-info';
   providedIn: 'root'
 })
 export class AuthService {
+
+    userInfo: UserInfo;
 
     constructor(private http: HttpClient) { 
 
@@ -33,7 +36,12 @@ export class AuthService {
         });
     }
 
-    getUserInfo() {
-        return this.http.get<UserInfo>("/api/users");
+    async getUserInfo() {
+        try {
+            this.userInfo = await lastValueFrom(this.http.get<UserInfo>("/api/users"));
+        }
+        catch(e) {
+            this.userInfo = null;
+        }
     }
 }

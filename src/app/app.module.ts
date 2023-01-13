@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +12,11 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginSignupComponent } from './navbar/login-signup/login-signup.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './Services/auth.service';
 
+function initializeApp(authService: AuthService): () => Promise<void> {
+    return () => authService.getUserInfo();
+}
 
 @NgModule({
   declarations: [
@@ -31,7 +35,12 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: APP_INITIALIZER,
+    useFactory: initializeApp,
+    deps: [AuthService],
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

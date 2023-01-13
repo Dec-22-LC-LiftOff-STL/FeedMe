@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ChoiceColumn } from '../model/choice-columns';
+import { AuthService } from '../Services/auth.service';
+import { ColumnsService } from '../Services/columns.service';
 interface Column {
   items: string[];
 
@@ -13,33 +16,87 @@ interface Column {
   styleUrls: ['./feed-me-now-page.component.css'],
 })
 export class FeedMeNowPageComponent implements OnInit {
-    columns: Column[] = [{
-      items: [""], 
-      columnKey: "items1",
-      columnTitle: "Snacks"
+    columns: ChoiceColumn[] = [{
+      name: "Snacks",
+      items: [""]
     }, {
-      items: [""],
-      columnKey: "items2",
-      columnTitle: "Take Out"
+      name: "Take Out",
+      items: [""]
     }];
 
     newColumnTitle: string = "";
+
+    constructor(private columnService: ColumnsService, private auth: AuthService) {}
+
+    ngOnInit(): void {
+      // logged in user retrieve from backend
+      if(this.auth.userInfo) {
+        this.columnService.getColumns().subscribe({
+          next: data => {
+            if(data?.length) {
+              this.columns = data;
+            }
+            else {
+              for(const column of this.columns){
+                this.columnService.createColumn(column).subscribe({
+                  next: columnData => {
+                    column.id = columnData.id;
+                  }
+                });
+              }
+            }
+          }
+        });
+      }
+      // anonymous user retrieve from local storage
+      else {
+        // get the string from localStorage
+        const str = localStorage.getItem("column");
+        if(str) {
+          // convert string to valid object
+          this.columns = JSON.parse(str);
+        }
+      }
+    }
 
     addNewColumn() {
       if(this.newColumnTitle === "") {
         alert("New column needs a name!");
       }
       else {
-        let index: number = this.columns.length + 1;
-        this.columns.push({items: [""], columnKey: "items" + index, columnTitle: this.newColumnTitle});
-        this.saveToLocalStorage();
+        // logged in user save to backend
+        if(this.auth.userInfo) {
+          const column: ChoiceColumn = {name: this.newColumnTitle, items: [""]};
+
+          this.columnService.createColumn(column).subscribe({
+            next: data => {
+              this.columns.push(data);
+            }
+          });
+        }
+        // anonymous user save to local storage
+        else {
+          let index: number = this.columns.length + 1;
+          this.columns.push({items: [""], id: index, name: this.newColumnTitle});
+          this.saveToLocalStorage();
+          this.newColumnTitle = "";
+        }
         this.newColumnTitle = "";
       }
     }
 
     removeColumn(index: number) {
-      this.columns.splice(index, 1);
-      this.saveToLocalStorage();
+      // logged in user delete from backend
+      if(this.auth.userInfo) {
+        const column = this.columns[index];
+        this.columnService.deleteColumn(column.id).subscribe();
+        this.columns.splice(index, 1);
+      }
+      // anonymous user delete from local storage
+      else {
+        this.columns.splice(index, 1);
+        this.saveToLocalStorage();
+      }
     }
 
     saveToLocalStorage() { 
@@ -48,14 +105,5 @@ export class FeedMeNowPageComponent implements OnInit {
   
       // save to localStorage
       localStorage.setItem("column", jsonArr);
-    }
-
-    ngOnInit(): void {
-      // get the string from localStorage
-      const str = localStorage.getItem("column");
-      if(str) {
-        // convert string to valid object
-        this.columns = JSON.parse(str);
-      }
     }
 }
