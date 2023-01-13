@@ -142,3 +142,21 @@ background-color: #39918C;
 
     margin-top: 20px;
   }
+
+  .formError {
+    font-weight: bold;
+    color: darkred;
+    text-align: center;
+  }
+
+  .formSuccess {
+    font-weight: bold;
+    color: darkgreen;
+    text-align: center;
+  }
+
+  .closeButton {
+    max-width: 50px; 
+    margin-left: auto;
+  }
+

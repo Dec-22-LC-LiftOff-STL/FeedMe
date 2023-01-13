@@ -1,5 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FuncsService } from 'src/app/services/funcs.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChoiceColumn } from 'src/app/model/choice-columns';
+import { AuthService } from 'src/app/Services/auth.service';
+import { ColumnsService } from 'src/app/Services/columns.service';
+import { FuncsService } from 'src/app/Services/funcs.service';
 
 @Component({
   selector: 'app-feed-me-now-column',
@@ -8,38 +11,40 @@ import { FuncsService } from 'src/app/services/funcs.service';
   providers: [FuncsService]
 })
 export class FeedMeNowColumnComponent implements OnInit {
-  @Input()
-  items: string[] = [""];
 
   @Input()
-  columnKey: string = "";
+  column: ChoiceColumn = {name: "", items: []};
 
-  @Input()
-  columnTitle: string = "";
+  @Output() 
+  saveColumn: EventEmitter<ChoiceColumn> = new EventEmitter<ChoiceColumn>();
 
   randomItem: string = "";
 
+  constructor(public fService: FuncsService, private auth: AuthService, private columnService: ColumnsService) {}
+
   ngOnInit(): void {
-    // get the string from localStorage
-    const str = localStorage.getItem(this.columnKey);
-    const title = localStorage.getItem(this.columnKey + "Title")
-    if(str) {
-      // convert string to valid object
-      this.items = JSON.parse(str);
+
+  }
+
+  save() {
+    // logged in user save to backend
+    if(this.auth.userInfo) {
+      this.columnService.updateColumn(this.column).subscribe();
     }
-    if(title) {
-      this.columnTitle = title;
+    // anonymous user save to local storage
+    else {
+      this.saveColumn.emit(this.column);
     }
   }
 
   addNewInput() {
-    this.items.push("");
-    this.saveToLocalStorage();
+    this.column.items.push("");
+    this.save();
   }
 
   removeInput(index: number) {
-    this.items.splice(index, 1);
-    this.saveToLocalStorage();
+    this.column.items.splice(index, 1);
+    this.save();
   }
 
   // This prevents the app from re-rendering the list of input fields when they are typed in
@@ -47,36 +52,7 @@ export class FeedMeNowColumnComponent implements OnInit {
     return index;
   }
 
-  saveToLocalStorage() { 
-    // convert array to JSON string using JSON.stringify() 
-    const jsonArr = JSON.stringify(this.items);
-
-    // save to localStorage
-    localStorage.setItem(this.columnKey, jsonArr);
-    localStorage.setItem(this.columnKey + "Title", this.columnTitle)
-  }
-
   randomizeColumn = (): void => {
-    this.randomItem = this.fService.randomize(this.items)
+    this.randomItem = this.fService.randomize(this.column.items);
   }
-
-  constructor(public fService: FuncsService) {}
-  // randomize() {
-  //   // checks to make sure it contains atleast one item
-  //   if(this.items.length <= 0) {
-  //     alert("Please add one or more items to your list!");
-  //   }
-  //   // checks to make there are no empty fields
-  //   else {
-  //     // loops through the array of items to look for any empty values
-  //     for(let i = 0; i < this.items.length; i++) {
-  //       if(this.items[i] === "") {
-  //         alert("Please ensure you have no empty fields!");
-  //         return;
-  //       }
-  //     }
-  //     // assign a random item using math.random
-  //     this.randomItem = this.items[Math.floor(Math.random()*this.items.length)];
-  //   }
-  // }
 }

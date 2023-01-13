@@ -3,11 +3,12 @@
 <body>
 <input
   type="text"
-  [(ngModel)]="columnTitle"
-  (ngModelChange)="saveToLocalStorage()"
+  [(ngModel)]="column.name"
   class="text-center form-control border-0 fs-2"
   placeholder="Enter an option"
+  (blur)="save()"
 />
+
 
     <div  class="border border-0">
         <div class="inputRow" *ngFor="let arrayItem of items; index as i; trackBy: trackByFn">
@@ -19,7 +20,7 @@
             placeholder="Enter an option"/>
             <button (click)="removeInput(i)" class="feedMeButton button5" >
               X
-            </button>
+          </button>
           </div>
           <label>
             Add more choices!
