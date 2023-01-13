@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-info btn-lg" (click)="openModal()" *ngIf="!userInfo; else logoutButton">Login/Register</button>
+<button type="button" id="signUpLoginBtn" class="btn btn-info btn-lg" (click)="openModal()" *ngIf="!userInfo; else logoutButton">Login/Register</button>
 <ng-template #logoutButton>
     <button type="button" class="btn btn-info btn-lg" (click)="logout()">Logout</button>
 </ng-template>
@@ -42,7 +42,7 @@
                                       <input class="form-check-input" type="checkbox" name="remember" [ngModel]="rememberMe" (ngModelChange)="rememberMeChanged($event)"> Remember me
                                     </label>
                                 </div>
-                                <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+                                <button type="submit" id="cardBtn" class="btn" (click)="login()">Login</button>
                             </div>
                         </div>
 
@@ -61,7 +61,7 @@
 
                                 <input type="password" name="registerConfirmPassword" class="form-control" placeholder="Confirm Password" [(ngModel)]="registerConfirmPassword">
 
-                                <button class="btn btn-dark btn-block" (click)="register()">Register</button>
+                                <button  id="cardBtn" class="btn btn-block" (click)="register()">Register</button>
 
                             </div>
                         </div>
