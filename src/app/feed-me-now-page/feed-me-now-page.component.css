@@ -60,6 +60,7 @@ background-size:cover;
     margin-bottom: 15px;
    }
 
+
   .inputRow {
     display: grid;
     grid-template-columns: 1fr auto;
