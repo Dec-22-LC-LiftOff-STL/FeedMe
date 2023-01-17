@@ -1,37 +1,39 @@
+<body>
 <input
   type="text"
-  [(ngModel)]="columnTitle"
-  (ngModelChange)="saveToLocalStorage()"
+  [(ngModel)]="column.name"
   class="text-center form-control border-0 fs-2"
-  placeholder="Enter an option"
+  placeholder="Enter a snack or restaurant choice"
+  (blur)="save()"
 />
 
-    <div class="border rounded" style="background-color: grey; margin-top: 20px">
-        <div class="inputRow" *ngFor="let arrayItem of items; index as i; trackBy: trackByFn">
-            <input type="text" name="arrayInput{{columnKey}}{{i}}"
-            [(ngModel)]="items[i]"
-            (ngModelChange)="saveToLocalStorage()"
+    <div class="border border-0">
+        <div class="inputRow" *ngFor="let arrayItem of column.items; index as i; trackBy: trackByFn">
+            <input type="text" name="arrayInput{{column.name}}{{i}}"
+            [(ngModel)]="column.items[i]"
             class="form-control border-0 fs-4 text-center" 
             style="border: 0px; margin-top: 8px; margin-bottom: 8px;"
-            placeholder="Enter an option"/>
+            placeholder="Enter an option"
+            (blur)="save()"/>
             <button (click)="removeInput(i)" class="feedMeButton button5" style="font-size: 20px; font-weight: bolder">
               x
             </button>
           </div>
           <label>
             Add more choices!
-            <button (click)="addNewInput()" class="feedMeButton button5" style="font-size: 20px; font-weight: bolder">
+            <button (click)="addNewInput()" class="feedMeButton button4">
               +
             </button>
           </label>
     </div>
 
-<button (click)="randomizeColumn()" class="btn btn-secondary btn-lg" title="Click here and your option will appear in the box below."> 
+<button (click)="randomizeColumn()" class="btn btn-lg" title="Click here and your option will appear in the box below."> 
   GENERATE <br/>
 </button>
 
 
-<p
-  class="text-center form-control w-25 fs-5"
-  style="border: none;"
->{{randomItem}}</p>
+
+
+<p id="randomizedItem"
+  class="text-center form-control w-50 fs-5">{{randomItem}}</p>
+</body>

@@ -1,14 +1,25 @@
+nav {
+background-color: #39918C;
+}
+
+
+
 .navbar {
   overflow: hidden;
   max-height: 70px;
   display: flex;
   justify-content: sp;
+
+
+}
+#navBtn{
+margin: 20px 20px;
 }
 
 /* Style the links inside the navigation bar */
 .navbar a {
   float: left;
-  color: #f2f2f2;
+  color: #E4D4C8;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -19,15 +30,16 @@
 
 /* Change the color of links on hover */
 .navbar a:hover {
-  background-color: rgba(221, 221, 221, 0.247);
+  background-color:#EA9B7A;
   color: black;
-  font-weight: bolder;
-  width: 125%;
+  font-weight: bold;
+  width: 100%;
   position: relative;
 }
 
 .navbar a.active {
-  background-color: rgba(167, 167, 167, 0.904);
+  background-color:#D0B49F;
+  color: black;
 }
 
 .navbar img {

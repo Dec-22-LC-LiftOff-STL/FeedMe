@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-navbar',
@@ -8,4 +8,5 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 
 export class NavbarComponent {
+
 }

@@ -1,7 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <!--Description / Header-->
 <header class="container-fluid">
     <div class="text-center">
-        <h2>
+        <h2   style= "font-family:Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif; font-size: 50px;">
             Input what's in your pantry or what restaurants you have a taste for and
             we'll generate <br/>
             an option for you!
@@ -13,24 +17,26 @@
 <main class="container-fluid px-5">
   <div>
     <div class="row text-center">
-        <div class="col-sm p-3 mx-4" style="margin-top: 100px" *ngFor="let column of columns; index as i;">
-            <app-feed-me-now-column [items]="column.items" [columnKey]="column.columnKey" [columnTitle]="column.columnTitle"></app-feed-me-now-column>
-            <button *ngIf="i >= 2" (click)="removeColumn(i)" class="feedMeButton button5" style="font-size: 20px; font-weight: bolder">
-                x
+
+        <div class="col-sm p-3 mx-4"  *ngFor="let column of columns; index as i;">
+              <app-feed-me-now-column [column]="column" (saveColumn)="saveToLocalStorage()"></app-feed-me-now-column>
+            <button *ngIf="i >= 2" (click)="removeColumn(i)" class="feedMeButton button5">
+                X
+
             </button>
         </div>
     </div>
 
-    <div class="row text-center bg-light" style="max-width: 600px; margin: 80px auto 0px;" *ngIf="columns.length <= 5">
-      <div class="col-sm p-3 mx-4" style="margin-top: 20px;">
+    <div class="row text-center " id="addNewColumnId"  *ngIf="columns.length <= 5">
+      <div class="col-sm p-3 mx-4">
           <input type="text"
           [(ngModel)]="newColumnTitle"
-          class="form-control border-0 fs-4 text-center" 
-          style="border: 0px; margin-top: 8px; margin-bottom: 8px;"
+          class="form-control border-0 fs-4 text-center"
+        
           placeholder="Enter a new Column Name"/>
-          <label>
+          <label id="addNewColumn">
           Add a new Column!
-          <button (click)="addNewColumn()" class="feedMeButton button5" style="font-size: 20px; font-weight: bolder">
+          <button (click)="addNewColumn()" class="feedMeButton button5">
           +
           </button>
           </label>
@@ -38,3 +44,5 @@
     </div>
   </div>
 </main>
+</body>
+</html>
