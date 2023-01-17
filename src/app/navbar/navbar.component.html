@@ -1,22 +1,30 @@
-
 <nav class="navbar navbar-expand-sm fixed-top">
   <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+      <img class="rounded-circle" src="../../assets/NavbarPic.png">
+    </a>
     <ul class="navbar-nav navbar-light">
-      <li class="navbar-brand">
-        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-          <img class="rounded-circle" src="../../assets/NavbarPic.png">
-        </a>
-      </li>
-      <div id="navBtn" ></div>
-      <li class="nav-link">
-        <a routerLink="/feed-me-now" routerLinkActive="active">FeedMe Now</a>
-      </li>
       <!-- <div style="margin: 20px 20px;"></div> -->
       <!-- <li class="nav-link">
         <a routerLink="/feed-me-later" routerLinkActive="active">FeedMe Later</a>
       </li> -->
-    </ul>
-    <ul class="navbar-nav navbar-light">
+      
+      <li class="nav-dropdown">
+        <div class="btn-group">
+          <button type="button" class="" routerLink="/feed-me-now" routerLinkActive="active">FeedMe Now</button>
+          <button type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </li>
+      <button type="button" class="btn btn-info btn-lg save-button" style="border: 0; color: black; font-size: 15px; margin-right: 5px;">Save a FeedMe</button>
       <app-login-signup></app-login-signup>
     </ul>
   </div>

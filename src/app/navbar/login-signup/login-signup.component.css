@@ -18,18 +18,25 @@
  text-decoration: none;
  font-weight: 700;
   }
-#signUpLoginBtn{
-background-color: #EA9B7A;
- font-weight: bold;
-}
+
+  #signUpLoginBtn{
+  background-color: #EA9B7A;
+  font-weight: bold;
+  }
+
+  #signUpLoginBtn:active {
+    background-color: #D0B49F;
+  }
+
   body{
 
     background-color: #000;
   }
-  #signUpLogin{
-color: aliceblue;
 
+  #signUpLogin{
+    color: aliceblue;
   }
+
   .btn{
     max-width: 250px; 
     margin-left: auto;
