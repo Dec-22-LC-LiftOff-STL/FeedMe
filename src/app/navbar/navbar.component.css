@@ -81,3 +81,21 @@ nav {
 .save-button:active {
   background-color: #D0B49F;
 }
+
+.dropdown-menu {
+  background-color: #39918C;
+}
+
+.dropdown-item {
+  color: #E4D4C8;
+}
+
+.dropdown-item:hover {
+  background-color:#EA9B7A;
+  color: black;
+}
+
+.dropdown-item:active {
+  background-color:#D0B49F;
+  color: black;
+}
