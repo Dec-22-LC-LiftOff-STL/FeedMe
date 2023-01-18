@@ -8,11 +8,11 @@ import { ColumnLayoutService } from './Services/column-layout-service';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private layoutService: ColumnLayoutService) {
+  constructor() {
     
   }
 
   ngOnInit(): void {
-    this.layoutService.loadColumnLayouts();
+
   }
 }

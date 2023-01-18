@@ -35,25 +35,54 @@ export class FeedMeNowPageComponent implements OnInit {
 
     ngOnInit(): void {
 
-      this.activatedRoute.paramMap.subscribe(paramMap => { 
-        this.id = paramMap.get('id'); 
+      // logged in user retrieve from backend
+      if(this.auth.userInfo) {
 
-        // logged in user retrieve from backend
-        if(this.auth.userInfo) {
+        // checking the paramMap for our params
+        this.activatedRoute.paramMap.subscribe(paramMap => {
+
+          // assigning id to the current id in the paramMap, would recommend looking up activatedRoute and paramMap
+          this.id = paramMap.get('id'); 
+
+          // checking there is a valid id
           if(this.id) {
+
+            // getting the column by id
             this.layoutService.getColumnLayoutById(this.id).subscribe({
               next: data => {
+
+                // checking that data has columns that aren't empty
                 if(data?.choiceColumns?.length) {
+
+                  // assigning it to data
                   this.columns = data.choiceColumns;
                 }
               }
             });
           }
+          
+          // if the user tries to delete the param from the url it redirects them to our first id, which is default
           else {
-            this.router.navigate(['/feed-me-now', this.layoutService.layouts[0].id]);
+
+            // checks that layoutService has layouts and layouts is not empty before attempting to navigate to default
+            if(this.layoutService.layouts.length > 0) {
+
+              // uses navigate to redirect the user to the default layout, would recommend looking up router.navigate
+              this.router.navigate(['/feed-me-now', this.layoutService.layouts[0].id]);
+            }
           }
+        });
+      }
+      
+      // if not logged in anonymous users data saves to local storage
+      else {
+        // get the string from localStorage
+        const str = localStorage.getItem("column");
+        if(str) {
+          // convert string to valid object
+          this.columns = JSON.parse(str);
         }
-      });
+      }
     }
 
     addNewColumn() {

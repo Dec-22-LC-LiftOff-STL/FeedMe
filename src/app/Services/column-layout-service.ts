@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { lastValueFrom } from 'rxjs';
 import { ColumnLayout } from '../model/column-layout';
 import { UserInfo } from '../model/user-info';
 
@@ -18,12 +19,13 @@ export class ColumnLayoutService {
         return this.http.get<ColumnLayout>("/api/column-layouts/" + id);
     }
 
-    loadColumnLayouts() { 
-        return this.http.get<ColumnLayout[]>("/api/column-layouts").subscribe({
-            next: (data) => {
-                this.layouts = data;
-            }
-        });
+    async loadColumnLayouts() { 
+        try {
+            this.layouts = await lastValueFrom(this.http.get<ColumnLayout[]>("/api/column-layouts"));
+        }
+        catch(e) {
+            this.layouts = [];
+        }
     }
 
     createColumnLayout(columnLayout: ColumnLayout) { 
