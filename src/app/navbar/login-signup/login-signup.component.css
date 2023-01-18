@@ -38,25 +38,25 @@
 }
 
 #pills-home-tab {
-  background-color:  #FFCBA4;
-  color:  #327b77;
+  background-color:  #EA9B7A;
+  color: #E4D4C8;
   font-weight: 500;
 }
 
 #pills-home-tab.active {
-  background-color:  #EA9B7A;
+  background-color:  #FFCBA4;
   color: #000;
   font-weight: 900;
 }
 
 #pills-profile-tab {
-  background-color:#FFCBA4;
-  color: #327b77;
+  background-color:#EA9B7A;
+  color: #E4D4C8;
   font-weight: 500;
 }
 
 #pills-profile-tab.active {
-  background-color:  #EA9B7A;
+  background-color:  #FFCBA4;
   color: #000;
   font-weight: 900;
 }
@@ -117,7 +117,14 @@
 }
 
 #cardBtn {
-  background-color: #FFCBA4;
+  background-color: #EA9B7A;
+  color: #E4D4C8;
+}
+
+#cardBtn:active {
+  background-color:  #FFCBA4;
+  color: #000;
+  border: 0;
 }
 
 .form {
