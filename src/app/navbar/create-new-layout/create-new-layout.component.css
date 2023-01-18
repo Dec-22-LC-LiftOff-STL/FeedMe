@@ -1,0 +1,47 @@
+.save-button{
+    background-color: #EA9B7A;
+    font-weight: bold;
+    border: 0; 
+    color: black; 
+    font-size: 15px; 
+    margin-right: 5px;
+  }
+  
+.save-button:active {
+    background-color: #D0B49F;
+}
+
+.closeButton {
+  max-width: 50px; 
+  margin-left: auto;
+}
+
+.modal {
+  --bs-modal-width: 700px;
+}
+
+.modal-content {
+  background-color: #39918C;
+  padding: 1rem;
+  margin: auto;
+}
+
+.saveModal{
+  background-color: #8ce6cb;
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-button {
+  background-color: #EA9B7A;
+  border: 0; 
+  color: black; 
+  font-size: 15px; 
+  margin-right: 5px;
+}
+
+.create-button:active {
+  background-color: #D0B49F;
+}

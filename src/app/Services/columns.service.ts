@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { lastValueFrom } from 'rxjs';
 import { ChoiceColumn } from '../model/choice-columns';
 
 @Injectable({
@@ -14,8 +15,14 @@ export class ColumnsService {
         return this.http.get<ChoiceColumn[]>("/api/choiceColumns");
     }
 
-    createColumn(choiceColumn: ChoiceColumn) { 
-        return this.http.post<ChoiceColumn>("/api/choiceColumns", choiceColumn);
+    async createColumn(choiceColumn: ChoiceColumn) {
+        try {
+            return await lastValueFrom(this.http.post<ChoiceColumn>("/api/choiceColumns", choiceColumn));
+        } 
+        catch(e) {
+            console.error(e);
+            return null;
+        }
     }
 
     updateColumn(choiceColumn: ChoiceColumn) { 

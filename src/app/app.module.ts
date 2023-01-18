@@ -14,6 +14,7 @@ import { LoginSignupComponent } from './navbar/login-signup/login-signup.compone
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './Services/auth.service';
 import { ColumnLayoutService } from './Services/column-layout-service';
+import { CreateNewLayoutComponent } from './navbar/create-new-layout/create-new-layout.component';
 
 function initializeApp(authService: AuthService, columnLayoutService: ColumnLayoutService): () => Promise<void> {
     return async () => {
@@ -32,7 +33,8 @@ function initializeApp(authService: AuthService, columnLayoutService: ColumnLayo
     FeedMeLaterPageComponent,
     FeedMeNowColumnComponent,
     NavbarComponent,
-    LoginSignupComponent
+    LoginSignupComponent,
+    CreateNewLayoutComponent
   ],
   imports: [
     BrowserModule,

@@ -28,8 +28,14 @@ export class ColumnLayoutService {
         }
     }
 
-    createColumnLayout(columnLayout: ColumnLayout) { 
-        return this.http.post<ColumnLayout>("/api/column-layouts/", columnLayout);
+    async createColumnLayout(columnLayout: ColumnLayout) { 
+        try {
+            return await lastValueFrom(this.http.post<ColumnLayout>("/api/column-layouts", columnLayout));
+        }
+        catch(e) {
+            console.error(e);
+            return null;
+        }
     }
 
     updateColumnLayout(columnLayout: ColumnLayout) { 

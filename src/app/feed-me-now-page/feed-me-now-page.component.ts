@@ -4,6 +4,7 @@ import { AuthService } from '../Services/auth.service';
 import { ColumnsService } from '../Services/columns.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ColumnLayoutService } from '../Services/column-layout-service';
+import { ColumnLayout } from '../model/column-layout';
 
 interface Column {
   items: string[];
@@ -19,6 +20,8 @@ interface Column {
   styleUrls: ['./feed-me-now-page.component.css'],
 })
 export class FeedMeNowPageComponent implements OnInit {
+    currentLayout: ColumnLayout;
+
     columns: ChoiceColumn[] = [{
       name: "Snacks",
       items: [""]
@@ -50,12 +53,16 @@ export class FeedMeNowPageComponent implements OnInit {
             // getting the column by id
             this.layoutService.getColumnLayoutById(this.id).subscribe({
               next: data => {
+                this.currentLayout = data;
 
                 // checking that data has columns that aren't empty
                 if(data?.choiceColumns?.length) {
 
                   // assigning it to data
                   this.columns = data.choiceColumns;
+                }
+                else {
+                  this.columns = [];
                 }
               }
             });
@@ -85,20 +92,18 @@ export class FeedMeNowPageComponent implements OnInit {
       }
     }
 
-    addNewColumn() {
+    async addNewColumn() {
       if(this.newColumnTitle === "") {
         alert("New column needs a name!");
       }
       else {
         // logged in user save to backend
         if(this.auth.userInfo) {
-          const column: ChoiceColumn = {name: this.newColumnTitle, items: [""]};
+          let column: ChoiceColumn = {name: this.newColumnTitle, items: [""], columnLayout: this.currentLayout};
 
-          this.columnService.createColumn(column).subscribe({
-            next: data => {
-              this.columns.push(data);
-            }
-          });
+          column = await this.columnService.createColumn(column);
+
+          this.columns.push(column);
         }
         // anonymous user save to local storage
         else {
