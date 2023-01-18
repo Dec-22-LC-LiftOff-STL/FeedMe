@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ColumnLayoutService } from './Services/column-layout-service';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  constructor() {
+  constructor(private layoutService: ColumnLayoutService) {
     
   }
 
   ngOnInit(): void {
-
+    this.layoutService.loadColumnLayouts();
   }
 }

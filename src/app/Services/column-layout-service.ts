@@ -8,12 +8,22 @@ import { UserInfo } from '../model/user-info';
 })
 export class ColumnLayoutService {
 
+    layouts: ColumnLayout[] = [];
+
     constructor(private http: HttpClient) { 
 
     }
 
-    getColumnLayouts() { 
-        return this.http.get<ColumnLayout[]>("/api/column-layouts");
+    getColumnLayoutById(id: string) {
+        return this.http.get<ColumnLayout>("/api/column-layouts/" + id);
+    }
+
+    loadColumnLayouts() { 
+        return this.http.get<ColumnLayout[]>("/api/column-layouts").subscribe({
+            next: (data) => {
+                this.layouts = data;
+            }
+        });
     }
 
     createColumnLayout(columnLayout: ColumnLayout) { 
@@ -27,4 +37,6 @@ export class ColumnLayoutService {
     deleteColumnLayout(id: number) { 
         return this.http.delete("/api/column-layouts/" + id);
     }
+
+
 }

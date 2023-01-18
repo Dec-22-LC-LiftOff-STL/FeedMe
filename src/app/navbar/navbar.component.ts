@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ColumnLayoutService } from '../Services/column-layout-service';
 
 
 @Component({
@@ -8,5 +9,15 @@ import { Component, Input } from '@angular/core';
 })
 
 export class NavbarComponent {
+
+
+  constructor(private layoutService: ColumnLayoutService) {
+    
+  }
+
+  get getLayouts() {
+    return this.layoutService.layouts;
+  }
+
 
 }

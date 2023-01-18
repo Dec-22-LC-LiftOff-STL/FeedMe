@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ChoiceColumn } from '../model/choice-columns';
 import { AuthService } from '../Services/auth.service';
 import { ColumnsService } from '../Services/columns.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ColumnLayoutService } from '../Services/column-layout-service';
+
 interface Column {
   items: string[];
 
@@ -24,39 +27,43 @@ export class FeedMeNowPageComponent implements OnInit {
       items: [""]
     }];
 
+    id: string = "";
+
     newColumnTitle: string = "";
 
-    constructor(private columnService: ColumnsService, private auth: AuthService) {}
+    constructor(private columnService: ColumnsService, private auth: AuthService, private activatedRoute: ActivatedRoute, private layoutService: ColumnLayoutService, private router: Router) {}
 
     ngOnInit(): void {
-      // logged in user retrieve from backend
-      if(this.auth.userInfo) {
-        this.columnService.getColumns().subscribe({
-          next: data => {
-            if(data?.length) {
-              this.columns = data;
-            }
-            else {
-              for(const column of this.columns){
-                this.columnService.createColumn(column).subscribe({
-                  next: columnData => {
-                    column.id = columnData.id;
-                  }
-                });
+
+      this.activatedRoute.paramMap.subscribe(paramMap => { 
+        this.id = paramMap.get('id'); 
+
+        // logged in user retrieve from backend
+        if(this.auth.userInfo) {
+          if(this.id) {
+            this.layoutService.getColumnLayoutById(this.id).subscribe({
+              next: data => {
+                if(data?.choiceColumns?.length) {
+                  this.columns = data.choiceColumns;
+                }
               }
-            }
+            });
           }
-        });
-      }
-      // anonymous user retrieve from local storage
-      else {
-        // get the string from localStorage
-        const str = localStorage.getItem("column");
-        if(str) {
-          // convert string to valid object
-          this.columns = JSON.parse(str);
+          else {
+            this.router.navigate(['/feed-me-now', this.layoutService.layouts[0].id]);
+          }
         }
-      }
+
+        // anonymous user retrieve from local storage
+        else {
+          // get the string from localStorage
+          const str = localStorage.getItem("column");
+          if(str) {
+            // convert string to valid object
+            this.columns = JSON.parse(str);
+          }
+        }
+      });
     }
 
     addNewColumn() {
