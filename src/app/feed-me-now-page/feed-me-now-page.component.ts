@@ -53,16 +53,6 @@ export class FeedMeNowPageComponent implements OnInit {
             this.router.navigate(['/feed-me-now', this.layoutService.layouts[0].id]);
           }
         }
-
-        // anonymous user retrieve from local storage
-        else {
-          // get the string from localStorage
-          const str = localStorage.getItem("column");
-          if(str) {
-            // convert string to valid object
-            this.columns = JSON.parse(str);
-          }
-        }
       });
     }
 
