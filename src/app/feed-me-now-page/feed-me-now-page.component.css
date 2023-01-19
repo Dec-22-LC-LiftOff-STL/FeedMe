@@ -18,7 +18,7 @@ margin-bottom: 8px;
 }
 
 
-body {
+.feed-me-now-page-bg {
   background-image: url("/assets/fresh-colourful-ingredients-mexican-cuisine.jpg");
   background-color: #AB6B51;
   background-size:cover;
@@ -88,9 +88,25 @@ h4 {
 .menu-item {
   border: 0;
   background-color: transparent;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .material-icons {
   font-size: 20px;
+}
+
+.delete-column-icon {
+  font-size: 50px;
+}
+
+.feed-me-now-columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feed-me-now-columns .col-sm {
+  box-sizing: border-box;
+  min-width: calc(100% / 3 - 3rem);
+  max-width: 100%;
 }
