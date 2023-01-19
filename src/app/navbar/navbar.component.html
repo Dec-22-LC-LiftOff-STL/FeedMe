@@ -11,8 +11,8 @@
       
       <li class="nav-dropdown">
         <div class="btn-group">
-          <button type="button" class="" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</button>
-          <button type="button" class="" [routerLink]="['/feed-me-now']" routerLinkActive="active">FeedMe Now</button>
+          <button type="button" data-title="This button takes you back to the Home page." class="" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</button>
+          <button type="button" data-title="This button takes you to the FeedMeNow page where meal descisions can be made for you." class="" [routerLink]="['/feed-me-now']" routerLinkActive="active">FeedMe Now</button>
           <button type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
             <span class="visually-hidden">Toggle Dropdown</span>
           </button>
@@ -21,8 +21,8 @@
           </ul>
         </div>
       </li>
-      <app-create-new-layout></app-create-new-layout>
-      <app-login-signup></app-login-signup>
+      <app-create-new-layout data-title="This button allows you to &#010;create and save a FeedMe &#010; for any occaision or location."></app-create-new-layout>
+      <app-login-signup title="This button allows you to create and save a FeedMe for any occaision or location."></app-login-signup>
     </ul>
   </div>
 </nav>

@@ -30,14 +30,16 @@
 
     <div class="row text-center " id="addNewColumnId"  *ngIf="columns.length <= 5">
       <div class="col-sm p-3 mx-4">
-          <input type="text"
+      
+          <input
+          title="This where you can create a new column name, dont worry you can edit it later if you change your mind." type="text"  
           [(ngModel)]="newColumnTitle"
           class="form-control border-0 fs-4 text-center"
-        title="This where you can create a new column name, dont worry you can edit it later if you change your mind. "
-          placeholder="Enter a new Column Name"/>
+          placeholder="Enter a new Column Name">
+     
           <label id="addNewColumn">
           Add a new Column!
-          <button title="This button will create a new FeedMe column so we can help you make other descisions." (click)="addNewColumn()" class="feedMeButton button5">
+          <button  data-title="This button will create a new FeedMe column so we can help you make other descisions." (click)="addNewColumn()" class="feedMeButton button5">
           +
           </button>
           </label>
