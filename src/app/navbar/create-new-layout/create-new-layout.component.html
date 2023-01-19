@@ -3,7 +3,11 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="saveModal">
-                <button type="button" class="btn btn-lg closeButton" (click)="closeModal()">x</button>
+                <button type="button" class="btn btn-lg closeButton" (click)="closeModal()">
+                    <span class="material-icons" title="Close">
+                        close
+                    </span>
+                </button>
                 <div class="row text-center">
                     <div class="col-sm p-3 mx-4">
                         <input type="text" class="form-control border-0 fs-4 text-center" style="margin-bottom: 30px;" placeholder="Enter your Layout name!" [(ngModel)]="newLayoutName"/>

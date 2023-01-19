@@ -22,6 +22,11 @@ export class ColumnLayoutService {
     async loadColumnLayouts() { 
         try {
             this.layouts = await lastValueFrom(this.http.get<ColumnLayout[]>("/api/column-layouts"));
+            // sorts our layouts to make sure Default is always first in the list
+            this.layouts.sort((a, b) => {
+                // numerical descending sort by id
+                return a.id - b.id;
+            });
         }
         catch(e) {
             this.layouts = [];

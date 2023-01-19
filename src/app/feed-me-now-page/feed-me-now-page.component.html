@@ -32,12 +32,14 @@
           <input type="text"
           [(ngModel)]="newColumnTitle"
           class="form-control border-0 fs-4 text-center"
-        
+          style="margin-bottom: 20px;"
           placeholder="Enter a new Column Name"/>
           <label id="addNewColumn">
           Add a new Column!
-          <button (click)="addNewColumn()" class="feedMeButton button5">
-          +
+          <button (click)="addNewColumn()" class="menu-item">
+            <span class="material-icons" title="Add a Column">
+              add_circle
+            </span>
           </button>
           </label>
       </div>

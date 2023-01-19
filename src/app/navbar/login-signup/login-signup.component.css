@@ -165,6 +165,7 @@
 .closeButton {
   max-width: 50px; 
   margin-left: auto;
+  border: 0;
 }
 
 .loginSignupModal{
