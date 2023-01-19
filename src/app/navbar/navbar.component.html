@@ -27,17 +27,19 @@
                 <ng-container *ngIf="!editingNavbarLayout || editingNavbarLayout.id !== layout.id; else editLayoutTemplate">
                   <a [routerLink]="['/feed-me-now', layout.id]" routerLinkActive="active" class="dropdown-item">{{layout.name}}</a>
   
-                  <button type="button" class="dropdown-menu-btn">
-                    <span class="material-icons" title="Edit Layout" (click)="editLayout(i, $event)">
-                      edit
-                    </span>
-                  </button>
-  
-                  <button type="button" class="dropdown-menu-btn" (click)="removeLayout(i, $event)">
-                    <span class="material-icons" title="Delete Layout">
-                      delete
-                    </span>
-                  </button>
+                  <ng-container *ngIf="i !== 0">
+                    <button type="button" class="dropdown-menu-btn">
+                      <span class="material-icons" title="Edit Layout" (click)="editLayout(i, $event)">
+                        edit
+                      </span>
+                    </button>
+    
+                    <button type="button" class="dropdown-menu-btn" (click)="removeLayout(i, $event)">
+                      <span class="material-icons" title="Delete Layout">
+                        delete
+                      </span>
+                    </button>
+                  </ng-container>
                 </ng-container>
   
                 <ng-template #editLayoutTemplate>
