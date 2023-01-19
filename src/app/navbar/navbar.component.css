@@ -74,6 +74,10 @@ nav {
   color: black;
 }
 
+.nav-feedme-now {
+  flex: 1;
+}
+
 .save-button{
   background-color: #EA9B7A;
   font-weight: bold;

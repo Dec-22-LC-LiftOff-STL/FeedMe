@@ -19,10 +19,6 @@ export class NavbarComponent {
 
   }
 
-  get getLayouts() {
-    return this.layoutService.layouts;
-  }
-
   removeLayout(index: number, event: MouseEvent) {
     // this prevents the dropdown from closing when the delete button is clicked
     event.stopPropagation();
@@ -64,5 +60,13 @@ export class NavbarComponent {
 
     this.editingNavbarLayout = null;
     this.edittedLayoutName = "";
+  }
+
+  get getLayouts() {
+    return this.layoutService.layouts;
+  }
+
+  get userInfo() {
+    return this.auth.userInfo;
   }
 }
