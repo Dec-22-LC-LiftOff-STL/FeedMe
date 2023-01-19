@@ -14,11 +14,6 @@
   font-weight: 700;
 }
 
-#pills-profile-tab {
-  text-decoration: none;
-  font-weight: 700;
-}
-
 #signUpLoginBtn {
   background-color: #EA9B7A;
   font-weight: bold;
@@ -37,10 +32,20 @@
   margin-left: auto;
 }
 
-#pills-home-tab {
+#pills-home-tab:hover {
   background-color:  #EA9B7A;
   color: #E4D4C8;
   font-weight: 500;
+}
+
+#pills-home-tab {
+  background-color: #39918C;
+  color: #E4D4C8;
+}
+
+#pills-profile-tab {
+  background-color: #39918C;
+  color: #E4D4C8;
 }
 
 #pills-home-tab.active {
@@ -49,9 +54,9 @@
   font-weight: 900;
 }
 
-#pills-profile-tab {
+#pills-profile-tab:hover {
   background-color:#EA9B7A;
-  color: #E4D4C8;
+  color: #000;
   font-weight: 500;
 }
 
@@ -118,7 +123,7 @@
 
 #cardBtn {
   background-color: #EA9B7A;
-  color: #E4D4C8;
+  color: #000;
 }
 
 #cardBtn:active {
