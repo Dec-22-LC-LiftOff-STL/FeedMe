@@ -14,7 +14,7 @@
               [(ngModel)]="column.items[i]"
               class="form-control border-0 fs-4 text-center" 
               style="border: 0px; margin-top: 8px; margin-bottom: 8px;"
-              placeholder="Enter an option"
+              placeholder="Example: Biscuits"
               (blur)="save()"/>
               
               <button (click)="removeInput(i)" class="menu-item">
@@ -33,7 +33,7 @@
             </label>
       </div>
 
-  <button (click)="randomizeColumn()" class="btn btn-lg" title="Click here and your option will appear in the box below."> 
+  <button (click)="randomizeColumn()" class="btn btn-lg" data-title="Click here and your option will appear in the box below."> 
     Choose for me! <br/>
   </button>
 

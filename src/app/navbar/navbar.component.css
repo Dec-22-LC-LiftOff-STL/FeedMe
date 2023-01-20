@@ -32,6 +32,7 @@ nav {
   background-color:#D0B49F;
   color: black;
 }
+
 [data-title]:hover:after {
   visibility: visible;
 }
@@ -172,4 +173,22 @@ nav {
 .dropdown-input:active {
   border: 0;
   text-decoration: none;
+}
+
+.home-page-btn {
+  background-color: transparent;
+  color: #E4D4C8;
+  border-width: 0;
+  padding: 10.5px 16px;
+  font-size: 35px;
+}
+
+.home-page-btn:hover {
+  background-color:#D0B49F;
+  color: black;
+}
+
+.home-page-btn:active {
+  background-color:#D0B49F;
+  color: black;
 }
