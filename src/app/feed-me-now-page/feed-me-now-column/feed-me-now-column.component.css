@@ -26,7 +26,13 @@
 }
 
 
-
+#add_columnBtn{
+  color: whitesmoke;
+  font-size: 25px;
+  display: inline-flex;
+  vertical-align: top;
+  
+}
 .feedMeColumn{
  background-color: #8ce6cb;
  border-radius: 30px;
