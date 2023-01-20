@@ -18,7 +18,7 @@
               (blur)="save()"/>
               
               <button (click)="removeInput(i)" class="menu-item">
-                <span class="material-icons" title="Delete Item">
+                <span id="deleteBtn" class="material-icons" title="This button will remove a row. ">
                   delete
                 </span>
               </button>
@@ -26,14 +26,14 @@
             <label class="column-input-label">
               Add more choices!
               <button (click)="addNewInput()" class="menu-item">
-                <span id="add_columnBtn" class="material-icons" title="Add Item">
+                <span id="addColumnBtn" class="material-icons" title="This button allows you to creat more rows to enter more items for FeedMe to choose from">
                   add_circle
                 </span>
               </button>
             </label>
       </div>
 
-  <button (click)="randomizeColumn()" class="btn btn-lg" data-title="Click here and your option will appear in the box below."> 
+  <button (click)="randomizeColumn()" class="btn btn-lg" title="Click here and your option will appear in the box below."> 
     Choose for me! <br/>
   </button>
 

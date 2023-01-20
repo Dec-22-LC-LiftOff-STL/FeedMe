@@ -11,26 +11,21 @@
   margin-bottom: 15px;
 }
 
-[data-title]:after {
-  content: attr(data-title);
-  background-color: #EA9B7A;    
-  color: #ffffff;
-  font-size: 16px;
-  position: absolute;
-  padding: 0px 8px 4px 8px;
-  visibility: hidden;
-  border-radius: 20px;
-  border-width: 2px;
-  border-color: #39918C;
-  white-space: pre;
-}
 
 
-#add_columnBtn{
-  color: whitesmoke;
-  font-size: 25px;
+#deleteBtn{
+  color: #EA9B7A; 
+  font-size: 50px;
   display: inline-flex;
-  vertical-align: top;
+ vertical-align: top;
+ padding-top: 10px;
+  
+}
+#addColumnBtn{
+  color:#EA9B7A; 
+  font-size: 28px;
+  display: inline-flex;
+  vertical-align: middle;
   
 }
 .feedMeColumn{

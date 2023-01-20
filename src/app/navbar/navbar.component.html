@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm fixed-top">
   <div class="container-fluid">
 
-      <img class="" src="../../assets/FeedMeLogo6.png">
+      <img class="" src="../../assets/FeedMeLogo6.png" title="This a really awesome logo Patrick designed!">
    
     <ul class="navbar-nav navbar-light">
       <!-- <div style="margin: 20px 20px;"></div> -->
@@ -10,12 +10,12 @@
       </li> -->
       
       <li>
-        <button type="button" data-title="This button takes you back to the Home page." class="home-page-btn" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</button>
+        <button type="button" title="This button takes you back to the Home page." class="home-page-btn" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</button>
       </li>
 
       <ng-container *ngIf="!userInfo; else createLayoutsTemplate">
         <li class="nav-link nav-feedme-now">
-          <a routerLink="/feed-me-now" routerLinkActive="active" data-title="This button takes you to the FeedMeNow page where meal descisions can be made for you." >FeedMe Now</a>
+          <a routerLink="/feed-me-now" routerLinkActive="active" title="This button takes you to the FeedMeNow page where meal descisions can be made for you." >FeedMe Now</a>
         </li>
       </ng-container>
 
@@ -66,9 +66,9 @@
         </li>
       </ng-template>
 
-      <app-create-new-layout *ngIf="userInfo" data-title="This button allows you to &#010;create and save a FeedMe &#010; for any occaision or location."></app-create-new-layout>
+      <app-create-new-layout *ngIf="userInfo" title="This button allows you to &#010;create and save a FeedMe &#010; for any occaision or location."></app-create-new-layout>
 
-      <app-login-signup></app-login-signup>
+      <app-login-signup title="This will open the register and log-in window, allowing you to create an account where you can save your FeedMe"></app-login-signup>
 
     </ul>
   </div>
