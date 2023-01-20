@@ -66,18 +66,26 @@
           </div>
 
         </li>
+        
       </ng-template>
-      <a>Light-mode</a>    
+ 
+      <span class="material-symbols-sharp">
+        brightness_5
+        </span>  
       <label class="switch">
        <input type="checkbox">
-       <span class="slider round"></span>
-     </label>
-         <a>Dark-mode</a>  
-
+       <span class="slider round" style="  width: 80px;
+       height: 40px; float: right;"></span>
+    </label>
+     <a class="material-symbols-sharp" style="margin-left: 15px ;">
+      dark_mode
+     </a>
+        
       <app-create-new-layout *ngIf="userInfo" title="This button allows you to &#010;create and save a FeedMe &#010; for any occaision or location."></app-create-new-layout>
 
-      <app-login-signup title="This will open the register and log-in window, allowing you to create an account where you can save your FeedMe"></app-login-signup>
+      <app-login-signup style= "margin-left: 100px;" title="This will open the register and log-in window, allowing you to create an account where you can save your FeedMe"></app-login-signup>
 
     </ul>
+
   </div>
 </nav>

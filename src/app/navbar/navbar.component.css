@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
+@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
+@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
 
 nav {
   background-color: #39918C;
@@ -148,7 +150,10 @@ nav {
 .dropdown-menu-item .material-icons {
   font-size: 20px;
 }
-
+.material-symbols-sharp{
+  color: antiquewhite;
+  font-size: 65px;
+}
 .dropdown-input {
   border: 0;
   text-align: center; 
@@ -183,6 +188,22 @@ nav {
   font-size: 75px;
 
 }
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -228,4 +249,4 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-} 
+}
