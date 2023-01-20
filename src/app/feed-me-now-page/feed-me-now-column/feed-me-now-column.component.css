@@ -101,3 +101,17 @@ button .tip{
 button:hover .tip{
   display: inline;
 }
+
+.menu-item {
+  border: 0;
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+
+.material-icons {
+  font-size: 20px;
+}
+
+.column-input-label {
+  font-size: 18px;
+}

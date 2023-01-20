@@ -1,12 +1,9 @@
-
-
-body {
-background-image: url("/assets/fresh-colourful-ingredients-mexican-cuisine.edit.jpg");
-background-color: #AB6B51;
-background-size:cover;
+.bg-img {
+  background-image: url("/assets/fresh-colourful-ingredients-mexican-cuisine.edit.jpg");
+  background-color: #AB6B51;
+  background-size:cover;
   min-height: 100vh;
- background-blend-mode: overlay;
-
+  background-blend-mode: overlay;
 }
 [data-title]:hover:after {
   visibility: visible;
@@ -29,8 +26,7 @@ background-size:cover;
 
 
 #imgWaffles{
-opacity: 100%;
-
+  opacity: 100%;
   border-radius: 30px;
 }
 
@@ -72,6 +68,5 @@ h4 {
 }
 
 #FeedMeBtn {
-background-color: #39918C;
-
+  background-color: #39918C;
 }

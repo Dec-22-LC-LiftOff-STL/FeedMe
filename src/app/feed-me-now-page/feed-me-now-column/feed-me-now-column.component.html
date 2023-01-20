@@ -16,14 +16,19 @@
               style="border: 0px; margin-top: 8px; margin-bottom: 8px;"
               placeholder="Enter an option"
               (blur)="save()"/>
-              <button title="This button will remove the row it is next to." (click)="removeInput(i)" class="feedMeButton button5" style="font-size: 20px; font-weight: bolder">
-                x
+              
+              <button (click)="removeInput(i)" class="menu-item">
+                <span class="material-icons" title="Delete Item">
+                  delete
+                </span>
               </button>
             </div>
-            <label>
+            <label class="column-input-label">
               Add more choices!
-              <button title="This button allows you to add more rows so you can have more variety for FeedMe to choose from. " (click)="addNewInput()" class="feedMeButton button4">
-                +
+              <button (click)="addNewInput()" class="menu-item">
+                <span class="material-icons" title="Add Item">
+                  add_circle
+                </span>
               </button>
             </label>
       </div>

@@ -1,30 +1,45 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<!--Description / Header-->
-<header class="container-fluid">
-    <div class="text-center">
+<div class="feed-me-now-page-bg">
+  <!--Description / Header-->
+  <header class="container-fluid">
+      <div class="text-center">
         <h2>
           Can't decide what to snack on? Can't decide where to eat?<br/>
           Enter snack options on hand, or restaurants nearby<br>
           and we will decide for you!
          </h2>
             <h5>Hover over any item for a brief description of how to use the site. </h5>
-    </div>
-</header>
-<!--Description / Header-->
+      </div>
+  </header>
+  <!--Description / Header-->
 
-<main class="container-fluid px-5">
-  <div>
-    <div class="row text-center">
+  <main class="container-fluid px-5">
+    <div>
+      <div class="feed-me-now-columns text-center">
+          <div class="col-sm p-3 mx-4"  *ngFor="let column of columns; index as i;">
+                <app-feed-me-now-column [column]="column" (saveColumn)="saveToLocalStorage()"></app-feed-me-now-column>
+              <button *ngIf="i >= 2" (click)="removeColumn(i)" class="menu-item">
+                <span class="material-icons delete-column-icon" title="Delete Column">
+                  delete
+                </span>
+              </button>
+          </div>
+      </div>
 
-        <div class="col-sm p-3 mx-4"  *ngFor="let column of columns; index as i;">
-              <app-feed-me-now-column [column]="column" (saveColumn)="saveToLocalStorage()"></app-feed-me-now-column>
-            <button *ngIf="i >= 2" (click)="removeColumn(i)" class="feedMeButton button5">
-                X
-
+      <div class="row text-center " id="addNewColumnId"  *ngIf="columns.length <= 5">
+        <div class="col-sm p-3 mx-4">
+            <input type="text"
+            [(ngModel)]="newColumnTitle"
+            class="form-control border-0 fs-4 text-center"
+            style="margin-bottom: 20px;"
+            placeholder="Enter a new Column Name"/>
+            <label id="addNewColumn">
+            Add a new Column!
+            <button (click)="addNewColumn()" class="menu-item">
+              <span class="material-icons" title="Add a Column">
+                add_circle
+              </span>
             </button>
+            </label>
         </div>
     </div>
 
@@ -43,9 +58,8 @@
           +
           </button>
           </label>
+          
       </div>
     </div>
-  </div>
-</main>
-</body>
-</html>
+  </main>
+</div>

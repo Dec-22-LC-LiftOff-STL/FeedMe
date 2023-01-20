@@ -34,11 +34,13 @@ export class FeedMeNowPageComponent implements OnInit {
 
     newColumnTitle: string = "";
 
+    // injects all of our services, ActivatedRoute, and Router
     constructor(private columnService: ColumnsService, private auth: AuthService, private activatedRoute: ActivatedRoute, private layoutService: ColumnLayoutService, private router: Router) {}
 
+    // would recommend looking up OnInit
     ngOnInit(): void {
 
-      // logged in user retrieve from backend
+      // checking if the user is authenticated / logged in
       if(this.auth.userInfo) {
 
         // checking the paramMap for our params
@@ -50,7 +52,7 @@ export class FeedMeNowPageComponent implements OnInit {
           // checking there is a valid id
           if(this.id) {
 
-            // getting the column by id
+            // getting the column layout by id
             this.layoutService.getColumnLayoutById(this.id).subscribe({
               next: data => {
                 this.currentLayout = data;
@@ -81,9 +83,9 @@ export class FeedMeNowPageComponent implements OnInit {
         });
       }
       
-      // if not logged in anonymous users data saves to local storage
+      // if not logged in users data saves to local storage
       else {
-        // get the string from localStorage
+        // gets the string from localStorage
         const str = localStorage.getItem("column");
         if(str) {
           // convert string to valid object
@@ -97,7 +99,7 @@ export class FeedMeNowPageComponent implements OnInit {
         alert("New column needs a name!");
       }
       else {
-        // logged in user save to backend
+        // checking if the user is authenticated / logged in
         if(this.auth.userInfo) {
           let column: ChoiceColumn = {name: this.newColumnTitle, items: [""], columnLayout: this.currentLayout};
 
@@ -105,7 +107,7 @@ export class FeedMeNowPageComponent implements OnInit {
 
           this.columns.push(column);
         }
-        // anonymous user save to local storage
+        // if not logged in anonymous users data saves to local storage
         else {
           let index: number = this.columns.length + 1;
           this.columns.push({items: [""], id: index, name: this.newColumnTitle});
@@ -117,13 +119,14 @@ export class FeedMeNowPageComponent implements OnInit {
     }
 
     removeColumn(index: number) {
-      // logged in user delete from backend
+      // checks if the user is authenticated
       if(this.auth.userInfo) {
+        // basically deletes a column by id
         const column = this.columns[index];
         this.columnService.deleteColumn(column.id).subscribe();
         this.columns.splice(index, 1);
       }
-      // anonymous user delete from local storage
+      // not authenticated user deletes from local storage
       else {
         this.columns.splice(index, 1);
         this.saveToLocalStorage();
