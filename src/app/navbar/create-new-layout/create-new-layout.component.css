@@ -25,6 +25,8 @@
   background-color: #39918C;
   padding: 1rem;
   margin: auto;
+  border-width: 2px;
+  border-color: #EA9B7A;
 }
 
 .saveModal{

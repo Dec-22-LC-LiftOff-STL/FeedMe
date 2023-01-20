@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-sm fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-      <img class="rounded-circle" src="../../assets/NavbarPic.png">
-    </a>
+
+      <img class="navbar-brand" src="../../assets/FeedMeLogo6.png">
+   
     <ul class="navbar-nav navbar-light">
       <!-- <div style="margin: 20px 20px;"></div> -->
       <!-- <li class="nav-link">
@@ -11,15 +11,16 @@
       
       <ng-container *ngIf="!userInfo; else createLayoutsTemplate">
         <li class="nav-link nav-feedme-now">
-          <a routerLink="/feed-me-now" routerLinkActive="active">FeedMe Now</a>
+          <a routerLink="/feed-me-now" routerLinkActive="active" title="This button takes you to the FeedMeNow page where meal descisions can be made for you." >FeedMe Now</a>
         </li>
       </ng-container>
       
       <ng-template #createLayoutsTemplate>
         <li class="nav-dropdown">
           <div class="btn-group">
-            <button type="button" class="main-dropdown-btn" [routerLink]="['/feed-me-now']" routerLinkActive="active">FeedMe Now</button>
-            <button type="button" class="dropdown-toggle dropdown-toggle-split main-dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="button" data-title="This button takes you back to the Home page." class="" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</button>
+            <button type="button" class="main-dropdown-btn" [routerLink]="['/feed-me-now']" routerLinkActive="active" data-title="This button takes you to the FeedMeNow page where meal descisions can be made for you.">FeedMe Now</button>
+            <button type="button" class="dropdown-toggle dropdown-toggle-split main-dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false" title="Once logged in this will alow you to choose from previously created layouts with ease.">
               <span class="visually-hidden">Toggle Dropdown</span>
             </button>
             <ul class="dropdown-menu">
@@ -62,7 +63,7 @@
         </li>
       </ng-template>
 
-      <app-create-new-layout *ngIf="userInfo"></app-create-new-layout>
+      <app-create-new-layout *ngIf="userInfo" data-title="This button allows you to &#010;create and save a FeedMe &#010; for any occaision or location."></app-create-new-layout>
 
       <app-login-signup></app-login-signup>
 

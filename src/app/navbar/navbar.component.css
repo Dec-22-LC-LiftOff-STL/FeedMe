@@ -18,7 +18,9 @@ nav {
 }
 
 .navbar-brand {
-  text-decoration: none;
+  background-color: #39918C;
+   vertical-align: top;
+ 
 }
 
 .navbar-brand.active {
@@ -29,6 +31,23 @@ nav {
 .navbar .nav-link a.active {
   background-color:#D0B49F;
   color: black;
+}
+[data-title]:hover:after {
+  visibility: visible;
+}
+
+[data-title]:after {
+  content: attr(data-title);
+  background-color: #EA9B7A;    
+  color: #ffffff;
+  font-size: 16px;
+  position: absolute;
+  padding: 0px 8px 4px 8px;
+  visibility: hidden;
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: #39918C;
+  white-space: pre;
 }
 
 /* Change the color of links on hover */
