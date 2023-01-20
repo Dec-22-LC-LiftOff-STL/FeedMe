@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
+
 nav {
   background-color: #39918C;
   padding: 0;
@@ -33,23 +35,7 @@ nav {
   color: black;
 }
 
-[data-title]:hover:after {
-  visibility: visible;
-}
 
-[data-title]:after {
-  content: attr(data-title);
-  background-color: #EA9B7A;    
-  color: #ffffff;
-  font-size: 16px;
-  position: absolute;
-  padding: 0px 8px 4px 8px;
-  visibility: hidden;
-  border-radius: 20px;
-  border-width: 2px;
-  border-color: #39918C;
-  white-space: pre;
-}
 
 /* Change the color of links on hover */
 .navbar .nav-link a:hover, .navbar-brand:hover {
@@ -191,4 +177,8 @@ nav {
 .home-page-btn:active {
   background-color:#D0B49F;
   color: black;
+}
+#darkModeToggle{
+  color: #EA9B7A;
+  font-size: 75px;
 }
