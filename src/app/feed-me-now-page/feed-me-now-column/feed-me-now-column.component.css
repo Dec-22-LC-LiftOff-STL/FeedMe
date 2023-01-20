@@ -10,12 +10,26 @@
   margin-top: 25px;
   margin-bottom: 15px;
 }
-body{
+
+[data-title]:after {
+  content: attr(data-title);
+  background-color: #EA9B7A;    
+  color: #ffffff;
+  font-size: 16px;
+  position: absolute;
+  padding: 0px 8px 4px 8px;
+  visibility: hidden;
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: #39918C;
+  white-space: pre;
+}
+
+
+
+.feedMeColumn{
  background-color: #8ce6cb;
  border-radius: 30px;
-
-
-
 }
 #randomizedItem{
 margin: auto; border-radius: 30px; border-width: 10px; border-color :  #8ce6cb; background-color: antiquewhite; height: 70px; 
@@ -101,4 +115,18 @@ button .tip{
 
 button:hover .tip{
   display: inline;
+}
+
+.menu-item {
+  border: 0;
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+
+.material-icons {
+  font-size: 20px;
+}
+
+.column-input-label {
+  font-size: 18px;
 }

@@ -13,9 +13,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginSignupComponent } from './navbar/login-signup/login-signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './Services/auth.service';
+import { ColumnLayoutService } from './Services/column-layout-service';
+import { CreateNewLayoutComponent } from './navbar/create-new-layout/create-new-layout.component';
 
-function initializeApp(authService: AuthService): () => Promise<void> {
-    return () => authService.getUserInfo();
+function initializeApp(authService: AuthService, columnLayoutService: ColumnLayoutService): () => Promise<void> {
+    return async () => {
+      await authService.getUserInfo();
+      if(authService.userInfo) {
+        await columnLayoutService.loadColumnLayouts();
+      }
+    }
 }
 
 @NgModule({
@@ -26,7 +33,8 @@ function initializeApp(authService: AuthService): () => Promise<void> {
     FeedMeLaterPageComponent,
     FeedMeNowColumnComponent,
     NavbarComponent,
-    LoginSignupComponent
+    LoginSignupComponent,
+    CreateNewLayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +46,7 @@ function initializeApp(authService: AuthService): () => Promise<void> {
   providers: [{
     provide: APP_INITIALIZER,
     useFactory: initializeApp,
-    deps: [AuthService],
+    deps: [AuthService, ColumnLayoutService],
     multi: true
   }],
   bootstrap: [AppComponent]

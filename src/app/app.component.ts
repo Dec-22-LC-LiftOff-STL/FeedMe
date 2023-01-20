@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ColumnLayoutService } from './Services/column-layout-service';
 
 @Component({
   selector: 'app-root',
