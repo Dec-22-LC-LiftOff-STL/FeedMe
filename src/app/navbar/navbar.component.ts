@@ -14,6 +14,10 @@ export class NavbarComponent {
   editingNavbarLayout: ColumnLayout;
 
   edittedLayoutName: string = "";
+  toggleDarkTheme(): void {
+    document.body.classList.toggle('dark-theme');
+  }
+
 
   // injects our services
   constructor(private layoutService: ColumnLayoutService, private auth: AuthService) {
