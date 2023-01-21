@@ -7,6 +7,9 @@ import { ColumnLayoutService } from './Services/column-layout-service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  toggleDarkTheme(): void {
+    document.body.classList.toggle('dark-theme');
+  }
 
   constructor() {
     
