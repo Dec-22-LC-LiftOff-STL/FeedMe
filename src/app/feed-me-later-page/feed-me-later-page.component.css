@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.feedMeColumn{
+  background-color: #8ce6cb;
+  border-radius: 30px;
+ }
+ 
 body {
   font-family: "Roboto", sans-serif;
   display: flex;
