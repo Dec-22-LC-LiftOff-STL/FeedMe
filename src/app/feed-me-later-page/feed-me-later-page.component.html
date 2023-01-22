@@ -1,5 +1,5 @@
 <!-- Description / Header -->
-<header class="container-fluid"  style="margin-top: 115px;">
+<header class="container-fluid" style="margin-top: 115px;">
   <div>
     <h2 class="text-center">
       Don't mind cooking? Input the ingredients you have in your pantry and
@@ -13,7 +13,32 @@
   <hr>
 </header>
 
-<app-inventory-form></app-inventory-form>
+<div class="row">
+  <app-inventory-form class="col-3 offset-2"></app-inventory-form>
+  <!-- <app-health-tags-form class="col-3 offset-1"></app-health-tags-form> -->
+  <app-recipe-results class="col-3 offset-2"></app-recipe-results>
+</div>
+
+<div id="page-spacer"></div>
+
+<div class="col-6 offset-3">
+  <h3>This should display the selected recipe after the randomizer button has been pushed.</h3>
+  <img src="..\assets\recipe-standin.png" class="container-fluid" style="max-height: 200px; max-width: auto;">
+  <ul>Ingredients:
+      <li>ingredient</li>
+      <li>ingredient</li>
+      <li>ingredient</li>
+      <li>ingredient</li>
+      <li>ingredient</li>
+      <li>ingredient</li>
+      <li>ingredient</li>
+  </ul>
+  <p>url</p>
+  <p>cuisineType</p>
+  <p>mealType</p>
+  <p>dishType</p>
+</div>
+
 <div id="page-spacer"></div>
 
 
