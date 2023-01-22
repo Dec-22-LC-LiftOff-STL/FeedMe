@@ -12,6 +12,8 @@
 #imgWaffles{
   opacity: 100%;
   border-radius: 30px;
+  width: 660px;
+  height: 460px;
 }
 
 h1 {

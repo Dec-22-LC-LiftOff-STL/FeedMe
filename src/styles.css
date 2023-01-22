@@ -8,7 +8,7 @@ body {
      --active-color: #FFCBA4;
     --border-color: #EA9B7A;
     --modal-color: #8ce6cb;
-
+    --nav-text-color:  #E4D4C8;
     --nav-hover-color: #a06b55;
   }
 nav{
@@ -19,7 +19,7 @@ nav{
 
 
   body.dark-theme {
-    --text-color: #eee;
+    --text-color: hsl(177, 44%, 45%);
     --bkg-color: #252222;
     --btn-txt-color: white;
     --btn-bg-color: hsl(177, 44%, 25%);
@@ -27,8 +27,9 @@ nav{
     --nav-btn-color: #156485;
     --active-color:#00345b;
     --border-color: #156485;
-    --modal-color: #731934;
+    --modal-color: hsl(177, 44%, 35%);;
     --nav-hover-color:#2c3c89;
+    --nav-text-color: hsl(177, 44%, 45%);
   }
   
   body {
@@ -58,10 +59,19 @@ nav{
     background-color: var(--btn-bg-color);
    color: var(--btn-txt-color);
   }
+
+  
+  
+  
+
   .login-signup-button{
     background-color: var(--nav-btn-color)
+    
 
   }
+.form-check-label{
+    color: var(--btn-txt-color); 
+}
   .login-signup-button:active {
     background-color:var(--nav-btn-color)
   }
