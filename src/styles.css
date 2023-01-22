@@ -41,7 +41,11 @@ nav{
     color: var(--text-color);
   }
   .bg-img{
-  
+    background-image: url("/assets/lukas-blazek-f-knife-unsplash.jpg");
+  /* background-color: #AB6B51;   lukas-blazek-f-knife-unsplash.jpg brooke-lark-tomatobg-unsplash.jpg   fresh-colourful-ingredients-mexican-cuisine.edit.jpg*/
+  background-size:cover;
+  min-height: 100vh;
+  background-blend-mode: overlay;
     background-color: var(--bkg-color);
 
   }
