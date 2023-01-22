@@ -41,9 +41,11 @@ nav{
     color: var(--text-color);
   }
   .bg-img{
-    background-image: url("/assets/top-view-chicken-onion-lemon-herbs-pieces-chicken-lavash-board.jpg ");
-  /* background-color: #AB6B51;     top-view-chicken-onion-lemon-herbs-pieces-chicken-lavash-board  top-view-cut-lemons-dog-rosehips-feijoas-grey-table-copy-space.jpg lukas-blazek-f-knife-unsplash.jpg brooke-lark-tomatobg-unsplash.jpg   fresh-colourful-ingredients-mexican-cuisine.edit.jpg*/
+    background-image: url("/assets/lukas-blazek-f-knife-unsplash.jpg ");
+  /* background-color: #AB6B51;  wooden-plate-pita-bread-with-sliced-tomato-onion   top-view-chicken-onion-lemon-herbs-pieces-chicken-lavash-board  top-view-cut-lemons-dog-rosehips-feijoas-grey-table-copy-space.jpg lukas-blazek-f-knife-unsplash.jpg brooke-lark-tomatobg-unsplash.jpg   fresh-colourful-ingredients-mexican-cuisine.edit.jpg*/
   background-size:cover;
+
+
   min-height: 100vh;
   background-blend-mode: overlay;
     background-color: var(--bkg-color);
