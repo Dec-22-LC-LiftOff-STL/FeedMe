@@ -3,8 +3,19 @@ body {
     --bkg-color: #AB6B51;
     --btn-txt-color: black;
     --btn-bg-color:  #39918C;
-  }
+    --nav-bkg-color:#39918C;
+    --nav-btn-color:  #EA9B7A;
+     --active-color: #FFCBA4;
+    --border-color: #EA9B7A;
+    --modal-color: #8ce6cb;
 
+    --nav-hover-color: #a06b55;
+  }
+nav{
+
+        background-color:var(--nav-bkg-color);
+
+}
 
 
   body.dark-theme {
@@ -12,7 +23,12 @@ body {
     --bkg-color: #252222;
     --btn-txt-color: white;
     --btn-bg-color: #c66e73;
-
+    --nav-bkg-color:#c66e73;
+    --nav-btn-color: #156485;
+    --active-color:#00345b;
+    --border-color: #156485;
+    --modal-color: #731934;
+    --nav-hover-color:#2c3c89;
   }
   
   body {
@@ -42,4 +58,18 @@ body {
     background-color: var(--btn-bg-color);
    color: var(--btn-txt-color);
   }
+  .login-signup-button{
+    background-color: var(--nav-btn-color)
+
+  }
+  .login-signup-button:active {
+    background-color:var(--nav-btn-color)
+  }
+  .modal-content {
+    background-color: var(--nav-bkg-color);
   
+    border-color: var(   --border-color);
+  }
+  .loginSignupModal{
+    background-color: var(--modal-color);
+  }
