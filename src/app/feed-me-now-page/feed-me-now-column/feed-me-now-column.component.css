@@ -29,7 +29,7 @@
   
 }
 .feedMeColumn{
- background-color: #8ce6cb;
+ background-color: var(--nav-bkg-color);
  border-radius: 30px;
 }
 #randomizedItem{

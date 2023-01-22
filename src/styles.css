@@ -67,9 +67,9 @@ nav{
     background-color: var(--btn-bg-color);
    color: var(--btn-txt-color);
 max-width: 100%;
-display: flex;  
+display: flexbox;  
 justify-content: center;  
-align-items: right;  
+align-items: center;  
 
 
    }
