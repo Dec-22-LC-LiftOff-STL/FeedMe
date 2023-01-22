@@ -1,18 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&family=Roboto:wght@300;500;700&display=swap");
 
+#page-spacer {
+  margin-bottom: 50px;
+}
+/* 
 * {
   box-sizing: border-box;
+}
+
+#inventory {
+  padding: 5px;
+  margin: 5px;
+}
+
+#recipeGenerator {
+  padding: 10px;
+  margin: 5px;
+}
+
+.search-forms {
+  background-color: #8ce6cb;
+  border-radius: 30px;
+  max-width: 400px;
+  max-height: 600px;
 }
 
 .feedMeColumn{
   background-color: #8ce6cb;
   border-radius: 30px;
  }
- 
+
 body {
   font-family: "Roboto", sans-serif;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
+
+  background-image: url("/assets/fresh-colourful-ingredients-mexican-cuisine.edit.jpg");
+  background-color: #AB6B51;
+  background-size:cover;
+  min-height: 100vh;
+  background-blend-mode: overlay;
 
   align-items: top;
   justify-content: center;
@@ -20,58 +47,6 @@ body {
   overflow: hidden;
   margin: 0;
   border-radius: 20px;
-}
-
-.row {
-  padding: 15px;
-}
-
-.p {
-  color: #060606;
-  margin: 10px 0 20px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.h3 {
-  color: #060606;
-  margin: 10px 0 20px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-#instructions {
-  padding-left: 30px;
-  justify-content: center;
-  text-align: left;
-}
-
-.container {
-  /* This puts all of the */
-  width: 1000px;
-}
-
-.wrapper {
-  top: 50%;
-  left: 50%;
-  transform: translate (-50%, -50%);
-  background: rgba(0, 0, 0, 0.6);
-  max-width: 550px;
-  width: 100%;
-  padding: 15px;
-  border-radius: 5px;
-  /* The bellow puts text area and generator button on same page */
-  display: flex;
-  justify-content: space-between;
-}
-
-.wrapper.input {
-  width: 85%;
-  padding: 15px 20px;
-  border: none;
-  border-radius: 5px;
 }
 
 .btn {
@@ -89,7 +64,58 @@ textarea {
   font-size: 16px;
 }
 
-.tag {
+
+
+.p {
+  color: #060606;
+  margin: 10px 0 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.h3 {
+  color: #060606;
+  margin: 10px 0 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* #instructions {
+  padding-left: 30px;
+  justify-content: center;
+  text-align: left;
+} */
+
+  /* This puts all of the */
+/* .container {
+ width: 1000px;
+} */
+
+/* .wrapper {
+  top: 50%;
+  left: 50%;
+  transform: translate (-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  max-width: 550px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  The bellow puts text area and generator button on same page
+  display: flex;
+  justify-content: space-between;
+} */
+
+/* .wrapper.input {
+  width: 85%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+} */
+
+
+/* .tag {
   background-color: #f0932b;
   color: #fff;
   border-radius: 50px;
@@ -97,9 +123,9 @@ textarea {
   margin: 0 5px 10px 0;
   font-size: 14px;
   display: inline-block;
-}
+} */
 
-.button {
+/* .button {
   background: #fff;
   border: 2px solid #666;
   color: #666;
@@ -129,27 +155,26 @@ ol > li:before {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-}
+} */
 
-h2 {
+/* h2 {
   font-size: 30px;
   margin-top: 20px;
 }
+*/
 
 
-#recipeGenerator {
-  margin-left: 200px;
-  margin-bottom: 200px;
-  margin-top: 50px;
-}
 
+
+
+/*
 .container-fluid.px-5 {
   padding-top: 20px;
 
  
-  /* margin-left: 500px; */
+  margin-left: 500px;
 
-}
-#recipeNameBox{ 
+} */
+/* #recipeNameBox{ 
  text-align: center;
-}
+} */
