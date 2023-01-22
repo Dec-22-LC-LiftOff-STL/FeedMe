@@ -152,7 +152,8 @@
 }
 .material-symbols-sharp{
   color: antiquewhite;
-  font-size: 65px;
+  font-size: 45px;
+  text-decoration: none;
 }
 .dropdown-input {
   border: 0;
