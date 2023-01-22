@@ -1,23 +1,17 @@
 body {
     --text-color: #222;
     --bkg-color: #AB6B51;
-    --btn-txt-color: white;
-    --btn-bg-color: rgb(11, 88, 160);
+    --btn-txt-color: black;
+    --btn-bg-color:  #39918C;
   }
-  /* .bg-img {
-    background-image: url("/assets/fresh-colourful-ingredients-mexican-cuisine.edit.jpg");
-    --background-color: #AB6B51;
-    background-size:cover;
-    min-height: 100vh;
-    background-blend-mode: overlay;
-  } */
+
 
 
   body.dark-theme {
     --text-color: #eee;
     --bkg-color: #252222;
-    --btn-txt-color: rgb(46, 43, 43);
-    --btn-bg-color: rgb(20, 211, 195);
+    --btn-txt-color: white;
+    --btn-bg-color: #c66e73;
 
   }
   
@@ -30,11 +24,9 @@ body {
     color: var(--text-color);
   }
   .bg-img{
-    /* background-image: url("/assets/fresh-colourful-ingredients-mexican-cuisine.edit.jpg"); */
+  
     background-color: var(--bkg-color);
-    /* background-size:cover;
-    min-height: 100vh;
-    background-blend-mode: overlay; */
+
   }
 .h4{
     color: var(--text-color)
@@ -45,5 +37,9 @@ body {
     border-radius: 2px;
     color: var(--btn-txt-color);
     background-color: var(--btn-bg-color);
+  }
+  #FeedMeBtn {
+    background-color: var(--btn-bg-color);
+   color: var(--btn-txt-color);
   }
   
