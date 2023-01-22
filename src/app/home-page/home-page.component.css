@@ -5,24 +5,8 @@
   min-height: 100vh;
   background-blend-mode: overlay;
 }
-[data-title]:hover:after {
-  visibility: visible;
-}
 
-[data-title]:after {
-  content: attr(data-title);
-  background-color: #EA9B7A;    
-  color: #ffffff;
-  font-size: 16px;
-  position: absolute;
-  padding: 0px 8px 4px 8px;
-  visibility: hidden;
-  border-radius: 20px;
-  border-width: 2px;
-  border-color: #39918C;
-  white-space: pre;
-  font-weight: 400;
-}
+
 
 
 #imgWaffles{
@@ -59,9 +43,9 @@ h4 {
   margin-top: 360px;
   padding: 45px;
 }
-.h4 {
+/* .h4 {
   color: black;
-}
+} */
 
 #orCircle {
   max-width: 150px;
