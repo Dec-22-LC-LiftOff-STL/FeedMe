@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-inventory-form',
   templateUrl: './inventory-form.component.html',
   styleUrls: ['./inventory-form.component.css']
 })
-export class InventoryFormComponent {
-
-  ingredients: Array<string> = ['ingredient1', 'ingredient2', 'ingredient3', 'ingredient4', 'ingredient5', 'ingredient6', 'ingredient7', 'ingredient8']
+export class InventoryFormComponent implements OnInit {
 
 
+  // would recommend looking up OnInit
+  ngOnInit(): void {
+
+  }
 
 }
