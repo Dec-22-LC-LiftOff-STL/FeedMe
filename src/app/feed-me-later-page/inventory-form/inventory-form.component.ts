@@ -5,7 +5,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   templateUrl: './inventory-form.component.html',
   styleUrls: ['./inventory-form.component.css']
 })
-export class InventoryFormComponent {
+export class InventoryFormComponent implements OnInit {
 
   ingredients: string = "";
 
@@ -14,6 +14,7 @@ export class InventoryFormComponent {
 
   submit() {
     this.ingredientsSubmitted.emit(this.ingredients.split(","));
+
   }
 
 }
