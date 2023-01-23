@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-inventory-form',
@@ -7,8 +7,13 @@ import { Component } from '@angular/core';
 })
 export class InventoryFormComponent {
 
-  ingredients: Array<string> = ['ingredient1', 'ingredient2', 'ingredient3', 'ingredient4', 'ingredient5', 'ingredient6', 'ingredient7', 'ingredient8']
+  ingredients: string = "";
 
+  @Output() 
+  ingredientsSubmitted: EventEmitter<string[]> = new EventEmitter<string[]>();
 
+  submit() {
+    this.ingredientsSubmitted.emit(this.ingredients.split(","));
+  }
 
 }

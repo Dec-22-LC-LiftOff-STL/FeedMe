@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { RecipeResult } from 'src/app/model/recipe';
 
 @Component({
   selector: 'app-recipe-results',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class RecipeResultsComponent {
 
+  @Input()
+  recipeResults: RecipeResult[] = [];
+  
 }

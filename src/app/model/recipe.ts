@@ -8,3 +8,17 @@ export interface Recipe {
     mealType: string;
     dishType: string;
 }
+
+export interface RecipeLink {
+    title: string;
+    href: string;
+}
+
+export interface RecipeLinks {
+    self: RecipeLink;
+}
+
+export interface RecipeResult {
+    recipe: Recipe;
+    _links: RecipeLinks;
+}

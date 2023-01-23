@@ -3,21 +3,21 @@
     Give us a list of what's available to cook with and it will appear in your inventory below.
   </h4>
   <div id="recipeGenerator" class="container-fluid">
-    <textarea placeholder="Enter ingredients here separated by commas..." id="ingredient-textarea"></textarea>
+    <textarea name="ingredient-list" [(ngModel)]="ingredients" placeholder="Enter ingredients here separated by commas" id="ingredient-textarea"></textarea>
   </div>
   <div id="recipeGenerator" class="container-fluid">
-    <button type="button" class="btn btn-secondary btn-lg">
+    <!-- <button type="button" class="btn btn-secondary btn-lg">
       Add
-    </button>
+    </button> -->
     <hr>
   </div>
 
   <div id="inventory">
-    <h3>Your Inventory: </h3>
+    <!-- <h3>Your Inventory: </h3>
     <ul class="overflow-auto container-fluid" id="sel2" name="sellist2">
       <li *ngFor='let ingredient of ingredients'>{{ingredient}}</li>
     </ul>
-    <label for="sel2" class="form-label">Mutiple select list (hold shift or crtl to select more than one):</label>
-    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    <label for="sel2" class="form-label">Mutiple select list (hold shift or crtl to select more than one):</label> -->
+    <button type="submit" class="btn btn-primary mt-3" (click)="submit()">Submit</button>
   </div>
 </form>

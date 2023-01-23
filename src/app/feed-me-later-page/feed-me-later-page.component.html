@@ -13,35 +13,31 @@
   <hr>
 </header>
 
-<div class="row">
-  <app-inventory-form class="col-3 offset-2"></app-inventory-form>
+<div class="row justify-content-center">
+  <app-inventory-form class="col-4" (ingredientsSubmitted)="fetchRecipes($event)"></app-inventory-form>
   <!-- <app-health-tags-form class="col-3 offset-1"></app-health-tags-form> -->
-  <app-recipe-results class="col-3 offset-2"></app-recipe-results>
+  <!-- <app-recipe-results class="col-3 offset-2"></app-recipe-results> -->
+  <div class="col-4" *ngIf="randomRecipe">
+    <h3>{{randomRecipe.recipe.label}}</h3>
+    <img src="{{randomRecipe.recipe.image}}" class="container-fluid" style="max-height: 200px; max-width: auto;">
+    <p>Ingredients:</p>
+    <ul>
+        <li *ngFor="let ingredient of randomRecipe.recipe.ingredientLines">{{ingredient}}</li>
+    </ul>
+    <a href="{{randomRecipe.recipe.url}}">{{randomRecipe.recipe.url}}</a>
+    <p>Cuisine type: {{randomRecipe.recipe.cuisineType}}</p>
+    <p>Meal type: {{randomRecipe.recipe.mealType}}</p>
+    <p>Dish type: {{randomRecipe.recipe.dishType}}</p>
+  </div>
 </div>
 
 <div id="page-spacer"></div>
 
-<div class="col-6 offset-3">
-  <h3>This should display the selected recipe after the randomizer button has been pushed.</h3>
-  <img src="..\assets\recipe-standin.png" class="container-fluid" style="max-height: 200px; max-width: auto;">
-  <ul>Ingredients:
-      <li>ingredient</li>
-      <li>ingredient</li>
-      <li>ingredient</li>
-      <li>ingredient</li>
-      <li>ingredient</li>
-      <li>ingredient</li>
-      <li>ingredient</li>
-  </ul>
-  <p>url</p>
-  <p>cuisineType</p>
-  <p>mealType</p>
-  <p>dishType</p>
+<div class="row">
+  <app-recipe-results class="col-3" style="margin: 20px auto 0 auto;" [recipeResults]="recipes"></app-recipe-results>
 </div>
 
 <div id="page-spacer"></div>
-
-
 
 
 
