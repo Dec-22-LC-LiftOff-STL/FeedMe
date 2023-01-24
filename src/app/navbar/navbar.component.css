@@ -178,10 +178,11 @@
 .home-page-btn:hover {
   background-color:var( --nav-hover-color);
   color: black;
+  max-width: 100%;
 }
 
 .home-page-btn:active {
-  background-color:#D0B49F;
+  background-color:var( --nav-hover-color);
   color: black;
 }
 #darkModeToggle{

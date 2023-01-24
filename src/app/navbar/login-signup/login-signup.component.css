@@ -35,7 +35,7 @@
 
 #pills-home-tab:hover {
   background-color: var(  --nav-hover-color);
-  color: var(--btn-txt-color);
+  color: var(--nav-txt-color);
   font-weight: 500;
 }
 
@@ -50,20 +50,20 @@
 }
 
 #pills-home-tab.active {
-  background-color: var(--active-color);
-  color: var(--btn-txt-color);
+  background-color: var(--nav-active-color);
+  color: var(--nav-txt-color);
   font-weight: 700;
 }
 
 #pills-profile-tab:hover {
   background-color: var(  --nav-hover-color);
-  color: var(--btn-txt-color);
+  color: var(--nav-txt-color);
   font-weight: 500;
 }
 
 #pills-profile-tab.active {
-  background-color: var(--active-color);
-  color: var(--btn-txt-color);
+  background-color: var(--nav-active-color);
+  color: var(--nav-txt-color);
   font-weight: 700;
 }
 #rememberMe{

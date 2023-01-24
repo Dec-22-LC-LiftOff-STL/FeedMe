@@ -3,8 +3,8 @@ body {
     --text-color: #222;
     --bkg-color: #AB6B51;
     --btn-txt-color: black;
-    --btn-bg-color: #8ce6cb;
-    --nav-bkg-color:#8ce6cb;
+    --btn-bg-color: hsl(162, 64%, 63%);
+    --nav-bkg-color:hsl(162, 64%, 63%);
     --nav-btn-color:  #EA9B7A;
      --active-color: #FFCBA4;
     --border-color: #EA9B7A;
