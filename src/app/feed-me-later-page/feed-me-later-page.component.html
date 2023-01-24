@@ -1,79 +1,38 @@
 <div class="bg-img">
 <!-- Description / Header -->
-<header class="container-fluid">
-  <div  style="margin-top: 85px; ">
-    <h1 class="text-center" style="align-content: center;">
-      Don't mind cooking? Input the ingredients you have in your pantry and
-      we'll generate <br />
-      a recipe option for you!
-    </h1>
-  </div>
-  <div>
-    <h4 style="text-align: right;">Powered by Edamam</h4>
+  <header class="container-fluid">
+    <div  style="margin-top: 85px; ">
+      <h1 class="text-center" style="align-content: center;">
+        Don't mind cooking? Input the ingredients you have in your pantry and
+        we'll generate <br />
+        a recipe option for you!
+      </h1>
+    </div>
+    <div>
+      <h4 style="text-align: right;">Powered by Edamam</h4>
+    </div>
+
+  </header>
+
+  <div class="row justify-content-center">
+    <app-inventory-form class="col-4" (ingredientsSubmitted)="fetchRecipes($event)"></app-inventory-form>
+    <!-- <app-health-tags-form class="col-3 offset-1"></app-health-tags-form> -->
+    <!-- <app-recipe-results class="col-3 offset-2"></app-recipe-results> -->
+    <div class="col-4" *ngIf="randomRecipe">
+      <h3>{{randomRecipe.recipe.label}}</h3>
+      <img src="{{randomRecipe.recipe.image}}" class="container-fluid" style="max-height: 200px; max-width: auto;">
+      <p>Ingredients:</p>
+      <ul>
+          <li *ngFor="let ingredient of randomRecipe.recipe.ingredientLines">{{ingredient}}</li>
+      </ul>
+      <a href="{{randomRecipe.recipe.url}}">{{randomRecipe.recipe.url}}</a>
+      <p>Cuisine type: {{randomRecipe.recipe.cuisineType}}</p>
+      <p>Meal type: {{randomRecipe.recipe.mealType}}</p>
+      <p>Dish type: {{randomRecipe.recipe.dishType}}</p>
+    </div>
   </div>
 
-</header>
-
-<div class="row justify-content-center">
-  <app-inventory-form class="col-4" (ingredientsSubmitted)="fetchRecipes($event)"></app-inventory-form>
-  <!-- <app-health-tags-form class="col-3 offset-1"></app-health-tags-form> -->
-  <!-- <app-recipe-results class="col-3 offset-2"></app-recipe-results> -->
-  <div class="col-4" *ngIf="randomRecipe">
-    <h3>{{randomRecipe.recipe.label}}</h3>
-    <img src="{{randomRecipe.recipe.image}}" class="container-fluid" style="max-height: 200px; max-width: auto;">
-    <p>Ingredients:</p>
-    <ul>
-        <li *ngFor="let ingredient of randomRecipe.recipe.ingredientLines">{{ingredient}}</li>
-    </ul>
-    <a href="{{randomRecipe.recipe.url}}">{{randomRecipe.recipe.url}}</a>
-    <p>Cuisine type: {{randomRecipe.recipe.cuisineType}}</p>
-    <p>Meal type: {{randomRecipe.recipe.mealType}}</p>
-    <p>Dish type: {{randomRecipe.recipe.dishType}}</p>
+  <div class="row" *ngIf="randomRecipe">
+    <app-recipe-results class="col-3" style="margin: 20px auto 0 auto;" [recipeResults]="recipes"></app-recipe-results>
   </div>
 </div>
-
-<div id="page-spacer"></div>
-
-<div class="row" *ngIf="randomRecipe">
-  <app-recipe-results class="col-3" style="margin: 20px auto 0 auto;" [recipeResults]="recipes"></app-recipe-results>
-</div>
-
-<div id="page-spacer"></div>
-
-</div>
-
-
-<!-- end of bg-img tag -->
-
-<!-- Description / Header -->
-
-<!-- Search Box and Generate Button -->
-
-<!-- Recipe Image / Name / Instructions -->
-<!-- <main class="container-fluid px-5"> -->
-<!-- <div class="row">  -->
-<!-- <img _ngcontent-uwn-c18="" _ngcontent-ueu-c16="" src="/assets/home-page.png" alt="FeedMe Now" style="padding-bottom: 5px;"> -->
-<!-- <div class="col-sm p-3 mx-4" id="recipeNameBox">
-          <img
-            src="/assets/recipe-standin.png"
-            alt="Recipe image"
-            width="300"
-            height="200"
-          />
-          <h1 id="recipeName">Recipe Name</h1>
-          <p>Cuisine Type | Prep Time | Cook Time</p>
-        </div>
-       
-       
-        <div id="instructions" class="col-sm p-3 mx-4">
-          <h3>Instructions:</h3>
-          <ol>
-            <li>Step 1</li>
-            <li>Step 2</li>
-            <li>Step 3</li>
-            <li>Step 4</li>
-          </ol>
-        </div> -->
-<!-- </div> -->
-<!-- </main> -->
-<!-- Recipe Image / Name / Instructions -->
