@@ -28,12 +28,12 @@
 }
 
 .navbar-brand.active {
-  background-color:#D0B49F;
+  background-color:var( --nav-hover-color);
   color: black;
 }
 
 .navbar .nav-link a.active {
-  background-color:#D0B49F;
+  background-color:var( --nav-hover-color);
   color: black;
 }
 
@@ -66,19 +66,19 @@
 
 .nav-dropdown .main-dropdown-btn {
   background-color: transparent;
-  color: #E4D4C8;
+  color: var(--nav-text-color);
   border-width: 0;
   padding: 10.5px 16px;
   font-size: 35px;
 }
 
 .nav-dropdown .main-dropdown-btn:hover {
-  background-color:#EA9B7A;
+  background-color:var( --nav-hover-color);
   color: black;
 }
 
 .nav-dropdown .main-dropdown-btn.active {
-  background-color:#D0B49F;
+  background-color:var( --nav-hover-color);
   color: black;
 }
 
@@ -96,32 +96,32 @@
 }
 
 .save-button:active {
-  background-color: #D0B49F;
+  background-color:var( --nav-hover-color);
 }
 
 .dropdown-menu {
-  background-color: #39918C;
+  background-color: var(--nav-bkg-color);
 }
 
 .dropdown-item {
-  color: #E4D4C8;
+  color: var(--nav-text-color);
   height: 100%;
   display: flex;
   align-items: center;
 }
 
 .dropdown-item:hover {
-  background-color:#EA9B7A;
+  background-color:var( --nav-hover-color);
   color: black;
 }
 
 .dropdown-item:active {
-  background-color:#D0B49F;
+  background-color:var( --nav-hover-color);
   color: black;
 }
 
 .dropdown-item.active {
-  background-color:#D0B49F;
+  background-color:var( --nav-hover-color);
   color: black;
 }
 
@@ -140,11 +140,11 @@
 }
 
 .dropdown-menu-btn:hover {
-  background-color:#EA9B7A;
+  background-color:var( --nav-hover-color);
 }
 
 .dropdown-menu-btn:active {
-  background-color:#D0B49F;
+  background-color:var( --nav-hover-color);
 }
 
 .dropdown-menu-item .material-icons {
