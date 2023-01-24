@@ -8,7 +8,7 @@ body {
      --active-color: #FFCBA4;
     --border-color: #EA9B7A;
     --modal-color: #8ce6cb;
-
+    --nav-text-color:  #E4D4C8;
     --nav-hover-color: #a06b55;
   }
 nav{
@@ -19,7 +19,7 @@ nav{
 
 
   body.dark-theme {
-    --text-color: #eee;
+    --text-color: hsl(177, 44%, 45%);
     --bkg-color: #252222;
     --btn-txt-color: white;
     --btn-bg-color: hsl(177, 44%, 25%);
@@ -27,8 +27,9 @@ nav{
     --nav-btn-color: #156485;
     --active-color:#00345b;
     --border-color: #156485;
-    --modal-color: #731934;
+    --modal-color: hsl(177, 44%, 35%);;
     --nav-hover-color:#2c3c89;
+    --nav-text-color: hsl(177, 44%, 45%);
   }
   
   body {
@@ -38,12 +39,24 @@ nav{
   h1,
   p {
     color: var(--text-color);
+   
   }
   .bg-img{
-  
+    background-image: url("/assets/lukas-blazek-f-knife-unsplash.jpg ");
+  /* background-color: #AB6B51;  wooden-plate-pita-bread-with-sliced-tomato-onion   top-view-chicken-onion-lemon-herbs-pieces-chicken-lavash-board  top-view-cut-lemons-dog-rosehips-feijoas-grey-table-copy-space.jpg lukas-blazek-f-knife-unsplash.jpg brooke-lark-tomatobg-unsplash.jpg   fresh-colourful-ingredients-mexican-cuisine.edit.jpg*/
+  background-size:cover;
+
+
+  min-height: 100vh;
+  background-blend-mode: overlay;
     background-color: var(--bkg-color);
+  
 
   }
+  .feedMeColumn{
+    background-color: var(--nav-bkg-color);
+    border-radius: 30px;
+   }
 .h4{
     color: var(--text-color)
 }
@@ -57,11 +70,26 @@ nav{
   #FeedMeBtn {
     background-color: var(--btn-bg-color);
    color: var(--btn-txt-color);
-  }
+max-width: 100%;
+display: flexbox;  
+justify-content: center;  
+align-items: center;  
+
+
+   }
+
+  
+  
+  
+
   .login-signup-button{
     background-color: var(--nav-btn-color)
+    
 
   }
+.form-check-label{
+    color: var(--btn-txt-color); 
+}
   .login-signup-button:active {
     background-color:var(--nav-btn-color)
   }

@@ -14,7 +14,7 @@
 
 /* Style the links inside the navigation bar */
 .navbar .nav-link a {
-  color: #E4D4C8;
+  color: var(--nav-text-color);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -169,7 +169,7 @@
 
 .home-page-btn {
   background-color: transparent;
-  color: #E4D4C8;
+  color: var(--nav-text-color);
   border-width: 0;
   padding: 10.5px 16px;
   font-size: 35px;

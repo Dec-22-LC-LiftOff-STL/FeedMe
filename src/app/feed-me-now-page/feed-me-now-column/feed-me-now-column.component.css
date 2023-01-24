@@ -28,10 +28,7 @@
   vertical-align: middle;
   
 }
-.feedMeColumn{
- background-color: #8ce6cb;
- border-radius: 30px;
-}
+
 #randomizedItem{
 margin: auto; border-radius: 30px; border-width: 10px; border-color :  #8ce6cb; background-color: antiquewhite; height: 70px; 
 }
