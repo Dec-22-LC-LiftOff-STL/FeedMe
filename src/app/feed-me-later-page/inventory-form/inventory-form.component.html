@@ -1,9 +1,9 @@
-<form class="card search-forms"  style="background-color: red;">
+<form class="card search-forms"  style="background-color: var(--column-inner-color)">
   <h4>
     Give us a list of what's available to cook with and it will appear in your inventory below.
   </h4>
   <div id="recipeGenerator" class="container-fluid">
-    <textarea name="ingredient-list"  style="background-color: red;" [(ngModel)]="ingredients" placeholder="Enter ingredients here separated by commas" id="ingredient-textarea"></textarea>
+    <textarea name="ingredient-list"  style="background-color: var(--column-inner-color)" [(ngModel)]="ingredients" placeholder="Enter ingredients here separated by commas" id="ingredient-textarea"></textarea>
   </div>
   <div id="recipeGenerator" class="container-fluid">
     <!-- <button type="button" class="btn btn-secondary btn-lg">
@@ -18,6 +18,6 @@
       <li *ngFor='let ingredient of ingredients'>{{ingredient}}</li>
     </ul>
     <label for="sel2" class="form-label">Mutiple select list (hold shift or crtl to select more than one):</label> -->
-    <button type="submit" class="btn btn-primary mt-3" (click)="submit()">Submit</button>
+    <button type="submit" class="btn btn-primary mt-3 border-0" (click)="submit()">Submit</button>
   </div>
 </form>
