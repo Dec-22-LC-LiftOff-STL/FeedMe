@@ -33,7 +33,7 @@
 
 <div id="page-spacer"></div>
 
-<div class="row">
+<div class="row" *ngIf="randomRecipe">
   <app-recipe-results class="col-3" style="margin: 20px auto 0 auto;" [recipeResults]="recipes"></app-recipe-results>
 </div>
 
