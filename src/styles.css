@@ -1,15 +1,16 @@
 body {
+  --placeholder-text-color:grey ;
     --text-color: #222;
     --bkg-color: #AB6B51;
     --btn-txt-color: black;
-    --btn-bg-color:  hsl(177, 44%, 45%);
+    --btn-bg-color: #8ce6cb;
     --nav-bkg-color:#8ce6cb;
     --nav-btn-color:  #EA9B7A;
      --active-color: #FFCBA4;
     --border-color: #EA9B7A;
     --modal-color:hsl(177, 44%, 45%);
-    --nav-text-color:  #E4D4C8;
-    --nav-hover-color: #a06b55;
+    --nav-text-color:  #EA9B7A;
+    --nav-hover-color: #EA9B7A;
   }
 nav{
 
@@ -19,6 +20,7 @@ nav{
 
 
   body.dark-theme {
+    --placeholder-text-color: hsl(177, 44%, 55%); ;
     --text-color: hsl(177, 44%, 45%);
     --bkg-color: #252222;
     --btn-txt-color: white;
@@ -28,7 +30,7 @@ nav{
     --active-color:#00345b;
     --border-color: #156485;
     --modal-color: hsl(177, 44%, 35%);;
-    --nav-hover-color:#2c3c89;
+    --nav-hover-color:#156485;
     --nav-text-color: hsl(177, 44%, 45%);
   }
   

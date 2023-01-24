@@ -41,7 +41,7 @@
 
 /* Change the color of links on hover */
 .navbar .nav-link a:hover, .navbar-brand:hover {
-  background-color:#EA9B7A;
+  background-color:var( --nav-hover-color);
   color: black;
 }
 
@@ -151,7 +151,7 @@
   font-size: 20px;
 }
 .material-symbols-sharp{
-  color: antiquewhite;
+  color: var(--nav-text-color);
   font-size: 45px;
   text-decoration: none;
 }
@@ -176,7 +176,7 @@
 }
 
 .home-page-btn:hover {
-  background-color:#D0B49F;
+  background-color:var( --nav-hover-color);
   color: black;
 }
 
