@@ -15,5 +15,4 @@ export class InventoryFormComponent {
   submit() {
     this.ingredientsSubmitted.emit(this.ingredients.split(","));
   }
-
 }
