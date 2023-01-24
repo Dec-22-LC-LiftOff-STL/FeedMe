@@ -11,7 +11,12 @@
   margin-bottom: 15px;
 }
 
-
+.column-input-label{
+  color:var(--text-color);
+}
+.text-center.form-control.border-0.fs-2{
+  color:var(--text-color);
+}
 
 #deleteBtn{
   color: #EA9B7A; 
@@ -80,7 +85,8 @@ margin: auto; border-radius: 30px; border-width: 10px; border-color :  #8ce6cb; 
   grid-column-gap: 8px;
   max-width: 500px;
   margin: 0 auto;
-  background-color: #8ce6cb;
+  padding: 15px;
+  background-color: var(--input-box-bg-color);
   
 }
 
@@ -88,6 +94,7 @@ margin: auto; border-radius: 30px; border-width: 10px; border-color :  #8ce6cb; 
   border: 0px;
   margin: 0 auto;
   background-color: transparent;
+ 
 }
 
 
@@ -95,6 +102,7 @@ margin: auto; border-radius: 30px; border-width: 10px; border-color :  #8ce6cb; 
   border: 0px;
   margin-top: 8px;
   margin-bottom: 8px;
+
 }
 
 .feedMeButton.button5 {

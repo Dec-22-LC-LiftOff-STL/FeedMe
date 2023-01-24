@@ -35,7 +35,7 @@ margin-bottom: 8px;
   width: 50px;
   background-color:#EAEFF2;
   border: black solid 2px;
-  color: Black;
+  color: var(--text-color);
   font-weight:900;
   font-size: 25px;
   margin-top: 25px;
@@ -68,7 +68,9 @@ main {
 
 .col-sm.p-3.mx-4 {
   margin-top: 100px;
-    background-color: #39918C;
+    background-color: var(--column-border-color);
+ 
+
 
 }
 

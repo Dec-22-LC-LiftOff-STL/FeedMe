@@ -9,8 +9,11 @@ body {
      --active-color: #FFCBA4;
     --border-color: #EA9B7A;
     --modal-color:hsl(177, 44%, 45%);
-    --nav-text-color:  #EA9B7A;
+    --nav-text-color:  hsl(18, 73%, 50%);
     --nav-hover-color: #EA9B7A;
+    --column-border-color:  hsl(177, 44%, 45%);
+    --column-inner-color:hsl(162, 64%, 63%);
+    --input-box-bg-color: hsl(177, 44%, 45%); 
   }
 nav{
 
@@ -20,7 +23,7 @@ nav{
 
 
   body.dark-theme {
-    --placeholder-text-color: hsl(177, 44%, 55%); ;
+    --placeholder-text-color: hsl(177, 44%, 45%); ;
     --text-color: hsl(177, 44%, 45%);
     --bkg-color: #252222;
     --btn-txt-color: white;
@@ -32,6 +35,9 @@ nav{
     --modal-color: hsl(177, 44%, 35%);;
     --nav-hover-color:#156485;
     --nav-text-color: hsl(177, 44%, 45%);
+    --column-border-color:  #156485; 
+    --column-inner-color: hsl(177, 44%, 25%);
+    --input-box-bg-color:  #156485; 
   }
   
   body {
@@ -42,6 +48,10 @@ nav{
   p {
     color: var(--text-color);
    
+  }
+
+  .btn{
+    color:var(--text-color);
   }
   .bg-img{
     background-image: url("/assets/lukas-blazek-f-knife-unsplash.jpg ");
@@ -56,8 +66,9 @@ nav{
 
   }
   .feedMeColumn{
-    background-color: var(--nav-bkg-color);
+    background-color: var( --column-inner-color);
     border-radius: 30px;
+  
    }
 h4{
     color: var(--text-color)
