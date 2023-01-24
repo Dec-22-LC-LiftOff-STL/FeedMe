@@ -57,7 +57,7 @@ nav{
     background-color: var(--nav-bkg-color);
     border-radius: 30px;
    }
-.h4{
+h4{
     color: var(--text-color)
 }
   button {
