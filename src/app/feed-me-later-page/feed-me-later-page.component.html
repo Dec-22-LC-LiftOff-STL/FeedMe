@@ -15,10 +15,10 @@
   </header>
 
   <div class="row justify-content-center">
-    <app-inventory-form class="col-4" (ingredientsSubmitted)="fetchRecipes($event)"></app-inventory-form>
+    <app-inventory-form class="col-4"  style="background-color: red;" (ingredientsSubmitted)="fetchRecipes($event)"></app-inventory-form>
     <!-- <app-health-tags-form class="col-3 offset-1"></app-health-tags-form> -->
     <!-- <app-recipe-results class="col-3 offset-2"></app-recipe-results> -->
-    <div class="col-4" *ngIf="randomRecipe">
+    <div class="col-4" *ngIf="randomRecipe" >
       <h3>{{randomRecipe.recipe.label}}</h3>
       <img src="{{randomRecipe.recipe.image}}" class="container-fluid" style="max-height: 200px; max-width: auto;">
       <p>Ingredients:</p>

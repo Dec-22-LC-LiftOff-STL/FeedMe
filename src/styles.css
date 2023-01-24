@@ -50,8 +50,9 @@ nav{
    
   }
 
-  .btn{
+  .btn {
     color:var(--text-color);
+    background-color: var(--nav-btn-color);
   }
   .bg-img{
     background-image: url("/assets/lukas-blazek-f-knife-unsplash.jpg ");
@@ -96,8 +97,8 @@ align-items: center;
   
 
   .login-signup-button{
-    background-color: var(--nav-btn-color)
-    
+    color:var(--text-color);
+    background-color: var(--nav-btn-color);
 
   }
 .form-check-label{

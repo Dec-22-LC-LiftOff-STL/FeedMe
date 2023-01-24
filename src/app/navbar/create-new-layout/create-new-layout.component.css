@@ -48,3 +48,7 @@
 .create-button:active {
   background-color: #D0B49F;
 }
+#createAFeedMeLayoutBtn{
+  color:var(--text-color);
+  background-color: var(--nav-btn-color);
+}
