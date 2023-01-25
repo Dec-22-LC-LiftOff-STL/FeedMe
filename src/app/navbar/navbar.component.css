@@ -175,14 +175,15 @@
   font-size: 35px;
 }
 
+
 .home-page-btn:hover {
-  background-color:var( --nav-hover-color);
+  background-color: var(--nav-hover-color);
   color: black;
   max-width: 100%;
 }
 
-.home-page-btn:active {
-  background-color:var( --nav-hover-color);
+.nav-btn:active  {
+  background-color:var( --active-color);
   color: black;
 }
 #darkModeToggle{

@@ -6,11 +6,11 @@ body {
     --btn-bg-color: hsl(162, 64%, 63%);
     --nav-bkg-color:hsl(162, 64%, 63%);
     --nav-btn-color:  #EA9B7A;
-     --active-color: #FFCBA4;
+     --active-color: hsl(26, 100%, 52%);
     --border-color: #EA9B7A;
     --modal-color:hsl(177, 44%, 45%);
     --nav-text-color:  hsl(18, 73%, 50%);
-    --nav-hover-color: #EA9B7A;
+    --nav-hover-color: hsl(18, 73%, 80%);
     --column-border-color:  hsl(177, 44%, 45%);
     --column-inner-color:hsl(162, 64%, 63%);
     --input-box-bg-color: hsl(177, 44%, 45%); 
