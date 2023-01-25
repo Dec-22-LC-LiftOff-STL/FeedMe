@@ -30,3 +30,14 @@
 .powered-by a {
   text-decoration: none;
 }
+
+.feedme-later-outer {
+  background-color: var(--column-border-color);
+  padding: 1rem;
+}
+
+.feedme-later-inner {
+  background-color: var(--column-inner-color);
+  color: var(--text-color);
+  border-radius: 8px;
+}

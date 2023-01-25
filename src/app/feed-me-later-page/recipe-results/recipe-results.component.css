@@ -4,6 +4,12 @@
     margin: 10px;
 }
 
+.recipe-result-card {
+    background-color: var(--column-inner-color);
+    text-decoration: none;
+    border: 0;
+}
+
 .recipe-results-outer {
     background-color: var(--column-border-color);
     padding: 1rem;
@@ -12,6 +18,7 @@
 .recipe-results-inner {
     background-color: var(--column-inner-color);
     color: var(--text-color);
+    border-radius: 8px;
 }
 
 .recipe-results-inner a p {
