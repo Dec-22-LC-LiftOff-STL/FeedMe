@@ -33,52 +33,29 @@
   margin-left: auto;
 }
 
-#pills-home-tab:hover {
-  background-color: var(  --nav-hover-color);
-  color: var(--nav-txt-color);
-  font-weight: 500;
-}
-
 #pills-home-tab {
-  background-color: var(--nav-btn-color);
-  color: #E4D4C8;
+  background-color: var(--nav-bkg-color);
+  color: var(--nav-txt-color);
 }
 
 #pills-profile-tab {
-  background-color: var(--nav-btn-color);
-  color: #E4D4C8;
+  background-color: var(--nav-bkg-color);
+  color: var(--nav-txt-color);
 }
 
 #pills-home-tab.active {
   background-color: var(--nav-active-color);
   color: var(--nav-txt-color);
-  font-weight: 700;
-}
-
-#pills-profile-tab:hover {
-  background-color: var(  --nav-hover-color);
-  color: var(--nav-txt-color);
-  font-weight: 500;
 }
 
 #pills-profile-tab.active {
   background-color: var(--nav-active-color);
   color: var(--nav-txt-color);
-  font-weight: 700;
 }
+
 #rememberMe{
-  
-    color: var(--btn-txt-color);
-  
+  color: var(--btn-txt-color);
 }
-
-/* #modalLogin {
-  background-color: #FFCBA4;
-}
-
-#modalSignUp {
-  background-color: #FFCBA4;
-} */
 
 .card {
   background-color: #39918C;
@@ -95,18 +72,6 @@
   border-top-left-radius: 5px !important;
 }
 
-.btn-dark {
-  color: red;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
-}
-
-.btn-dark:hover {
-  color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
-}
-
 .nav-pills {
   display:table !important;
   width:100%;
@@ -114,7 +79,6 @@
 
 .nav-pills .nav-link {
   border-radius: 0px;
-  border-bottom: 1px solid #0d6efd40;
 }
 
 .nav-item {
@@ -123,7 +87,6 @@
 }
 
 #signUpLoginBtn{
-
   font-weight: bold;
 }
 
@@ -133,8 +96,8 @@
 }
 
 #cardBtn:active {
-
   color: #000;
+  background-color:var(--btn-active-color);
   border: 0;
 }
 
@@ -172,6 +135,7 @@
   max-width: 50px; 
   margin-left: auto;
   border: 0;
+  background-color: transparent;
 }
 
 .loginSignupModal{
@@ -191,11 +155,16 @@
 }
 
 .login-signup-button{
-
+  border-radius: 8px;
   font-weight: bold;
   border: 0; 
-
   font-size: 25px; 
   margin-right: 5px;
+}
+
+.login-signup-button:active {
+  color: #000;
+  background-color:var(--btn-active-color);
+  border: 0;
 }
 

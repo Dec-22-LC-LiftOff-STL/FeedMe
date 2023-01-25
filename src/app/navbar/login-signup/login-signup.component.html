@@ -1,6 +1,6 @@
-<button type="button" class="btn btn-info btn-lg login-signup-button" (click)="openModal()" *ngIf="!userInfo; else logoutButton">Login/Register</button>
+<button type="button" class="login-signup-button" (click)="openModal()" *ngIf="!userInfo; else logoutButton">Login/Register</button>
 <ng-template #logoutButton>
-    <button type="button" class="btn btn-info btn-lg login-signup-button" (click)="logout()">Logout</button>
+    <button type="button" class="login-signup-button" (click)="logout()">Logout</button>
 </ng-template>
 
 <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">

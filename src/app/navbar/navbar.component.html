@@ -9,12 +9,8 @@
         <a title="This button takes you back to the Home page."  routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
       </li>
 
-      <li class="nav-link">
-        <a routerLink="/feed-me-later" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">FeedMe Later</a>
-      </li>
-
       <ng-container *ngIf="!userInfo; else createLayoutsTemplate">
-        <li class="nav-link nav-feedme-now">
+        <li class="nav-link">
           <a routerLink="/feed-me-now" routerLinkActive="active"
             title="This button takes you to the FeedMeNow page where meal descisions can be made for you.">FeedMe
             Now</a>
@@ -75,6 +71,12 @@
           </div>
         </li>
       </ng-template>
+
+      <li class="nav-link">
+        <a routerLink="/feed-me-later" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">FeedMe Later</a>
+      </li>
+
+      <li class="nav-spacer"></li>
 
       <label class="switch">
         <input type="checkbox" (click)="toggleDarkTheme()">

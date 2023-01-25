@@ -42,7 +42,6 @@ margin-bottom: 8px;
   margin-bottom: 15px;
 }
 
-
 .inputRow {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -51,11 +50,10 @@ margin-bottom: 8px;
   margin: 0 auto;
   background-color: #39918C;
 }
+
 [data-title]:hover:after {
   visibility: visible;
 }
-
-
 
 h2 {
   font-size: 40px;
@@ -68,10 +66,7 @@ main {
 
 .col-sm.p-3.mx-4 {
   margin-top: 100px;
-    background-color: var(--column-border-color);
- 
-
-
+  background-color: var(--column-border-color);
 }
 
 h4 {

@@ -7,6 +7,10 @@
   padding: 0;
 } */
 
+.navbar {
+  --bs-navbar-padding-y: 0;
+}
+
 .navbar-nav {
   align-items: center;
   flex: 1;
@@ -16,9 +20,10 @@
 .navbar .nav-link a {
   color: var(--text-color);
   text-align: center;
-  padding: 12px 16px;
+  padding: 10px 16px;
   text-decoration: none;
   font-size: 35px;
+  display: block;
 }
 
 .navbar-brand {
@@ -59,7 +64,6 @@
 }
 
 .nav-dropdown {
-  flex: 1;
   text-decoration: none;
 }
 
@@ -67,7 +71,7 @@
   background-color: transparent;
   color: var(--nav-text-color);
   border-width: 0;
-  padding: 10.5px 16px;
+  padding: 10px 16px;
   font-size: 35px;
 }
 
@@ -81,7 +85,7 @@
   color: black;
 }
 
-.nav-feedme-now {
+.nav-spacer {
   flex: 1;
 }
 
@@ -149,11 +153,13 @@
 .dropdown-menu-item .material-icons {
   font-size: 20px;
 }
-.material-symbols-sharp{
+
+.material-symbols-sharp {
   color: var(--nav-text-color);
   font-size: 45px;
   text-decoration: none;
 }
+
 .dropdown-input {
   border: 0;
   text-align: center; 
@@ -170,7 +176,7 @@
   background-color: transparent;
   color: var(--nav-text-color);
   border-width: 0;
-  padding: 10.5px 16px;
+  padding: 10px 16px;
   font-size: 35px;
 }
 
@@ -181,15 +187,16 @@
   max-width: 100%;
 }
 
-.nav-btn:active  {
+.nav-btn:active {
   background-color:var( --active-color);
   color: black;
 }
-#darkModeToggle{
+
+#darkModeToggle {
   color: #EA9B7A;
   font-size: 75px;
-
 }
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -279,6 +286,7 @@ input:checked + .slider .light-mode {
 
 /* Rounded sliders */
 .slider.round {
+  background-color: var(--nav-active-color);
   border-radius: 34px;
 }
 

@@ -1,4 +1,4 @@
-.save-button{
+.save-button {
     background-color: #EA9B7A;
     font-weight: bold;
     border: 0; 
@@ -29,7 +29,7 @@
   border-color: #EA9B7A;
 }
 
-.saveModal{
+.saveModal {
   background-color: #8ce6cb;
   border-radius: 30px;
   position: relative;
@@ -45,13 +45,10 @@
   margin-right: 5px;
 }
 
-.create-button:active {
-  background-color: #D0B49F;
+.create-button:active, #createAFeedMeLayoutBtn:active {
+  background-color: var(--btn-active-color);
 }
-#createAFeedMeLayoutBtn{
+#createAFeedMeLayoutBtn {
   color:var(--text-color);
   background-color: var(--nav-btn-color);
-}
-#createAFeedMeLayoutBtn:hover{
-  background-color:var( --nav-hover-color);
 }

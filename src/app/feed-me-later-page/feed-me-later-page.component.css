@@ -3,6 +3,32 @@
 #page-spacer {
   margin-bottom: 100px;
 }
+
+.bg-img {
+  display: flex;
+  flex-direction: column;
+}
+
+.feed-me-later-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.powered-by {
+  flex: 1;
+  align-items: flex-end;
+}
+
+.powered-by p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.powered-by a {
+  text-decoration: none;
+}
 /* 
 * {
   box-sizing: border-box;
