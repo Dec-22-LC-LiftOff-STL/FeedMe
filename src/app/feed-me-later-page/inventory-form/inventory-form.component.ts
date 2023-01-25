@@ -13,6 +13,11 @@ export class InventoryFormComponent {
   ingredientsSubmitted: EventEmitter<string[]> = new EventEmitter<string[]>();
 
   submit() {
-    this.ingredientsSubmitted.emit(this.ingredients.split(","));
+    if(!this.ingredients) {
+      alert("Please fill out the search form!");
+    }
+    else {
+      this.ingredientsSubmitted.emit(this.ingredients.split(","));
+    }
   }
 }
