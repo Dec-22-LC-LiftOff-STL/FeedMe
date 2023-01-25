@@ -33,8 +33,8 @@ nav{
     --active-color:#00345b;
     --border-color: #156485;
     --modal-color: hsl(177, 44%, 35%);;
-    --nav-hover-color:#156485;
-    --nav-text-color: hsl(177, 44%, 45%);
+    --nav-hover-color:hsl(198, 73%, 40%);
+    --nav-text-color: hsl(0, 0%, 2%);
     --column-border-color:  #156485; 
     --column-inner-color: hsl(177, 44%, 25%);
     --input-box-bg-color:  #156485; 
@@ -100,6 +100,9 @@ align-items: center;
     color:var(--text-color);
     background-color: var(--nav-btn-color);
 
+  }
+  .login-signup-button:hover{
+    background-color: var(--nav-hover-color);
   }
 .form-check-label{
     color: var(--btn-txt-color); 

@@ -3,5 +3,5 @@
     margin: 5px;
 }
 #recipeSubmit::hover{
-background-color: #31d2f2;;
+background-color: hsl(18, 73%, 80%);
 }

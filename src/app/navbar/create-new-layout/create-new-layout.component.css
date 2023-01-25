@@ -53,5 +53,5 @@
   background-color: var(--nav-btn-color);
 }
 #createAFeedMeLayoutBtn:hover{
-  background-color: #31d2f2;
+  background-color:var( --nav-hover-color);
 }
