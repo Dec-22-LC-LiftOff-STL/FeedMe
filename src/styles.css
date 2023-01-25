@@ -40,7 +40,7 @@ body.dark-theme {
   --column-border-color: hsl(177, 43%, 20%);
   --column-inner-color: hsl(177, 45%, 31%);
   --input-box-bg-color: hsl(177, 42%, 11%);
-  --btn-active-color: hsl(178, 42%, 20%);
+  --btn-active-color: hsl(179, 50%, 25%);
   --randomize-border-color: hsl(178, 41%, 12%);
   --randomize-inner-color: hsl(177, 45%, 34%);
 }

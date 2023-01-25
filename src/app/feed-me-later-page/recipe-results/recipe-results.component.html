@@ -1,20 +1,20 @@
-<div id="recipeResults" class="card">
+<div id="recipeResults" class="card recipe-results-outer">
     <div class="overflow-auto container-fluid" id="recipe-results">
         <ul>
-        <li class="card recipe-thumbs" *ngFor="let recipe of recipeResults">
-            <h3>{{recipe.recipe.label}}</h3>
-            <img src="{{recipe.recipe.image}}" class="container-fluid" style="max-height: 200px; max-width: auto;">
-            <p>Ingredients:</p>
-            <ul>
-                <li *ngFor="let ingredient of recipe.recipe.ingredientLines">{{ingredient}}</li>
-            </ul>
-            <a href="{{recipe.recipe.url}}">{{recipe.recipe.url}}</a>
-            <p>Cuisine type: {{recipe.recipe.cuisineType}}</p>
-            <p>Meal type: {{recipe.recipe.mealType}}</p>
-            <p>Dish type: {{recipe.recipe.dishType}}</p>
+        <li class="card recipe-thumbs recipe-results-outer" *ngFor="let recipe of recipeResults">
+            <div class="recipe-results-inner">
+                <h3>{{recipe.recipe.label}}</h3>
+                <img src="{{recipe.recipe.image}}" class="container-fluid" style="max-height: 300; max-width: 500px">
+                <p>Ingredients:</p>
+                <ul>
+                    <li class="ingredient-spacer" *ngFor="let ingredient of recipe.recipe.ingredientLines">{{ingredient}}</li>
+                </ul>
+                <p>Instructions: <a href="{{recipe.recipe.url}}"> {{recipe.recipe.url}}</a></p>
+                <p>Cuisine type: {{recipe.recipe.cuisineType}}</p>
+                <p>Meal type: {{recipe.recipe.mealType}}</p>
+                <p>Dish type: {{recipe.recipe.dishType}}</p>
+            </div>
         </li>
     </ul>
     </div>
-    <!-- <label for="sel2" class="form-label">Mutiple select list (hold shift or ctrl to select more than one):</label>
-    <button type="submit" class="btn btn-primary mt-3">Pick One For Me!</button> -->
 </div>

@@ -1,0 +1,32 @@
+.inventory-form-container {
+    background-color: var(--column-border-color);
+    padding: 1rem;
+}
+
+.inventory-form-inner {
+    background-color: var(--column-inner-color);
+}
+
+.inventory-search-area {
+    background-color: var(--input-box-bg-color);
+    color: var(--text-color);
+    border: 0;  
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+::placeholder {
+    color: var(--placeholder-text-color);
+    opacity: .5; 
+}
+
+.inventory-submit {
+    border-radius: 8px;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-txt-color);
+}
+
+.inventory-submit:active {
+    background-color: var(--btn-active-color);
+    color: black;
+}

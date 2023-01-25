@@ -3,3 +3,23 @@
     padding: 10px;
     margin: 10px;
 }
+
+.recipe-results-outer {
+    background-color: var(--column-border-color);
+    padding: 1rem;
+}
+
+.recipe-results-inner {
+    background-color: var(--column-inner-color);
+    color: var(--text-color);
+}
+
+.recipe-results-inner a p {
+    text-decoration: none;
+    border: 0;
+    padding-top: 5px;
+}
+
+.ingredient-spacer {
+    padding-bottom: 5px;
+}
