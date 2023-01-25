@@ -42,7 +42,7 @@
   color: var(--btn-active-color); 
 }
 
-#randomizedItem{
+.randomizedItem {
   margin: auto; 
   border-radius: 30px; 
   border-width: 10px; 
@@ -54,12 +54,15 @@
 .button1 {
   border-radius: 2px;
 }
+
 .button2 {
   border-radius: 4px;
 }
+
 .button3 {
   border-radius: 8px;
 }
+
 .button4 {
     border-radius: 50%;
     height: 50px;
@@ -72,6 +75,7 @@
     margin-top: 25px;
     margin-bottom: 15px;
 }
+
 .button5 {
   border-radius: 50%;
   height: 50px;
@@ -108,7 +112,6 @@
   border: 0px;
   margin: 0 auto;
   background-color: transparent;
- 
 }
 
 
@@ -116,7 +119,8 @@
   border: 0px;
   margin-top: 8px;
   margin-bottom: 8px;
-
+  color: var(--text-color);
+  background-color: var(--input-box-bg-color);
 }
 
 .feedMeButton.button5 {

@@ -1,7 +1,0 @@
-.form {
-    padding: 5px;
-    margin: 5px;
-}
-#recipeSubmit::hover{
-background-color: hsl(18, 73%, 80%);
-}

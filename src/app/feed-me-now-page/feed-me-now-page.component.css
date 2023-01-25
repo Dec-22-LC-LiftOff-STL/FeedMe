@@ -89,8 +89,16 @@ h4 {
   font-size: 20px;
 }
 
-.delete-column-icon {
+.delete-column-icon{
+  color: var(--nav-btn-color); 
   font-size: 50px;
+  display: inline-flex;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+.delete-column-icon:active {
+  color: var(--btn-active-color); 
 }
 
 .feed-me-now-columns {
@@ -102,4 +110,30 @@ h4 {
   box-sizing: border-box;
   min-width: calc(100% / 3 - 3rem);
   max-width: 100%;
+}
+
+.add-column-btn {
+  color: var(--nav-btn-color); 
+  font-size: 20px;
+  display: inline-flex;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+.add-column-btn:active {
+  color: var(--btn-active-color); 
+}
+
+.add-column-label {
+  color: var(--text-color);
+}
+
+.add-column-input { 
+  color: var(--text-color);
+  background-color: var(--input-box-bg-color);
+}
+
+::placeholder { 
+  color: var(--placeholder-text-color);
+  opacity: .5; 
 }

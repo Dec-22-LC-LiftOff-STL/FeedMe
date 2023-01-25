@@ -136,7 +136,7 @@
 
 .dropdown-menu-btn {
   background-color: transparent;
-  color: black;
+  color: var(--nav-btn-color);
   border-width: 0;
   padding: 10px;
   font-weight: bold;

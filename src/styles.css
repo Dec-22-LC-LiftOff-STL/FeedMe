@@ -1,5 +1,5 @@
 body {
-  --placeholder-text-color: grey;
+  --placeholder-text-color: rgb(73, 73, 73);
   --text-color: #222;
   --bkg-color: #AB6B51;
   --btn-txt-color: black;
@@ -13,7 +13,7 @@ body {
   --nav-active-color: #EA9B7A;
   --column-border-color: #AB6B51;
   --column-inner-color: #FFCBA4;
-  --input-box-bg-color: #AB6B51;
+  --input-box-bg-color: #ffffff;
   --btn-active-color: #ffd8b9;
   --randomize-border-color: #925c47;
   --randomize-inner-color: #fcd4b6;
@@ -24,22 +24,22 @@ nav {
 }
 
 body.dark-theme {
-  --placeholder-text-color: hsl(177, 44%, 45%);
+  --placeholder-text-color: hsl(177, 51%, 53%);
   --text-color: hsl(177, 44%, 45%);
   --bkg-color: #252222;
   --btn-txt-color: hsl(177, 44%, 45%);
-  --btn-bg-color: hsl(177, 44%, 25%);
-  --nav-bkg-color: hsl(177, 44%, 25%);
+  --btn-bg-color: hsl(177, 43%, 20%);
+  --nav-bkg-color: hsl(177, 43%, 20%);
   --nav-btn-color: hsl(178, 42%, 16%);
   --active-color: hsl(178, 42%, 16%);
   --border-color: hsl(178, 42%, 16%);
   --modal-color: hsl(177, 44%, 35%);
-  --nav-hover-color: hsl(178, 45%, 36%);
+  --nav-hover-color: hsl(177, 45%, 31%);
   --nav-active-color: hsl(178, 42%, 16%);
   --nav-text-color: hsl(177, 44%, 45%);
-  --column-border-color: hsl(178, 42%, 16%);
-  --column-inner-color: hsl(177, 44%, 25%);
-  --input-box-bg-color: #156485;
+  --column-border-color: hsl(177, 43%, 20%);
+  --column-inner-color: hsl(177, 45%, 31%);
+  --input-box-bg-color: hsl(177, 42%, 11%);
   --btn-active-color: hsl(178, 42%, 20%);
   --randomize-border-color: hsl(178, 41%, 12%);
   --randomize-inner-color: hsl(177, 45%, 34%);
@@ -104,13 +104,7 @@ button {
   display: flexbox;
   justify-content: center;
   align-items: center;
-
-
 }
-
-
-
-
 
 .login-signup-button {
   color: var(--text-color);

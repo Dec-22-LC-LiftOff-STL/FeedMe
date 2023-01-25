@@ -25,17 +25,17 @@
           </div>
       </div>
 
-      <div class="row text-center " id="addNewColumnId"  *ngIf="columns.length <= 5">
+      <div class="row text-center" id="addNewColumnId"  *ngIf="columns.length <= 5">
         <div class="col-sm p-3 mx-4">
             <input type="text"
             [(ngModel)]="newColumnTitle"
-            class="form-control border-0 fs-4 text-center"
+            class="form-control border-0 fs-4 text-center add-column-input"
             style="margin-bottom: 20px;"
             placeholder="Enter a new Column Name"/>
-            <label id="addNewColumn">
+            <label id="addNewColumn" class="add-column-label">
             Add a new Column!
             <button (click)="addNewColumn()" class="menu-item">
-              <span class="material-icons" title="Add a Column">
+              <span class="material-icons add-column-btn" title="Add a Column">
                 add_circle
               </span>
             </button>
