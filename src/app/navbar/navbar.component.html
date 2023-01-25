@@ -13,7 +13,11 @@
       </li>
 
       <li class="nav-link">
-        <a routerLink="/feed-me-later" routerLinkActive="active">FeedMe Later</a>
+        <a  title="This button takes you back to the Home page."  routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+      </li>
+
+      <li class="nav-link">
+        <a routerLink="/feed-me-later" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">FeedMe Later</a>
       </li>
 
       <ng-container *ngIf="!userInfo; else createLayoutsTemplate">
