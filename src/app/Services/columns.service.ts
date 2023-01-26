@@ -15,7 +15,7 @@ export class ColumnsService {
 
     // gets our columns using a related endpoint in the back end and a get request
     getColumns() { 
-        return this.http.get<ChoiceColumn[]>("/api/choiceColumns");
+        return this.http.get<ChoiceColumn[]>("/api/choice-columns");
     }
 
     
@@ -25,7 +25,7 @@ export class ColumnsService {
     async createColumn(choiceColumn: ChoiceColumn) {
         try {
             // converts the observable get request into a promise by fetching the last value from it and then awaits the promise
-            return await lastValueFrom(this.http.post<ChoiceColumn>("/api/choiceColumns", choiceColumn));
+            return await lastValueFrom(this.http.post<ChoiceColumn>("/api/choice-columns", choiceColumn));
         } 
 
         // catches any errors that might be thrown
@@ -38,11 +38,11 @@ export class ColumnsService {
 
     // updates a column using a related endpoint in the back end and a put request
     updateColumn(choiceColumn: ChoiceColumn) { 
-        return this.http.put<ChoiceColumn>("/api/choiceColumns/" + choiceColumn.id, choiceColumn);
+        return this.http.put<ChoiceColumn>("/api/choice-columns/" + choiceColumn.id, choiceColumn);
     }
 
     // deletes a column using a related endpoint in the back end and a delete request
     deleteColumn(id: number) { 
-        return this.http.delete("/api/choiceColumns/" + id);
+        return this.http.delete("/api/choice-columns/" + id);
     }
 }

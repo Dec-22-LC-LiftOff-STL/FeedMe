@@ -11,38 +11,59 @@
   margin-bottom: 15px;
 }
 
-[data-title]:after {
-  content: attr(data-title);
-  background-color: #EA9B7A;    
-  color: #ffffff;
-  font-size: 16px;
-  position: absolute;
-  padding: 0px 8px 4px 8px;
-  visibility: hidden;
-  border-radius: 20px;
-  border-width: 2px;
-  border-color: #39918C;
-  white-space: pre;
+.column-input-label{
+  color:var(--text-color);
 }
 
-
-
-.feedMeColumn{
- background-color: #8ce6cb;
- border-radius: 30px;
+.text-center.form-control.border-0.fs-2{
+  color:var(--text-color);
 }
-#randomizedItem{
-margin: auto; border-radius: 30px; border-width: 10px; border-color :  #8ce6cb; background-color: antiquewhite; height: 70px; 
+
+#deleteBtn{
+  color: var(--nav-btn-color); 
+  font-size: 50px;
+  display: inline-flex;
+  vertical-align: top;
+  padding-top: 10px;
 }
+
+#deleteBtn:active {
+  color: var(--btn-active-color); 
+}
+
+#addColumnBtn{
+  color: var(--nav-btn-color); 
+  font-size: 28px;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+#addColumnBtn:active {
+  color: var(--btn-active-color); 
+}
+
+.randomizedItem {
+  margin: auto; 
+  border-radius: 30px; 
+  border-width: 10px; 
+  border-color: var(--randomize-border-color);
+  background-color: var(--randomize-inner-color);
+  height: 70px; 
+  font-weight: 700;
+}
+
 .button1 {
   border-radius: 2px;
 }
+
 .button2 {
   border-radius: 4px;
 }
+
 .button3 {
   border-radius: 8px;
 }
+
 .button4 {
     border-radius: 50%;
     height: 50px;
@@ -55,6 +76,7 @@ margin: auto; border-radius: 30px; border-width: 10px; border-color :  #8ce6cb; 
     margin-top: 25px;
     margin-bottom: 15px;
 }
+
 .button5 {
   border-radius: 50%;
   height: 50px;
@@ -67,9 +89,15 @@ margin: auto; border-radius: 30px; border-width: 10px; border-color :  #8ce6cb; 
   margin-top: 25px;
   margin-bottom: 15px;
 }
+
 .btn.btn-lg{
   background-color: #EAEFF2;
   margin-bottom: 20px;
+}
+
+::placeholder { 
+  color: var(--placeholder-text-color);
+  opacity: .5; 
 }
 
 .inputRow {
@@ -78,7 +106,7 @@ margin: auto; border-radius: 30px; border-width: 10px; border-color :  #8ce6cb; 
   grid-column-gap: 8px;
   max-width: 500px;
   margin: 0 auto;
-  background-color: #8ce6cb;
+  padding: 2px 15px 2px 15px;
 }
 
 .text-center.form-control.border-0.fs-2 {
@@ -92,6 +120,8 @@ margin: auto; border-radius: 30px; border-width: 10px; border-color :  #8ce6cb; 
   border: 0px;
   margin-top: 8px;
   margin-bottom: 8px;
+  color: var(--text-color);
+  background-color: var(--input-box-bg-color);
 }
 
 .feedMeButton.button5 {
@@ -129,4 +159,19 @@ button:hover .tip{
 
 .column-input-label {
   font-size: 18px;
+}
+
+.choose-button{
+  background-color: var(--nav-btn-color);
+  border-radius: 8px;
+  font-weight: bold;
+  border: 0; 
+  font-size: 25px; 
+  margin-bottom: 10px;
+}
+
+.choose-button:active{
+  color: #000;
+  background-color:var(--btn-active-color);
+  border: 0;
 }

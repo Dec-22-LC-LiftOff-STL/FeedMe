@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './Services/auth.service';
 import { ColumnLayoutService } from './Services/column-layout-service';
 import { CreateNewLayoutComponent } from './navbar/create-new-layout/create-new-layout.component';
+import { InventoryFormComponent } from './feed-me-later-page/inventory-form/inventory-form.component';
+import { HealthTagsFormComponent } from './feed-me-later-page/health-tags-form/health-tags-form.component';
+import { RecipeResultsComponent } from './feed-me-later-page/recipe-results/recipe-results.component';
 
 function initializeApp(authService: AuthService, columnLayoutService: ColumnLayoutService): () => Promise<void> {
     return async () => {
@@ -34,7 +37,10 @@ function initializeApp(authService: AuthService, columnLayoutService: ColumnLayo
     FeedMeNowColumnComponent,
     NavbarComponent,
     LoginSignupComponent,
-    CreateNewLayoutComponent
+    CreateNewLayoutComponent,
+    InventoryFormComponent,
+    HealthTagsFormComponent,
+    RecipeResultsComponent
   ],
   imports: [
     BrowserModule,

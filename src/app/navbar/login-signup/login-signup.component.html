@@ -1,6 +1,6 @@
-<button type="button" class="btn btn-info btn-lg login-signup-button" (click)="openModal()" *ngIf="!userInfo; else logoutButton">Login/Register</button>
+<button type="button" class="login-signup-button" (click)="openModal()" *ngIf="!userInfo; else logoutButton">Login/Register</button>
 <ng-template #logoutButton>
-    <button type="button" class="btn btn-info btn-lg login-signup-button" (click)="logout()">Logout</button>
+    <button type="button" class="login-signup-button" (click)="logout()">Logout</button>
 </ng-template>
 
 <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
@@ -38,9 +38,9 @@
     
                                     <p class="formError" *ngIf="loginError">{{loginError}}</p>
     
-                                    <input type="text" name="loginUsername" class="form-control" placeholder="Username" [(ngModel)]="loginUsername" (ngModelChange)="loginUsernameChanged($event)">
+                                    <input type="text" name="loginUsername" class="form-control" placeholder="Username" [(ngModel)]="loginUsername" (ngModelChange)="loginUsernameChanged($event)" (keyup.enter)="login()">
     
-                                    <input type="password" name="loginPassword" class="form-control" placeholder="Password" [(ngModel)]="loginPassword">
+                                    <input type="password" name="loginPassword" class="form-control" placeholder="Password" [(ngModel)]="loginPassword" (keyup.enter)="login()">
     
                                     <div class="form-group form-check">
                                         <label class="form-check-label">
@@ -58,13 +58,13 @@
     
                                 <div class="form px-4">
                                     
-                                    <input type="text" name="registerUsername" class="form-control" placeholder="Username" [(ngModel)]="registerUsername">
+                                    <input type="text" name="registerUsername" class="form-control" placeholder="Username" [(ngModel)]="registerUsername" (keyup.enter)="register()">
     
-                                    <input type="email" name="registerEmail" class="form-control" placeholder="Email" [(ngModel)]="registerEmail">
+                                    <input type="email" name="registerEmail" class="form-control" placeholder="Email" [(ngModel)]="registerEmail" (keyup.enter)="register()">
     
-                                    <input type="password" name="registerPassword" class="form-control" placeholder="Password" [(ngModel)]="registerPassword">
+                                    <input type="password" name="registerPassword" class="form-control" placeholder="Password" [(ngModel)]="registerPassword" (keyup.enter)="register()">
     
-                                    <input type="password" name="registerConfirmPassword" class="form-control" placeholder="Confirm Password" [(ngModel)]="registerConfirmPassword">
+                                    <input type="password" name="registerConfirmPassword" class="form-control" placeholder="Confirm Password" [(ngModel)]="registerConfirmPassword" (keyup.enter)="register()">
     
                                     <button  id="cardBtn" class="btn btn-block" (click)="register()">Register</button>
     

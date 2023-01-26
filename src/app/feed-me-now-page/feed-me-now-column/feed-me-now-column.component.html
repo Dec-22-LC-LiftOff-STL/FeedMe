@@ -15,10 +15,11 @@
               class="form-control border-0 fs-4 text-center" 
               style="border: 0px; margin-top: 8px; margin-bottom: 8px;"
               placeholder="Example: Biscuits"
-              (blur)="save()"/>
+              (blur)="save()"
+              (keyup.enter)="randomizeColumn()"/>
               
               <button (click)="removeInput(i)" class="menu-item">
-                <span class="material-icons" title="Delete Item">
+                <span id="deleteBtn" class="material-icons" title="This button will remove a row. ">
                   delete
                 </span>
               </button>
@@ -26,19 +27,19 @@
             <label class="column-input-label">
               Add more choices!
               <button (click)="addNewInput()" class="menu-item">
-                <span class="material-icons" title="Add Item">
+                <span id="addColumnBtn" class="material-icons" title="This button allows you to creat more rows to enter more items for FeedMe to choose from">
                   add_circle
                 </span>
               </button>
             </label>
       </div>
 
-  <button (click)="randomizeColumn()" class="btn btn-lg" data-title="Click here and your option will appear in the box below."> 
+  <button (click)="randomizeColumn()" class="choose-button" title="Click here and your option will appear in the box below."> 
     Choose for me! <br/>
   </button>
 
 
 
 
-  <p id="randomizedItem" class="text-center form-control w-50 fs-5" title="Your randomly selected food choice will appear here.">{{randomItem}}</p>
+  <p class="text-center form-control w-50 fs-5 randomizedItem" title="Your randomly selected food choice will appear here.">{{randomItem}}</p>
 </div>

@@ -17,15 +17,6 @@ margin-top: 8px;
 margin-bottom: 8px;
 }
 
-
-.feed-me-now-page-bg {
-  background-image: url("/assets/fresh-colourful-ingredients-mexican-cuisine.edit.jpg");
-  background-color: #AB6B51;
-  background-size:cover;
-  min-height: 100vh;
-  background-blend-mode: overlay;
-}
-
 #addNewColumn{
   font-size: 25px;
 }
@@ -44,13 +35,12 @@ margin-bottom: 8px;
   width: 50px;
   background-color:#EAEFF2;
   border: black solid 2px;
-  color: Black;
+  color: var(--text-color);
   font-weight:900;
   font-size: 25px;
   margin-top: 25px;
   margin-bottom: 15px;
 }
-
 
 .inputRow {
   display: grid;
@@ -60,25 +50,10 @@ margin-bottom: 8px;
   margin: 0 auto;
   background-color: #39918C;
 }
+
 [data-title]:hover:after {
   visibility: visible;
 }
-
-[data-title]:after {
-  content: attr(data-title);
-  background-color: #EA9B7A;    
-  color: #ffffff;
-  font-size: 16px;
-  position: absolute;
-  padding: 0px 8px 4px 8px;
-  visibility: hidden;
-  border-radius: 20px;
-  border-width: 2px;
-  border-color: #39918C;
-  white-space: pre;
-  font-weight: 400;
-}
-
 
 h2 {
   font-size: 40px;
@@ -91,13 +66,12 @@ main {
 
 .col-sm.p-3.mx-4 {
   margin-top: 100px;
-    background-color: #39918C;
-
+  background-color: var(--column-border-color);
 }
 
 h4 {
-  margin-top: 360px;
-  padding: 45px;
+  margin-top: 10px;
+ 
 }
 
 #orCircle {
@@ -115,8 +89,16 @@ h4 {
   font-size: 20px;
 }
 
-.delete-column-icon {
+.delete-column-icon{
+  color: var(--nav-btn-color); 
   font-size: 50px;
+  display: inline-flex;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+.delete-column-icon:active {
+  color: var(--btn-active-color); 
 }
 
 .feed-me-now-columns {
@@ -128,4 +110,30 @@ h4 {
   box-sizing: border-box;
   min-width: calc(100% / 3 - 3rem);
   max-width: 100%;
+}
+
+.add-column-btn {
+  color: var(--nav-btn-color); 
+  font-size: 20px;
+  display: inline-flex;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+.add-column-btn:active {
+  color: var(--btn-active-color); 
+}
+
+.add-column-label {
+  color: var(--text-color);
+}
+
+.add-column-input { 
+  color: var(--text-color);
+  background-color: var(--input-box-bg-color);
+}
+
+::placeholder { 
+  color: var(--placeholder-text-color);
+  opacity: .5; 
 }

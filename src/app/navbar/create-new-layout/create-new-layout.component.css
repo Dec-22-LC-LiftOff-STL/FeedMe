@@ -1,5 +1,5 @@
-.save-button{
-    background-color: #EA9B7A;
+.save-button {
+    background-color: var(--nav-btn-color);
     font-weight: bold;
     border: 0; 
     color: black; 
@@ -8,13 +8,14 @@
   }
   
 .save-button:active {
-    background-color: #D0B49F;
+   background-color: var(--btn-active-color);
 }
 
 .closeButton {
   max-width: 50px; 
   margin-left: auto;
   border: 0;
+  background-color: transparent
 }
 
 .modal {
@@ -22,15 +23,13 @@
 }
 
 .modal-content {
-  background-color: #39918C;
+  background-color: var(--column-border-color);
   padding: 1rem;
   margin: auto;
-  border-width: 2px;
-  border-color: #EA9B7A;
 }
 
-.saveModal{
-  background-color: #8ce6cb;
+.saveModal {
+  background-color: var(--column-inner-color);;
   border-radius: 30px;
   position: relative;
   display: flex;
@@ -38,13 +37,30 @@
 }
 
 .create-button {
-  background-color: #EA9B7A;
+  background-color: var(--nav-btn-color);
   border: 0; 
-  color: black; 
+  color: var(--btn-txt-color); 
   font-size: 15px; 
   margin-right: 5px;
 }
 
-.create-button:active {
-  background-color: #D0B49F;
+.create-button:active, #createAFeedMeLayoutBtn:active {
+  background-color: var(--btn-active-color);
+}
+
+#createAFeedMeLayoutBtn {
+  color:var(--text-color);
+  background-color: var(--nav-btn-color);
+}
+
+.form-control {
+  background-color: var(--input-box-bg-color);
+  border: 0;
+  background-clip: none;
+  color: var(--text-color);
+}
+
+::placeholder {
+  color: var(--placeholder-text-color);
+  opacity: .5; 
 }

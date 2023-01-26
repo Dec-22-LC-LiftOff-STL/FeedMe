@@ -1,0 +1,14 @@
+<div class="inventory-form-container">
+  <form class="card search-forms inventory-form-inner ">
+    <h4>
+      Give us a list of what's available to cook with and it will appear in your inventory below.
+    </h4>
+    <div id="recipeGenerator" class="container-fluid">
+      <input name="ingredient-list" class="inventory-search-area" [(ngModel)]="ingredients" placeholder="Enter ingredients here separated by commas" id="ingredient-textarea" (keyup.enter)="submit()">
+    </div>
+
+    <div id="inventory">
+      <button type="submit" class="inventory-submit" (click)="submit()">Submit</button>
+    </div>
+  </form>
+</div>
