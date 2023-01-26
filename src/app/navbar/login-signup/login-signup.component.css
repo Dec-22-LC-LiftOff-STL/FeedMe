@@ -181,3 +181,7 @@
   opacity: .5; 
 }
 
+.form-check-input:checked {
+  background-color: var(--nav-btn-color);
+  border-color: var(--nav-bkg-color);
+}
