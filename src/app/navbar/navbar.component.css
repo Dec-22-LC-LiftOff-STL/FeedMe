@@ -76,12 +76,12 @@
 }
 
 .nav-dropdown .main-dropdown-btn:hover {
-  background-color:var( --nav-hover-color);
+  background-color:var(--nav-hover-color);
   color: black;
 }
 
 .nav-dropdown .main-dropdown-btn.active {
-  background-color:var( --nav-hover-color);
+  background-color:var(--nav-active-color);
   color: black;
 }
 
@@ -114,17 +114,17 @@
 }
 
 .dropdown-item:hover {
-  background-color:var( --nav-hover-color);
+  background-color:var(--nav-hover-color);
   color: black;
 }
 
 .dropdown-item:active {
-  background-color:var( --nav-hover-color);
+  background-color:var(--nav-active-color);
   color: black;
 }
 
 .dropdown-item.active {
-  background-color:var( --nav-hover-color);
+  background-color:var(--nav-active-color);
   color: black;
 }
 
@@ -147,7 +147,7 @@
 }
 
 .dropdown-menu-btn:active {
-  background-color:var( --nav-hover-color);
+  background-color:var(--nav-active-color);
 }
 
 .dropdown-menu-item .material-icons {
