@@ -38,7 +38,7 @@
           <h4 class="border border-dark rounded-circle">OR</h4>
         </div> -->
 
-        <div class="col-sm p-3 mx-4">
+        <div class="col-sm p-3 mx-4" *ngIf="userInfo">
           <a routerLink="/feed-me-later" routerLinkActive="active">
             <img id="imgWaffles"
               class="feedMeLater-img"
