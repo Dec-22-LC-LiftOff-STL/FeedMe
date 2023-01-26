@@ -15,7 +15,8 @@
               class="form-control border-0 fs-4 text-center" 
               style="border: 0px; margin-top: 8px; margin-bottom: 8px;"
               placeholder="Example: Biscuits"
-              (blur)="save()"/>
+              (blur)="save()"
+              (keyup.enter)="randomizeColumn()"/>
               
               <button (click)="removeInput(i)" class="menu-item">
                 <span id="deleteBtn" class="material-icons" title="This button will remove a row. ">

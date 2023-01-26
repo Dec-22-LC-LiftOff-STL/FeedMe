@@ -31,7 +31,8 @@
             [(ngModel)]="newColumnTitle"
             class="form-control border-0 fs-4 text-center add-column-input"
             style="margin-bottom: 20px;"
-            placeholder="Enter a new Column Name"/>
+            placeholder="Enter a new Column Name"
+            (keyup.enter)="addNewColumn()"/>
             <label id="addNewColumn" class="add-column-label">
             Add a new Column!
             <button (click)="addNewColumn()" class="menu-item">

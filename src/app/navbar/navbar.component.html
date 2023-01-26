@@ -52,7 +52,7 @@
                 </ng-container>
 
                 <ng-template #editLayoutTemplate>
-                  <input class="dropdown-input" [(ngModel)]="edittedLayoutName">
+                  <input class="dropdown-input" [(ngModel)]="edittedLayoutName" (keyup.enter)="confirmEditLayout(i, $event)">
                   <button type="button" class="dropdown-menu-btn" (click)="confirmEditLayout(i, $event)">
                     <span class="material-icons" title="Confirm Edit">
                       check

@@ -13,6 +13,9 @@
     border: 0;  
     outline: none !important;
     box-shadow: none !important;
+    width: 100%;
+    line-height: 50px;
+    margin: 10px auto 10px auto;
 }
 
 ::placeholder {
@@ -24,9 +27,14 @@
     border-radius: 8px;
     background-color: var(--btn-bg-color);
     color: var(--btn-txt-color);
+    margin: 10px auto 10px auto;
 }
 
 .inventory-submit:active {
     background-color: var(--btn-active-color);
     color: black;
+}
+
+#inventory {
+    text-align: center;
 }

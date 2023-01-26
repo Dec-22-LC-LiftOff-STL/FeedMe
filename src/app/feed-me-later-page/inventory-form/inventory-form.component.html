@@ -4,7 +4,7 @@
       Give us a list of what's available to cook with and it will appear in your inventory below.
     </h4>
     <div id="recipeGenerator" class="container-fluid">
-      <textarea name="ingredient-list" class="inventory-search-area" [(ngModel)]="ingredients" placeholder="Enter ingredients here separated by commas" id="ingredient-textarea"></textarea>
+      <input name="ingredient-list" class="inventory-search-area" [(ngModel)]="ingredients" placeholder="Enter ingredients here separated by commas" id="ingredient-textarea" (keyup.enter)="submit()">
     </div>
 
     <div id="inventory">
