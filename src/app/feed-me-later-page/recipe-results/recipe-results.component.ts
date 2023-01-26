@@ -8,7 +8,8 @@ import { RecipeResult } from 'src/app/model/recipe';
 })
 export class RecipeResultsComponent {
 
+  // used to display the list of 20 in this components html
+  // and passed in to the parent components html and renamed as recipes 
   @Input()
   recipeResults: RecipeResult[] = [];
-  
 }
