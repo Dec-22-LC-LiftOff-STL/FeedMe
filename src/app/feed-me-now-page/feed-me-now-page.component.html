@@ -1,48 +1,46 @@
-<!DOCTYPE html>
-<html>
-<body>
+<div class="bg-img">
+  <!--Description / Header-->
+  <header class="container-fluid">
+      <div class="text-center">
+        <h1>
+          Can't decide what to snack on? Can't decide where to eat?<br/>
+          Enter snack options on hand, or restaurants nearby<br>
+          and we will decide for you!
+         </h1>
+            <h4>Hover over any item for a brief description of how to use the site. </h4>
+      </div>
+  </header>
+  <!--Description / Header-->
 
-<!--Description / Header-->
-<header class="container-fluid">
-    <div class="text-center">
-        <h2   style= "font-family:Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif; font-size: 50px;">
-            Input what's in your pantry or what restaurants you have a taste for and
-            we'll generate <br/>
-            an option for you!
-        </h2>
-    </div>
-</header>
-<!--Description / Header-->
+  <main class="container-fluid px-5" >
+    <div>
+      <div class="feed-me-now-columns text-center" >
+          <div class="col-sm p-3 mx-4"  *ngFor="let column of columns; index as i;">
+                <app-feed-me-now-column [column]="column" (saveColumn)="saveToLocalStorage()"></app-feed-me-now-column>
+              <button *ngIf="i >= 2" (click)="removeColumn(i)" class="menu-item">
+                <span class="material-icons delete-column-icon" title="Delete Column">
+                  delete
+                </span>
+              </button>
+          </div>
+      </div>
 
-<main class="container-fluid px-5">
-  <div>
-    <div class="row text-center">
-
-        <div class="col-sm p-3 mx-4"  *ngFor="let column of columns; index as i;">
-              <app-feed-me-now-column [column]="column" (saveColumn)="saveToLocalStorage()"></app-feed-me-now-column>
-            <button *ngIf="i >= 2" (click)="removeColumn(i)" class="feedMeButton button5">
-                X
-
+      <div class="row text-center" id="addNewColumnId"  *ngIf="columns.length <= 5">
+        <div class="col-sm p-3 mx-4">
+            <input type="text"
+            [(ngModel)]="newColumnTitle"
+            class="form-control border-0 fs-4 text-center add-column-input"
+            style="margin-bottom: 20px;"
+            placeholder="Enter a new Column Name"
+            (keyup.enter)="addNewColumn()"/>
+            <label id="addNewColumn" class="add-column-label">
+            Add a new Column!
+            <button (click)="addNewColumn()" class="menu-item">
+              <span class="material-icons add-column-btn" title="Add a Column">
+                add_circle
+              </span>
             </button>
+            </label>
         </div>
     </div>
-
-    <div class="row text-center " id="addNewColumnId"  *ngIf="columns.length <= 5">
-      <div class="col-sm p-3 mx-4">
-          <input type="text"
-          [(ngModel)]="newColumnTitle"
-          class="form-control border-0 fs-4 text-center"
-        
-          placeholder="Enter a new Column Name"/>
-          <label id="addNewColumn">
-          Add a new Column!
-          <button (click)="addNewColumn()" class="feedMeButton button5">
-          +
-          </button>
-          </label>
-      </div>
-    </div>
-  </div>
-</main>
-</body>
-</html>
+</div>
