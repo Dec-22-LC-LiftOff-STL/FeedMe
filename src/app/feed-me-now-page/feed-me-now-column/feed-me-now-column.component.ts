@@ -20,29 +20,33 @@ export class FeedMeNowColumnComponent implements OnInit {
 
   randomItem: string = "";
 
+  // injects our services
   constructor(public fService: FuncsService, private auth: AuthService, private columnService: ColumnsService) {}
 
+  // would recommend looking up OnInit
   ngOnInit(): void {
 
   }
 
   save() {
-    // logged in user save to backend
+    // checks if the user is authenticated
     if(this.auth.userInfo) {
       this.columnService.updateColumn(this.column).subscribe();
     }
-    // anonymous user save to local storage
+    // if the user isn't authenticated it saves to local storage
     else {
       this.saveColumn.emit(this.column);
     }
   }
 
   addNewInput() {
+    // uses .push to push the input to our items array in column and saves the change
     this.column.items.push("");
     this.save();
   }
 
   removeInput(index: number) {
+    // splices an input from the items array in column and saves the change
     this.column.items.splice(index, 1);
     this.save();
   }
@@ -53,6 +57,7 @@ export class FeedMeNowColumnComponent implements OnInit {
   }
 
   randomizeColumn = (): void => {
+    // uses our randomize function in fService to randomize an item and assigns it to randomItem to be displayed in our html
     this.randomItem = this.fService.randomize(this.column.items);
   }
 }

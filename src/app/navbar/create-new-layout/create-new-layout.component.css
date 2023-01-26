@@ -1,0 +1,66 @@
+.save-button {
+    background-color: var(--nav-btn-color);
+    font-weight: bold;
+    border: 0; 
+    color: black; 
+    font-size: 15px; 
+    margin-right: 5px;
+  }
+  
+.save-button:active {
+   background-color: var(--btn-active-color);
+}
+
+.closeButton {
+  max-width: 50px; 
+  margin-left: auto;
+  border: 0;
+  background-color: transparent
+}
+
+.modal {
+  --bs-modal-width: 700px;
+}
+
+.modal-content {
+  background-color: var(--column-border-color);
+  padding: 1rem;
+  margin: auto;
+}
+
+.saveModal {
+  background-color: var(--column-inner-color);;
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-button {
+  background-color: var(--nav-btn-color);
+  border: 0; 
+  color: var(--btn-txt-color); 
+  font-size: 15px; 
+  margin-right: 5px;
+}
+
+.create-button:active, #createAFeedMeLayoutBtn:active {
+  background-color: var(--btn-active-color);
+}
+
+#createAFeedMeLayoutBtn {
+  color:var(--text-color);
+  background-color: var(--nav-btn-color);
+}
+
+.form-control {
+  background-color: var(--input-box-bg-color);
+  border: 0;
+  background-clip: none;
+  color: var(--text-color);
+}
+
+::placeholder {
+  color: var(--placeholder-text-color);
+  opacity: .5; 
+}

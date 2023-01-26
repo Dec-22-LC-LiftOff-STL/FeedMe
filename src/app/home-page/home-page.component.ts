@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UserInfo } from '../model/user-info';
+import { AuthService } from '../Services/auth.service';
 
 @Component({
   selector: 'app-home-page',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
 
+  constructor(private auth: AuthService) {}
+
+  get userInfo() {
+    return this.auth.userInfo;
+  }
 }

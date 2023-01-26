@@ -1,23 +1,12 @@
 
 
-body {
-       background-image: url("/assets/fresh-colourful-ingredients-mexican-cuisine.jpg");
-background-color: #AB6B51;
-background-size:cover;
-  min-height: 100vh;
- background-blend-mode: overlay;
 
-}
 
 #imgWaffles{
-opacity: 100%;
-
+  opacity: 100%;
   border-radius: 30px;
-}
-
-h1 {
-  font-size: 30px;
-  padding-top: 20px;
+  width: 660px;
+  height: 460px;
 }
 
 .container-fluid.px-5 {
@@ -44,15 +33,14 @@ h4 {
   margin-top: 360px;
   padding: 45px;
 }
-.h4 {
+/* .h4 {
   color: black;
-}
+} */
 
 #orCircle {
   max-width: 150px;
 }
 
-#FeedMeBtn {
-background-color: #39918C;
-
-}
+/* #FeedMeBtn {
+  background-color: #39918C;
+} */

@@ -1,168 +1,187 @@
 /* Modal styling */
 
-.backdrop{
-    background-color:rgba(0,0,0,0.6);
-    position:flex;
-    top:0;
-    left:0;
-    width:100%;
-    height:100vh;
-
-  }
-  #pills-home-tab{
-  text-decoration: none;
-  font-weight: 700;
-  }
-
-  #pills-profile-tab{
- text-decoration: none;
- font-weight: 700;
-  }
-#signUpLoginBtn{
-background-color: #EA9B7A;
- font-weight: bold;
+.backdrop {
+  background-color:rgba(0,0,0,0.6);
+  position:flex;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
 }
-  body{
-
-    background-color: #000;
-  }
-  #signUpLogin{
-color: aliceblue;
-
-  }
-  .btn{
-    max-width: 250px; 
-    margin-left: auto;
-  }
-
-  #pills-home-tab{
-    background-color:  #FFCBA4;
-    color:  #327b77;
-    font-weight: 500;
-  }
-  #pills-home-tab.active{
-    background-color:  #EA9B7A;
-    color: #000;
-    font-weight: 900;
-  }
-
-  #pills-profile-tab{
-    background-color:#FFCBA4;
-    color: #327b77;
-    font-weight: 500;
-  }
-  #pills-profile-tab.active{
-    background-color:  #EA9B7A;
-    color: #000;
-    font-weight: 900;
-  }
-
-  #modalLogin{
-    background-color: #FFCBA4;
-  }
-  #modalSignUp{
-    background-color: #FFCBA4;
-  }
- 
-  .card{
-background-color: #39918C;
-    width: 400px;
-    border:none;
-    margin-bottom: 100px;
-  
-
-  }
 
 
+#pills-home-tab {
+  text-decoration: none;
+}
 
+#signUpLoginBtn {
+  background-color: #EA9B7A;
+  font-weight: bold;
+}
 
-  .btr{
+#signUpLoginBtn:active {
+  background-color: #D0B49F;
+}
 
-    border-top-right-radius: 5px !important;
-  }
+#signUpLogin {
+  color: aliceblue;
+}
 
+.btn {
+  max-width: 250px; 
+  margin-left: auto;
+}
 
-  .btl{
+#pills-home-tab {
+  background-color: var(--nav-bkg-color);
+  color: var(--text-color);
+}
 
-    border-top-left-radius: 5px !important;
-  }
+#pills-profile-tab {
+  background-color: var(--nav-bkg-color);
+  color: var(--text-color);
+}
 
-  .btn-dark {
-      color: #fff;
-      background-color: #0d6efd;
-      border-color: #0d6efd;
-  }
+#pills-home-tab.active {
+  background-color: var(--nav-active-color);
+  color: black;
+  font-weight: bold;
+}
 
+#pills-profile-tab.active {
+  background-color: var(--nav-active-color);
+  color: black;
+  font-weight: bold;
+}
 
-  .btn-dark:hover {
-      color: #fff;
-      background-color: #0d6efd;
-      border-color: #0d6efd;
-  }
+#rememberMe{
+  color: var(--btn-txt-color);
+}
 
+.card {
+  background-color: #39918C;
+  width: 400px;
+  border:none;
+  margin-bottom: 100px;
+}
 
-  .nav-pills{
+.btr {
+  border-top-right-radius: 5px !important;
+}
 
-    display:table !important;
-    width:100%;
-  }
+.btl {
+  border-top-left-radius: 5px !important;
+}
 
-  .nav-pills .nav-link {
-      border-radius: 0px;
-          border-bottom: 1px solid #0d6efd40;
+.nav-pills {
+  display:table !important;
+  width:100%;
+}
 
-  }
+.nav-pills .nav-link {
+  border-radius: 0px;
+}
 
-  .nav-item{
-        display: table-cell;
-         background: #0d6efd2e;
-  }
-  #signUpLoginBtn{
-    background-color: #EA9B7A;
-     font-weight: bold;
-    }
-    #cardBtn{
-      background-color: #FFCBA4;
-    }
+.nav-item {
+  display: table-cell;
+  background: #0d6efd2e;
+}
 
-  .form{
+#signUpLoginBtn{
+  font-weight: bold;
+}
 
-    padding: 10px;
-        height: 300px;
-  }
+#cardBtn {
+  background-color:var(--nav-btn-color);
+  color: var(--btn-txt-color);
+}
 
-  .form input{
+#cardBtn:active {
+  color: #000;
+  background-color:var(--btn-active-color);
+  border: 0;
+}
 
-    margin-bottom: 12px;
-    border-radius: 3px;
-  }
+.form {
+  padding: 10px;
+  height: 300px;
+}
 
+.form input{
+  margin-bottom: 12px;
+  border-radius: 3px;
+}
 
-  .form input:focus{
+.form input:focus{
+  box-shadow: none;
+}
 
-    box-shadow: none;
-  }
+.form button{
+  margin-top: 20px;
+}
 
+.formError {
+  font-weight: bold;
+  color: darkred;
+  text-align: center;
+}
 
-  .form button{
+.formSuccess {
+  font-weight: bold;
+  color: darkgreen;
+  text-align: center;
+}
 
-    margin-top: 20px;
-  }
+.closeButton {
+  max-width: 50px; 
+  margin-left: auto;
+  border: 0;
+  background-color: transparent;
+}
 
-  .formError {
-    font-weight: bold;
-    color: darkred;
-    text-align: center;
-  }
+.loginSignupModal{
+  /* background-color: #8ce6cb; */
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
 
-  .formSuccess {
-    font-weight: bold;
-    color: darkgreen;
-    text-align: center;
-  }
+.modal-content {
+  /* background-color: #39918C; */
+  padding: 1rem;
+  margin: auto;
+  border-width: 1px;
+  /* border-color: #EA9B7A; */
+}
 
-  .closeButton {
-    max-width: 50px; 
-    margin-left: auto;
-  }
+.login-signup-button{
+  border-radius: 8px;
+  font-weight: bold;
+  border: 0; 
+  font-size: 25px; 
+  margin-right: 5px;
+}
 
+.login-signup-button:active {
+  color: #000;
+  background-color:var(--btn-active-color);
+  border: 0;
+}
+
+.form-control {
+  background-color: var(--input-box-bg-color);
+  border: 0;
+  background-clip: none;
+  color: var(--text-color);
+}
+
+::placeholder {
+  color: var(--placeholder-text-color);
+  opacity: .5; 
+}
+
+.form-check-input:checked {
+  background-color: var(--nav-btn-color);
+  border-color: var(--nav-bkg-color);
+}

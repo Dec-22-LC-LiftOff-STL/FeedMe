@@ -1,0 +1,13 @@
+<form class="card">
+    <div id="health-tags">
+        <h5>
+            Select from the list below to filter by one or more of Edamam's provided health tags.
+        </h5>
+        <select multiple class="form-select container-fluid" id="sel2" name="sellist2">
+            <option value=""></option>
+            <option *ngFor='let healthTag of healthTags'>{{healthTag}}</option>
+        </select>
+        <label for="sel2" class="form-label">Mutiple select list (hold shift or ctrl to select more than one):</label>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </div>
+</form>

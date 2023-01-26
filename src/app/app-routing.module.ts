@@ -5,6 +5,7 @@ import { FeedMeNowPageComponent } from './feed-me-now-page/feed-me-now-page.comp
 import { FeedMeLaterPageComponent } from './feed-me-later-page/feed-me-later-page.component';
 
 const routes: Routes = [
+  { path: 'feed-me-now/:id', component: FeedMeNowPageComponent },
   { path: 'feed-me-now', component: FeedMeNowPageComponent },
   { path: 'feed-me-later', component: FeedMeLaterPageComponent },
   { path: '', component: HomePageComponent }
