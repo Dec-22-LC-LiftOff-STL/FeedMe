@@ -18,7 +18,7 @@ export class RecipeService {
     // would recommend looking up Async Await
     async searchByIngredients(ingredients: string[]) { 
         // converts the observable get request into a promise by fetching the last value from it and then awaits the promise
-        // getting the information needed when this is called, separating our ingredients submitted by the user by comma into a string
+        // getting the information needed when this is called, separating our ingredients, that are submitted by the user, by comma into a string
         // url encoding is used which is why this works, %2C is a comma and %20 is a space, would recommend looking this up
         return await lastValueFrom(this.http.get<RecipeResult[]>("/api/recipes/search/ingredients/" + ingredients.join(",")));
     }

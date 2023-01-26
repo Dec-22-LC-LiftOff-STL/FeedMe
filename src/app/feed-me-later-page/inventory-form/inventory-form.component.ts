@@ -15,7 +15,6 @@ export class InventoryFormComponent {
   ingredientsSubmitted: EventEmitter<string[]> = new EventEmitter<string[]>();
 
   submit() {
-
     // checks if there were no ingredients submitted by the user and alerts them if so
     if(!this.ingredients) {
       alert("Please fill out the search form!");

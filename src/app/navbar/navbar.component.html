@@ -72,7 +72,7 @@
         </li>
       </ng-template>
 
-      <li class="nav-link">
+      <li class="nav-link" *ngIf="userInfo">
         <a routerLink="/feed-me-later" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">FeedMe Later</a>
       </li>
 
