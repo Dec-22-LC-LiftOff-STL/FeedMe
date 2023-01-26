@@ -49,6 +49,7 @@
   border-color: var(--randomize-border-color);
   background-color: var(--randomize-inner-color);
   height: 70px; 
+  font-weight: 700;
 }
 
 .button1 {
