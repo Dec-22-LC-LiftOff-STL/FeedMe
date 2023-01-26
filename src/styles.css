@@ -1,75 +1,131 @@
 body {
-    --text-color: #222;
-    --bkg-color: #AB6B51;
-    --btn-txt-color: black;
-    --btn-bg-color:  hsl(177, 44%, 45%);
-    --nav-bkg-color:hsl(177, 44%, 45%);
-    --nav-btn-color:  #EA9B7A;
-     --active-color: #FFCBA4;
-    --border-color: #EA9B7A;
-    --modal-color: #8ce6cb;
+  --placeholder-text-color: rgb(73, 73, 73);
+  --text-color: #222;
+  --bkg-color: #AB6B51;
+  --btn-txt-color: black;
+  --btn-bg-color: #AB6B51;
+  --nav-bkg-color: #aa725a;
+  --nav-btn-color: #EA9B7A;
+  --active-color: #FFCBA4;
+  --border-color: #EA9B7A;
+  --modal-color: #FFCBA4;
+  --nav-hover-color: #FFCBA4;
+  --nav-active-color: #EA9B7A;
+  --column-border-color: #AB6B51;
+  --column-inner-color: #FFCBA4;
+  --input-box-bg-color: #ffffff;
+  --btn-active-color: #ffd8b9;
+  --randomize-border-color: #925c47;
+  --randomize-inner-color: #fcd4b6;
+}
 
-    --nav-hover-color: #a06b55;
-  }
-nav{
+nav {
+  background-color: var(--nav-bkg-color);
+}
 
-        background-color:var(--nav-bkg-color);
+body.dark-theme {
+  --placeholder-text-color: hsl(177, 51%, 53%);
+  --text-color: hsl(177, 44%, 45%);
+  --bkg-color: #252222;
+  --btn-txt-color: hsl(177, 44%, 45%);
+  --btn-bg-color: hsl(177, 43%, 20%);
+  --nav-bkg-color: hsl(177, 43%, 20%);
+  --nav-btn-color: hsl(178, 42%, 16%);
+  --active-color: hsl(178, 42%, 16%);
+  --border-color: hsl(178, 42%, 16%);
+  --modal-color: hsl(177, 44%, 35%);
+  --nav-hover-color: hsl(177, 45%, 31%);
+  --nav-active-color: hsl(178, 42%, 16%);
+  --nav-text-color: hsl(177, 44%, 45%);
+  --column-border-color: hsl(177, 43%, 20%);
+  --column-inner-color: hsl(177, 45%, 31%);
+  --input-box-bg-color: hsl(177, 42%, 11%);
+  --btn-active-color: hsl(179, 50%, 25%);
+  --randomize-border-color: hsl(178, 41%, 12%);
+  --randomize-inner-color: hsl(177, 45%, 34%);
+}
+
+body {
+  background: var(--bkg-color);
+}
+
+h1,
+p {
+  color: var(--text-color);
+}
+
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn {
+  color: var(--text-color);
+  background-color: var(--nav-btn-color);
+}
+
+.bg-img {
+  background-image: url("/assets/lukas-blazek-f-knife-unsplash.jpg ");
+  /* background-color: #AB6B51;  wooden-plate-pita-bread-with-sliced-tomato-onion   top-view-chicken-onion-lemon-herbs-pieces-chicken-lavash-board  top-view-cut-lemons-dog-rosehips-feijoas-grey-table-copy-space.jpg lukas-blazek-f-knife-unsplash.jpg brooke-lark-tomatobg-unsplash.jpg   fresh-colourful-ingredients-mexican-cuisine.edit.jpg*/
+  background-size: cover;
+  min-height: 100vh;
+  background-blend-mode: overlay;
+  background-color: var(--bkg-color);
+  padding-bottom: 2rem;
+}
+
+.feedMeColumn {
+  background-color: var(--column-inner-color);
+  border-radius: 30px;
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-size: 30px;
+  padding-top: 40px;
+}
+
+h4 {
+  color: var(--text-color)
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  color: var(--btn-txt-color);
+  background-color: var(--btn-bg-color);
+}
+
+#FeedMeBtn {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-txt-color);
+  max-width: 100%;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-signup-button {
+  color: var(--text-color);
+  background-color: var(--nav-btn-color);
 
 }
 
-
-  body.dark-theme {
-    --text-color: #eee;
-    --bkg-color: #252222;
-    --btn-txt-color: white;
-    --btn-bg-color: hsl(177, 44%, 25%);
-    --nav-bkg-color:hsl(177, 44%, 25%);
-    --nav-btn-color: #156485;
-    --active-color:#00345b;
-    --border-color: #156485;
-    --modal-color: #731934;
-    --nav-hover-color:#2c3c89;
-  }
-  
-  body {
-    background: var(--bkg-color);
-  }
-  
-  h1,
-  p {
-    color: var(--text-color);
-  }
-  .bg-img{
-  
-    background-color: var(--bkg-color);
-
-  }
-.h4{
-    color: var(--text-color)
+.form-check-label {
+  color: var(--btn-txt-color);
 }
-  button {
-    padding: 10px;
-    border: none;
-    border-radius: 2px;
-    color: var(--btn-txt-color);
-    background-color: var(--btn-bg-color);
-  }
-  #FeedMeBtn {
-    background-color: var(--btn-bg-color);
-   color: var(--btn-txt-color);
-  }
-  .login-signup-button{
-    background-color: var(--nav-btn-color)
 
-  }
-  .login-signup-button:active {
-    background-color:var(--nav-btn-color)
-  }
-  .modal-content {
-    background-color: var(--nav-bkg-color);
-  
-    border-color: var(   --border-color);
-  }
-  .loginSignupModal{
-    background-color: var(--modal-color);
-  }
+.login-signup-button:active {
+  background-color: var(--nav-btn-color)
+}
+
+.modal-content {
+  background-color: var(--nav-bkg-color);
+
+  border-color: var(--border-color);
+}
+
+.loginSignupModal {
+  background-color: var(--modal-color);
+}

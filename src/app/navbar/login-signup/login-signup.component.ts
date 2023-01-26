@@ -31,7 +31,6 @@ export class LoginSignupComponent implements OnInit {
   @ViewChild("loginLink")
   loginLinkElement: ElementRef<HTMLAnchorElement>;
 
-
   display = "none"; 
   
   // injects AuthService

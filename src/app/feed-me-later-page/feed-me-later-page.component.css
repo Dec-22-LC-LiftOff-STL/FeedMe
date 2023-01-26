@@ -3,178 +3,41 @@
 #page-spacer {
   margin-bottom: 100px;
 }
-/* 
-* {
-  box-sizing: border-box;
-}
 
-#inventory {
-  padding: 5px;
-  margin: 5px;
-}
-
-#recipeGenerator {
-  padding: 10px;
-  margin: 5px;
-}
-
-.search-forms {
-  background-color: #8ce6cb;
-  border-radius: 30px;
-  max-width: 400px;
-  max-height: 600px;
-}
-
-.feedMeColumn{
-  background-color: #8ce6cb;
-  border-radius: 30px;
- }
-
-body {
-  font-family: "Roboto", sans-serif;
+.bg-img {
   display: flex;
   flex-direction: column;
-
-  background-image: url("/assets/fresh-colourful-ingredients-mexican-cuisine.edit.jpg");
-  background-color: #AB6B51;
-  background-size:cover;
-  min-height: 100vh;
-  background-blend-mode: overlay;
-
-  align-items: top;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
-  border-radius: 20px;
 }
 
-.btn {
-  height: 50px;
-  padding: 10px;
-}
-
-textarea {
-  display: block;
-  width: 100%;
-  height: 50px;
-  font-family: inherit;
-  padding: 10px;
-  margin: 0 0 20px;
-  font-size: 16px;
-}
-
-
-
-.p {
-  color: #060606;
-  margin: 10px 0 20px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.h3 {
-  color: #060606;
-  margin: 10px 0 20px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-} */
-
-/* #instructions {
-  padding-left: 30px;
-  justify-content: center;
-  text-align: left;
-} */
-
-  /* This puts all of the */
-/* .container {
- width: 1000px;
-} */
-
-/* .wrapper {
-  top: 50%;
-  left: 50%;
-  transform: translate (-50%, -50%);
-  background: rgba(0, 0, 0, 0.6);
-  max-width: 550px;
-  width: 100%;
-  padding: 15px;
-  border-radius: 5px;
-  The bellow puts text area and generator button on same page
+.feed-me-later-container {
+  margin-top: 15px;
+  flex: 1;
   display: flex;
-  justify-content: space-between;
-} */
+  flex-direction: column;
+}
 
-/* .wrapper.input {
-  width: 85%;
-  padding: 15px 20px;
-  border: none;
-  border-radius: 5px;
-} */
+.powered-by {
+  flex: 1;
+  align-items: flex-end;
+}
 
-
-/* .tag {
-  background-color: #f0932b;
-  color: #fff;
-  border-radius: 50px;
-  padding: 10px 20px;
-  margin: 0 5px 10px 0;
-  font-size: 14px;
-  display: inline-block;
-} */
-
-/* .button {
-  background: #fff;
-  border: 2px solid #666;
-  color: #666;
+.powered-by p {
+  margin: 0;
+  padding: 0;
   text-align: center;
-
-  font: 32px Arial, sans-serif;
 }
 
-ol {
-  margin-left: 0;
-  padding-left: 0;
-  counter-reset: item;
+.powered-by a {
+  text-decoration: none;
 }
 
-ol > li {
-  margin-left: 0;
-  padding-left: 0;
-  counter-increment: item;
-  list-style: none inside;
-  margin-bottom: 10px;
+.feedme-later-outer {
+  background-color: var(--column-border-color);
+  padding: 1rem;
 }
-ol > li:before {
-  content: counter(item);
-  padding: 3px 9px;
-  margin-right: 0.5em;
-  background: #ccc;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-} */
 
-/* h2 {
-  font-size: 30px;
-  margin-top: 20px;
+.feedme-later-inner {
+  background-color: var(--column-inner-color);
+  color: var(--text-color);
+  border-radius: 8px;
 }
-*/
-
-
-
-
-
-/*
-.container-fluid.px-5 {
-  padding-top: 20px;
-
- 
-  margin-left: 500px;
-
-} */
-/* #recipeNameBox{ 
- text-align: center;
-} */

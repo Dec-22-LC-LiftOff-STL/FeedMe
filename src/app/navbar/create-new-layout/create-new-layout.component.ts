@@ -61,7 +61,7 @@ export class CreateNewLayoutComponent {
 
         let column2: ChoiceColumn = {name: this.newColumn2Name, items: [""], columnLayout: layout};
 
-        // using our createColumn function to 
+        // using our createColumn function to create new columns in our back-end using the column objects initialized earlier
         column1 = await this.columnService.createColumn(column1);
 
         column2 = await this.columnService.createColumn(column2);

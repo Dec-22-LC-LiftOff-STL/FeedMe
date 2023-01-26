@@ -39,7 +39,7 @@ export class NavbarComponent {
     }
   }
 
-  editLayout(index: number, event: MouseEvent) {
+  editLayout(index: number, event) {
 
       // this prevents the dropdown from closing when the delete button is clicked
       event.stopPropagation();
@@ -55,7 +55,7 @@ export class NavbarComponent {
       }
   }
 
-  confirmEditLayout(index: number, event: MouseEvent) {
+  confirmEditLayout(index: number, event) {
     // this prevents the dropdown from closing when the delete button is clicked
     event.stopPropagation();
 
@@ -76,7 +76,7 @@ export class NavbarComponent {
     });
   }
 
-  cancelEditLayout(event: MouseEvent) {
+  cancelEditLayout(event) {
     // this prevents the dropdown from closing when the delete button is clicked
     event.stopPropagation();
 

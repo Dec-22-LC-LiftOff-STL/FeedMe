@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-inventory-form',
@@ -7,8 +7,21 @@ import { Component } from '@angular/core';
 })
 export class InventoryFormComponent {
 
-  ingredients: Array<string> = ['ingredient1', 'ingredient2', 'ingredient3', 'ingredient4', 'ingredient5', 'ingredient6', 'ingredient7', 'ingredient8']
+  // initializing an ingredients variable of type string, assigned to empty string
+  ingredients: string = "";
 
+  // ingredientsSubmitted with the Output() annotation so that the ingredients can be outputted from this component to the parent component
+  @Output() 
+  ingredientsSubmitted: EventEmitter<string[]> = new EventEmitter<string[]>();
 
-
+  submit() {
+    // checks if there were no ingredients submitted by the user and alerts them if so
+    if(!this.ingredients) {
+      alert("Please fill out the search form!");
+    }
+    else {
+      // uses ingredientsSubmitted to push out this information to our parent component, which is splitting the ingredients string into an array, separated by commas
+      this.ingredientsSubmitted.emit(this.ingredients.split(","));
+    }
+  }
 }

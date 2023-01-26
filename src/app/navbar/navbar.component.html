@@ -1,43 +1,48 @@
 <nav class="navbar navbar-expand-sm fixed-top">
   <div class="container-fluid">
 
-      <img class="" src="../../assets/FeedMeLogo6.png" title="This a really awesome logo Patrick designed!">
-   
+    <img class="" src="../../assets/FeedMeLogo6.png" title="This a really awesome logo Patrick designed!">
+
     <ul class="navbar-nav navbar-light">
-      <div style="margin: 20px 20px;"></div>
+
       <li class="nav-link">
-        <a routerLink="/feed-me-later" routerLinkActive="active">FeedMe Later</a>
-      </li>
-      
-      <li>
-        <button type="button" title="This button takes you back to the Home page." class="home-page-btn" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</button>
+        <a title="This button takes you back to the Home page."  routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
       </li>
 
       <ng-container *ngIf="!userInfo; else createLayoutsTemplate">
-        <li class="nav-link nav-feedme-now">
-          <a routerLink="/feed-me-now" routerLinkActive="active" title="This button takes you to the FeedMeNow page where meal descisions can be made for you." >FeedMe Now</a>
+        <li class="nav-link">
+          <a routerLink="/feed-me-now" routerLinkActive="active"
+            title="This button takes you to the FeedMeNow page where meal descisions can be made for you.">FeedMe
+            Now</a>
         </li>
       </ng-container>
+
 
       <ng-template #createLayoutsTemplate>
         <li class="nav-dropdown">
           <div class="btn-group">
-            <button type="button" class="main-dropdown-btn" [routerLink]="['/feed-me-now']" routerLinkActive="active" data-title="This button takes you to the FeedMeNow page where meal descisions can be made for you.">FeedMe Now</button>
-            <button type="button" class="dropdown-toggle dropdown-toggle-split main-dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false" title="Once logged in this will alow you to choose from previously created layouts with ease.">
+            <button type="button" class="main-dropdown-btn" [routerLink]="['/feed-me-now']" routerLinkActive="active"
+              data-title="This button takes you to the FeedMeNow page where meal descisions can be made for you.">FeedMe
+              Now</button>
+            <button type="button" class="dropdown-toggle dropdown-toggle-split main-dropdown-btn"
+              data-bs-toggle="dropdown" aria-expanded="false"
+              title="Once logged in this will alow you to choose from previously created layouts with ease.">
               <span class="visually-hidden">Toggle Dropdown</span>
             </button>
             <ul class="dropdown-menu">
               <li *ngFor="let layout of getLayouts; index as i;" class="dropdown-menu-item">
-                <ng-container *ngIf="!editingNavbarLayout || editingNavbarLayout.id !== layout.id; else editLayoutTemplate">
-                  <a [routerLink]="['/feed-me-now', layout.id]" routerLinkActive="active" class="dropdown-item">{{layout.name}}</a>
-  
+                <ng-container
+                  *ngIf="!editingNavbarLayout || editingNavbarLayout.id !== layout.id; else editLayoutTemplate">
+                  <a [routerLink]="['/feed-me-now', layout.id]" routerLinkActive="active"
+                    class="dropdown-item">{{layout.name}}</a>
+
                   <ng-container *ngIf="i !== 0">
                     <button type="button" class="dropdown-menu-btn">
                       <span class="material-icons" title="Edit Layout" (click)="editLayout(i, $event)">
                         edit
                       </span>
                     </button>
-    
+
                     <button type="button" class="dropdown-menu-btn" (click)="removeLayout(i, $event)">
                       <span class="material-icons" title="Delete Layout">
                         delete
@@ -45,9 +50,9 @@
                     </button>
                   </ng-container>
                 </ng-container>
-  
+
                 <ng-template #editLayoutTemplate>
-                  <input class="dropdown-input" [(ngModel)]="edittedLayoutName">
+                  <input class="dropdown-input" [(ngModel)]="edittedLayoutName" (keyup.enter)="confirmEditLayout(i, $event)">
                   <button type="button" class="dropdown-menu-btn" (click)="confirmEditLayout(i, $event)">
                     <span class="material-icons" title="Confirm Edit">
                       check
@@ -60,30 +65,36 @@
                   </button>
 
                 </ng-template>
-  
+
               </li>
             </ul>
           </div>
-
         </li>
-        
       </ng-template>
-  
-      <span class="material-symbols-sharp">
-        brightness_5
-        </span>  
-      <label class="switch">
-       <input type="checkbox"  (click)="toggleDarkTheme()">
-       <span class="slider round" style="  width: 80px;
-       height: 40px; float: right;"></span>
-    </label>
-     <a class="material-symbols-sharp" style="margin-left: 15px ;">
-      mode_night
-     </a>
-        
-      <app-create-new-layout *ngIf="userInfo" title="This button allows you to &#010;create and save a FeedMe &#010; for any occaision or location."></app-create-new-layout>
 
-      <app-login-signup style= "margin-left: 100px;" title="This will open the register and log-in window, allowing you to create an account where you can save your FeedMe"></app-login-signup>
+      <li class="nav-link" *ngIf="userInfo">
+        <a routerLink="/feed-me-later" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">FeedMe Later</a>
+      </li>
+
+      <li class="nav-spacer"></li>
+
+      <label class="switch">
+        <input type="checkbox" (click)="toggleDarkTheme()">
+        <span class="slider round">
+          <span class="material-symbols-sharp light-mode">
+            brightness_5
+          </span>
+          <span class="material-symbols-sharp dark-mode">
+            mode_night
+          </span>
+        </span>
+      </label>
+
+      <app-create-new-layout *ngIf="userInfo"
+        title="This button allows you to &#010;create and save a FeedMe &#010; for any occaision or location."></app-create-new-layout>
+
+      <app-login-signup
+        title="This will open the register and log-in window, allowing you to create an account where you can save your FeedMe"></app-login-signup>
 
     </ul>
 

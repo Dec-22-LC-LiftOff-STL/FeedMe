@@ -1,82 +1,42 @@
+<div class="bg-img">
 <!-- Description / Header -->
-<header class="container-fluid" style="margin-top: 115px;">
-  <div>
-    <h2 class="text-center">
-      Don't mind cooking? Input the ingredients you have in your pantry and
-      we'll generate <br />
-      a recipe option for you!
-    </h2>
-  </div>
-  <div>
-    <h5 style="text-align: right;">Powered by Edamam</h5>
-  </div>
-  <hr>
-</header>
+  <header class="container-fluid">
+    <div>
+      <h1 class="text-center" style="align-content: center;">
+        Don't mind cooking? Input the ingredients you have in your pantry and
+        we'll generate
+        a recipe option for you!
+      </h1>
+      <h4 class="text-center">Enter the food item you would like to use in your dish, seperated by commas, and we will generate 15+ recipes. </h4>
+    </div>
+  </header>
 
-<div class="row">
-  <app-inventory-form class="col-3 offset-2"></app-inventory-form>
-  <!-- <app-health-tags-form class="col-3 offset-1"></app-health-tags-form> -->
-  <app-recipe-results class="col-3 offset-2"></app-recipe-results>
-</div>
-
-<div id="page-spacer"></div>
-
-<div class="col-6 offset-3">
-  <h3>This should display the selected recipe after the randomizer button has been pushed.</h3>
-  <img src="..\assets\recipe-standin.png" class="container-fluid" style="max-height: 200px; max-width: auto;">
-  <ul>Ingredients:
-      <li>ingredient</li>
-      <li>ingredient</li>
-      <li>ingredient</li>
-      <li>ingredient</li>
-      <li>ingredient</li>
-      <li>ingredient</li>
-      <li>ingredient</li>
-  </ul>
-  <p>url</p>
-  <p>cuisineType</p>
-  <p>mealType</p>
-  <p>dishType</p>
-</div>
-
-<div id="page-spacer"></div>
-
-
-
-
-
-
-<!-- end of bg-img tag -->
-
-<!-- Description / Header -->
-
-<!-- Search Box and Generate Button -->
-
-<!-- Recipe Image / Name / Instructions -->
-<!-- <main class="container-fluid px-5"> -->
-<!-- <div class="row">  -->
-<!-- <img _ngcontent-uwn-c18="" _ngcontent-ueu-c16="" src="/assets/home-page.png" alt="FeedMe Now" style="padding-bottom: 5px;"> -->
-<!-- <div class="col-sm p-3 mx-4" id="recipeNameBox">
-          <img
-            src="/assets/recipe-standin.png"
-            alt="Recipe image"
-            width="300"
-            height="200"
-          />
-          <h1 id="recipeName">Recipe Name</h1>
-          <p>Cuisine Type | Prep Time | Cook Time</p>
+  <div class="container-fluid feed-me-later-container">
+    <div class="row justify-content-center">
+      <app-inventory-form class="col-4" (ingredientsSubmitted)="fetchRecipes($event)"></app-inventory-form>
+      <div class="col-4 feedme-later-outer" *ngIf="randomRecipe">
+        <div class="feedme-later-inner">
+          <h3>{{randomRecipe.recipe.label}}</h3>
+          <img src="{{randomRecipe.recipe.image}}" class="container-fluid" style="max-height: 300; max-width: 500px">
+          <p>Ingredients:</p>
+          <ul>
+              <li *ngFor="let ingredient of randomRecipe.recipe.ingredientLines">{{ingredient}}</li>
+          </ul>
+          <p>Instructions: <a href="{{randomRecipe.recipe.url}}">{{randomRecipe.recipe.url}}</a></p>
+          <p>Cuisine type: {{randomRecipe.recipe.cuisineType}}</p>
+          <p>Meal type: {{randomRecipe.recipe.mealType}}</p>
+          <p>Dish type: {{randomRecipe.recipe.dishType}}</p>
         </div>
-       
-       
-        <div id="instructions" class="col-sm p-3 mx-4">
-          <h3>Instructions:</h3>
-          <ol>
-            <li>Step 1</li>
-            <li>Step 2</li>
-            <li>Step 3</li>
-            <li>Step 4</li>
-          </ol>
-        </div> -->
-<!-- </div> -->
-<!-- </main> -->
-<!-- Recipe Image / Name / Instructions -->
+      </div>
+    </div>
+
+    <div class="row" *ngIf="randomRecipe">
+      <h1 class="text-center">Here's some more recipe's like the one above!</h1>
+      <app-recipe-results class="col-3" style="margin: 20px auto 0 auto;" [recipeResults]="recipes"></app-recipe-results>
+    </div>
+
+    <div class="row powered-by">
+      <p style="display: inline;">Powered by <a href="https://www.edamam.com">Edamam</a></p>
+    </div>
+  </div>
+</div>

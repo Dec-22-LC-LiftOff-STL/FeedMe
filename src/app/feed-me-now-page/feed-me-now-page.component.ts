@@ -59,9 +59,11 @@ export class FeedMeNowPageComponent implements OnInit {
 
                 // checking that data has columns that aren't empty
                 if(data?.choiceColumns?.length) {
-
                   // assigning it to data
-                  this.columns = data.choiceColumns;
+                  this.columns = data.choiceColumns.sort((a, b) => {
+                    // numerical descending sort by id
+                    return a.id - b.id;
+                  });;
                 }
                 else {
                   this.columns = [];
